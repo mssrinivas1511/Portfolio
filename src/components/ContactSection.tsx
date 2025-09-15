@@ -33,8 +33,8 @@ const ContactSection = () => {
   const contactInfo = [{
     icon: Mail,
     label: 'Email',
-    value: 'alex.morgan@example.com',
-    link: 'mailto:alex.morgan@example.com'
+    value: 'ssai55030@gmail.com',
+    link: 'mailto:ssai55030@gmail.com'
   }, {
     icon: Phone,
     label: 'Phone',
@@ -130,7 +130,16 @@ const ContactSection = () => {
                     <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4">
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
-                    
+                    <div>
+                      <p className="text-sm text-muted-foreground">{info.label}</p>
+                      {info.link ? (
+                        <a href={info.link} className="text-foreground hover:text-primary transition-colors">
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-foreground">{info.value}</p>
+                      )}
+                    </div>
                   </div>)}
               </div>
             </Card>
