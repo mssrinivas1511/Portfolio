@@ -40,7 +40,7 @@ const AboutSection = () => {
                   <p className="text-primary font-medium">Product Manager</p>
                 </div>
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-6">I specialize in building AI-driven solutions and scalable digital products. Turning Ideas into Impactful Digital Experiences. Learning, Building, and Growing Products That Matter.”</p>
+              
               <p className="text-muted-foreground leading-relaxed">
                 My approach combines data-driven decision making with user-centric design, 
                 ensuring every product delivers real value to end users while achieving 
@@ -51,17 +51,7 @@ const AboutSection = () => {
 
           {/* Achievements */}
           <div className="space-y-6">
-            {achievements.map((achievement, index) => (
-              <Card key={index} className="glass p-6 hover:border-primary/40 transition-colors duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4">
-                    <achievement.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h4 className="text-lg font-bold text-foreground">{achievement.title}</h4>
-                </div>
-                <p className="text-muted-foreground">{achievement.description}</p>
-              </Card>
-            ))}
+            {achievements.map((achievement, index) => {})}
           </div>
         </div>
 
