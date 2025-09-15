@@ -1,12 +1,51 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from 'react';
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import ProjectsSection from '@/components/ProjectsSection';
+import SkillsSection from '@/components/SkillsSection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
+import { ArrowUp } from 'lucide-react';
 
 const Index = () => {
+  useEffect(() => {
+    // Smooth scrolling for the entire page
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    return () => {
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <Navigation />
+      
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ProjectsSection />
+        <SkillsSection />
+        <ContactSection />
+      </main>
+      
+      <Footer />
+      
+      {/* Back to top button */}
+      <Button
+        variant="hero"
+        size="icon"
+        className="fixed bottom-8 right-8 z-40 rounded-full shadow-lg animate-float"
+        onClick={scrollToTop}
+      >
+        <ArrowUp className="w-5 h-5" />
+      </Button>
     </div>
   );
 };
