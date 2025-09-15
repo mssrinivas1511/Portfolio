@@ -38,8 +38,8 @@ const ContactSection = () => {
   }, {
     icon: Phone,
     label: 'Phone',
-    value: '+1 (555) 123-4567',
-    link: 'tel:+15551234567'
+    value: '+91-7287070114',
+    link: 'tel:+917287070114'
   }, {
     icon: MapPin,
     label: 'Location',
