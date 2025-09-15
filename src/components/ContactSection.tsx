@@ -5,86 +5,69 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  Linkedin, 
-  Twitter, 
-  Github,
-  MessageSquare
-} from 'lucide-react';
-
+import { Mail, Phone, MapPin, Send, Linkedin, Twitter, Github, MessageSquare } from 'lucide-react';
 const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
-    message: '',
+    message: ''
   });
-  const { toast } = useToast();
-
+  const {
+    toast
+  } = useToast();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate form submission
     toast({
       title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      description: "Thanks for reaching out. I'll get back to you soon."
     });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
   };
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: 'Email',
-      value: 'alex.morgan@example.com',
-      link: 'mailto:alex.morgan@example.com',
-    },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567',
-    },
-    {
-      icon: MapPin,
-      label: 'Location',
-      value: 'San Francisco, CA',
-      link: null,
-    },
-  ];
-
-  const socialLinks = [
-    {
-      icon: Linkedin,
-      label: 'LinkedIn',
-      url: 'https://linkedin.com/in/alexmorgan',
-      color: 'hover:text-blue-500',
-    },
-    {
-      icon: Twitter,
-      label: 'Twitter',
-      url: 'https://twitter.com/alexmorgan',
-      color: 'hover:text-blue-400',
-    },
-    {
-      icon: Github,
-      label: 'GitHub',
-      url: 'https://github.com/alexmorgan',
-      color: 'hover:text-purple-400',
-    },
-    {
-      icon: MessageSquare,
-      label: 'Medium',
-      url: 'https://medium.com/@alexmorgan',
-      color: 'hover:text-green-400',
-    },
-  ];
-
-  return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-background to-muted/20">
+  const contactInfo = [{
+    icon: Mail,
+    label: 'Email',
+    value: 'alex.morgan@example.com',
+    link: 'mailto:alex.morgan@example.com'
+  }, {
+    icon: Phone,
+    label: 'Phone',
+    value: '+1 (555) 123-4567',
+    link: 'tel:+15551234567'
+  }, {
+    icon: MapPin,
+    label: 'Location',
+    value: 'San Francisco, CA',
+    link: null
+  }];
+  const socialLinks = [{
+    icon: Linkedin,
+    label: 'LinkedIn',
+    url: 'https://linkedin.com/in/alexmorgan',
+    color: 'hover:text-blue-500'
+  }, {
+    icon: Twitter,
+    label: 'Twitter',
+    url: 'https://twitter.com/alexmorgan',
+    color: 'hover:text-blue-400'
+  }, {
+    icon: Github,
+    label: 'GitHub',
+    url: 'https://github.com/alexmorgan',
+    color: 'hover:text-purple-400'
+  }, {
+    icon: MessageSquare,
+    label: 'Medium',
+    url: 'https://medium.com/@alexmorgan',
+    color: 'hover:text-green-400'
+  }];
+  return <section id="contact" className="py-20 bg-gradient-to-br from-background to-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -103,49 +86,32 @@ const ContactSection = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="name" className="text-foreground">Name</Label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                    className="mt-2 glass border-primary/30 focus:border-primary"
-                    placeholder="Your name"
-                    required
-                  />
+                  <Input id="name" value={formData.name} onChange={e => setFormData(prev => ({
+                  ...prev,
+                  name: e.target.value
+                }))} className="mt-2 glass border-primary/30 focus:border-primary" placeholder="Your name" required />
                 </div>
                 <div>
                   <Label htmlFor="email" className="text-foreground">Email</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    className="mt-2 glass border-primary/30 focus:border-primary"
-                    placeholder="your.email@example.com"
-                    required
-                  />
+                  <Input id="email" type="email" value={formData.email} onChange={e => setFormData(prev => ({
+                  ...prev,
+                  email: e.target.value
+                }))} className="mt-2 glass border-primary/30 focus:border-primary" placeholder="your.email@example.com" required />
                 </div>
               </div>
               <div>
                 <Label htmlFor="subject" className="text-foreground">Subject</Label>
-                <Input
-                  id="subject"
-                  value={formData.subject}
-                  onChange={(e) => setFormData(prev => ({ ...prev, subject: e.target.value }))}
-                  className="mt-2 glass border-primary/30 focus:border-primary"
-                  placeholder="Project discussion"
-                  required
-                />
+                <Input id="subject" value={formData.subject} onChange={e => setFormData(prev => ({
+                ...prev,
+                subject: e.target.value
+              }))} className="mt-2 glass border-primary/30 focus:border-primary" placeholder="Project discussion" required />
               </div>
               <div>
                 <Label htmlFor="message" className="text-foreground">Message</Label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
-                  className="mt-2 glass border-primary/30 focus:border-primary min-h-[120px]"
-                  placeholder="Tell me about your project or idea..."
-                  required
-                />
+                <Textarea id="message" value={formData.message} onChange={e => setFormData(prev => ({
+                ...prev,
+                message: e.target.value
+              }))} className="mt-2 glass border-primary/30 focus:border-primary min-h-[120px]" placeholder="Tell me about your project or idea..." required />
               </div>
               <Button type="submit" variant="hero" size="lg" className="w-full">
                 <Send className="w-5 h-5 mr-2" />
@@ -160,26 +126,12 @@ const ContactSection = () => {
             <Card className="glass p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6">Get in Touch</h3>
               <div className="space-y-4">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-center">
+                {contactInfo.map((info, index) => <div key={index} className="flex items-center">
                     <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4">
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">{info.label}</p>
-                      {info.link ? (
-                        <a 
-                          href={info.link}
-                          className="text-foreground hover:text-primary transition-colors"
-                        >
-                          {info.value}
-                        </a>
-                      ) : (
-                        <p className="text-foreground">{info.value}</p>
-                      )}
-                    </div>
-                  </div>
-                ))}
+                    
+                  </div>)}
               </div>
             </Card>
 
@@ -187,18 +139,10 @@ const ContactSection = () => {
             <Card className="glass p-8">
               <h3 className="text-2xl font-bold text-foreground mb-6">Follow Me</h3>
               <div className="grid grid-cols-2 gap-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`flex items-center p-4 glass rounded-lg hover:scale-105 transition-all duration-300 ${social.color}`}
-                  >
+                {socialLinks.map((social, index) => <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className={`flex items-center p-4 glass rounded-lg hover:scale-105 transition-all duration-300 ${social.color}`}>
                     <social.icon className="w-6 h-6 mr-3" />
                     <span className="font-medium">{social.label}</span>
-                  </a>
-                ))}
+                  </a>)}
               </div>
             </Card>
 
@@ -217,8 +161,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
