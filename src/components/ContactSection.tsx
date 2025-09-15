@@ -43,7 +43,7 @@ const ContactSection = () => {
   }, {
     icon: MapPin,
     label: 'Location',
-    value: 'San Francisco, CA',
+    value: 'Visakhapatnam, Andhrapradesh',
     link: null
   }];
   const socialLinks = [{
