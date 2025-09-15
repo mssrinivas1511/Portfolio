@@ -62,7 +62,7 @@ const SkillsSection = () => {
   ];
 
   const certifications = [
-    { name: 'Certified Scrum Product Owner', icon: Shield },
+    { name: 'Certified UI/UX Designer', icon: Shield },
     { name: 'Google Analytics Certified', icon: BarChart },
     { name: 'AWS Solutions Architect', icon: Code },
     { name: 'Product Management Certificate', icon: Lightbulb },
