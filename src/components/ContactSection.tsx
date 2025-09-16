@@ -59,7 +59,7 @@ const ContactSection = () => {
   }, {
     icon: Github,
     label: 'GitHub',
-    url: 'https://github.com/alexmorgan',
+    url: 'https://github.com/mssrinivas1511',
     color: 'hover:text-purple-400'
   }, {
     icon: MessageSquare,
