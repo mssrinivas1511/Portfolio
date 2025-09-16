@@ -59,7 +59,7 @@ const SkillsSection = () => {
 
   const tools = [
     'Figma', 'Jira', 'Confluence', 'Mixpanel', 'Amplitude', 'Tableau', 
-    'Notion', 'Slack', 'GitHub', 'AWS', 'Google Analytics', 'Hotjar'
+    'Notion', 'Slack', 'GitHub', 'Balsamiq', 'Google Analytics', 'Hotjar'
   ];
 
   const certifications = [
