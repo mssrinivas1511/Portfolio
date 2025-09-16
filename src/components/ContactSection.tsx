@@ -64,7 +64,7 @@ const ContactSection = () => {
   }, {
     icon: Instagram,
     label: 'Instagram',
-    url: 'https://instagram.com/nivas_1511',
+    url: 'https://www.instagram.com/nivas_1511/',
     color: 'hover:text-pink-400'
   }];
   return <section id="contact" className="py-20 bg-gradient-to-br from-background to-muted/20">
