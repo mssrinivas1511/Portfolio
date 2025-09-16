@@ -38,7 +38,7 @@ const ContactSection = () => {
   }, {
     icon: Phone,
     label: 'Phone',
-    value: '+91-7287070114',
+    value: '+91 - 7287070114',
     link: 'tel:+917287070114'
   }, {
     icon: MapPin,
