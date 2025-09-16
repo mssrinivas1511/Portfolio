@@ -54,7 +54,7 @@ const ContactSection = () => {
   }, {
     icon: Twitter,
     label: 'Twitter',
-    url: 'https://twitter.com/alexmorgan',
+    url: 'https://twitter.com/SaiSrinivaS2371',
     color: 'hover:text-blue-400'
   }, {
     icon: Github,
