@@ -49,7 +49,7 @@ const ContactSection = () => {
   const socialLinks = [{
     icon: Linkedin,
     label: 'LinkedIn',
-    url: 'https://linkedin.com/in/alexmorgan',
+    url: 'https://www.linkedin.com/in/mssrinivas1511',
     color: 'hover:text-blue-500'
   }, {
     icon: Twitter,
