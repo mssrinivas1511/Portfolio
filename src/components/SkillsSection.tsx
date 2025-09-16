@@ -9,7 +9,8 @@ import {
   Rocket, 
   Code, 
   Lightbulb,
-  Shield
+  Shield,
+  Figma
 } from 'lucide-react';
 
 const SkillsSection = () => {
@@ -64,7 +65,7 @@ const SkillsSection = () => {
   const certifications = [
     { name: 'Certified UI/UX Designer', icon: Shield },
     { name: 'Google Analytics Certified', icon: BarChart },
-    { name: 'Figma Expert', icon: Code },
+    { name: 'Figma Expert', icon: Figma },
     { name: 'Product Management Certificate', icon: Lightbulb },
   ];
 
