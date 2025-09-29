@@ -63,17 +63,17 @@ const SkillsSection = () => {
   ];
 
   const certifications = [
-    { name: 'Certified UI/UX Designer', icon: Shield },
-    { name: 'Google Analytics Certified', icon: BarChart },
-    { name: 'Figma Expert', icon: Figma },
-    { name: 'Product Management Certificate', icon: Lightbulb },
+    { name: 'Certified UI/UX\nDesigner', icon: Shield },
+    { name: 'Google Analytics\nCertified', icon: BarChart },
+    { name: 'Figma Expert\nDiploma', icon: Figma },
+    { name: 'Product Management\nCertificate', icon: Lightbulb },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gradient-to-br from-background to-muted/10">
+    <section id="skills" className="py-24 bg-gradient-to-br from-background to-muted/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Skills & <span className="bg-gradient-primary bg-clip-text text-transparent">Expertise</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -82,7 +82,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Skill Categories */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-10 mb-20">
           {skillCategories.map((category, index) => (
             <Card key={index} className="glass p-6 hover:scale-105 transition-transform duration-300">
               <div className="flex items-center mb-6">
@@ -110,7 +110,7 @@ const SkillsSection = () => {
         </div>
 
         {/* Tools & Technologies */}
-        <Card className="glass p-8 mb-12">
+        <Card className="glass p-8 mb-16">
           <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
             Tools & Technologies
           </h3>
@@ -134,7 +134,7 @@ const SkillsSection = () => {
               <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <cert.icon className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-sm font-semibold text-foreground leading-tight">
+              <h4 className="text-sm font-semibold text-foreground leading-tight whitespace-pre-line">
                 {cert.name}
               </h4>
             </Card>

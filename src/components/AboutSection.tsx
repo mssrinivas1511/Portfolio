@@ -16,10 +16,10 @@ const AboutSection = () => {
     title: 'Team Leadership',
     description: 'Led cross-functional teams of 20+ professionals'
   }];
-  return <section id="about" className="py-20 bg-gradient-to-br from-background to-background/80">
+  return <section id="about" className="py-24 bg-gradient-to-br from-background to-background/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -27,7 +27,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Profile Info */}
           <div className="space-y-6">
             <div className="glass p-8 rounded-xl">
@@ -35,10 +35,10 @@ const AboutSection = () => {
                 <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mr-4">
                   <User className="w-8 h-8 text-white" />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground">M S SrinivaS</h3>
-                  <p className="text-primary font-medium">Product Manager</p>
-                </div>
+                 <div>
+                   <h3 className="text-2xl font-bold text-foreground">SrinivaS</h3>
+                   <p className="text-primary font-medium">Product Manager</p>
+                 </div>
               </div>
               
               <p className="text-muted-foreground leading-relaxed">
