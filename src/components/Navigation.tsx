@@ -19,7 +19,7 @@ const Navigation = () => {
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
-    { name: 'Resume', href: '#resume' },
+    
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -55,7 +55,17 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
-            <Button variant="hero" size="sm" className="ml-4">
+            <Button 
+              variant="hero" 
+              size="sm" 
+              className="ml-4"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/cv-srinivas.pdf';
+                link.download = 'Srinivas-Resume.pdf';
+                link.click();
+              }}
+            >
               <Download className="w-4 h-4 mr-2" />
               Resume
             </Button>
@@ -86,7 +96,17 @@ const Navigation = () => {
                   {item.name}
                 </button>
               ))}
-              <Button variant="hero" size="sm" className="mt-4">
+              <Button 
+                variant="hero" 
+                size="sm" 
+                className="mt-4"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/cv-srinivas.pdf';
+                  link.download = 'Srinivas-Resume.pdf';
+                  link.click();
+                }}
+              >
                 <Download className="w-4 h-4 mr-2" />
                 Resume
               </Button>
