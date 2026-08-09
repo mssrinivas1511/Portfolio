@@ -3,7 +3,7 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { defineMcp } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.26.1";
 
 // src/lib/mcp/tools/get-profile.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.1";
@@ -233,11 +233,16 @@ var get_resume_default = defineTool5({
 });
 
 // src/lib/mcp/index.ts
+var projectRef = "rbeiqnquqmabtovdtzlm";
 var mcp_default = defineMcp({
   name: "mssrinivas1511",
   title: "mssrinivas1511",
   version: "0.1.0",
-  instructions: "Public tools for SrinivaS's product management portfolio. Use `get_profile` for background and expertise, `list_projects` for featured case studies (optionally filtered), `get_skills` for skills, tools and certifications, `get_contact_info` for contact and social links, and `get_resume` for the downloadable resume URL. All data is public portfolio content; there is no private or per-user data.",
+  instructions: "Tools for SrinivaS's product management portfolio. Use `get_profile` for background and expertise, `list_projects` for featured case studies (optionally filtered), `get_skills` for skills, tools and certifications, `get_contact_info` for contact and social links, and `get_resume` for the downloadable resume URL. Callers must sign in to this app via OAuth.",
+  auth: auth.oauth.issuer({
+    issuer: `https://${projectRef}.supabase.co/auth/v1`,
+    acceptedAudiences: "authenticated"
+  }),
   tools: [get_profile_default, list_projects_default, get_skills_default, get_contact_info_default, get_resume_default]
 });
 
