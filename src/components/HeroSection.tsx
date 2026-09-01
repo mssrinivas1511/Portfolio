@@ -1,15 +1,23 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Download, Mail } from 'lucide-react';
+import { ArrowRight, Download, Mail, Linkedin, Twitter, Github, Instagram } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
+import { siteConfig, downloadResume } from '@/lib/site-config';
+
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const socials = [
+    { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin },
+    { icon: Twitter, label: 'Twitter / X', url: siteConfig.social.twitter },
+    { icon: Github, label: 'GitHub', url: siteConfig.social.github },
+    { icon: Instagram, label: 'Instagram', url: siteConfig.social.instagram },
+  ];
+
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
     backgroundImage: `url(${heroBackground})`,
     backgroundSize: 'cover',
@@ -55,7 +63,7 @@ const HeroSection = () => {
             View My Work
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
-          <Button variant="glass" size="lg" className="text-lg px-8 py-3">
+          <Button variant="glass" size="lg" className="text-lg px-8 py-3" onClick={downloadResume}>
             <Download className="w-5 h-5 mr-2" />
             Download Resume
           </Button>
@@ -63,6 +71,23 @@ const HeroSection = () => {
             <Mail className="w-5 h-5 mr-2" />
             Contact Me
           </Button>
+        </div>
+
+        {/* Social links */}
+        <div className="flex justify-center gap-4 mt-10 animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
+          {socials.map(({ icon: Icon, label, url }) => (
+            <a
+              key={label}
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              title={label}
+              className="w-11 h-11 glass rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300"
+            >
+              <Icon className="w-5 h-5" />
+            </a>
+          ))}
         </div>
 
         {/* Scroll indicator */}
