@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Download } from 'lucide-react';
+import { downloadResume } from '@/lib/site-config';
+
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
