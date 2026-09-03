@@ -40,7 +40,7 @@ var profile = {
       description: "Led cross-functional teams of 20+ professionals"
     }
   ],
-  resumeUrl: "/cv-srinivas.pdf"
+  resumeUrl: "/MSSRINIVAS_CV.pdf"
 };
 var projects = [
   {
@@ -119,10 +119,9 @@ var tools = [
   "Hotjar"
 ];
 var certifications = [
-  "Certified UI/UX Designer",
-  "Google Analytics Certified",
-  "Figma Expert Diploma",
-  "Product Management Certificate"
+  "Product Management with Gen AI Certificate",
+  "AI Product Management Certificate",
+  "Figma Certified"
 ];
 var contact = {
   email: "ssai55030@gmail.com",
@@ -130,7 +129,7 @@ var contact = {
   location: "Visakhapatnam, Andhra Pradesh",
   social: {
     linkedin: "https://www.linkedin.com/in/mssrinivas1511",
-    twitter: "https://twitter.com/SaiSrinivaS2371",
+    whatsapp: "https://wa.me/917287070114",
     github: "https://github.com/mssrinivas1511",
     instagram: "https://www.instagram.com/nivas_1511/"
   }

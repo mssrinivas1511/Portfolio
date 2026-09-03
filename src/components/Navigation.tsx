@@ -62,10 +62,7 @@ const Navigation = () => {
               size="sm" 
               className="ml-4"
               onClick={() => {
-                const link = document.createElement('a');
-                link.href = '/cv-srinivas.pdf';
-                link.download = 'Srinivas-Resume.pdf';
-                link.click();
+                downloadResume();
               }}
             >
               <Download className="w-4 h-4 mr-2" />
@@ -103,10 +100,7 @@ const Navigation = () => {
                 size="sm" 
                 className="mt-4"
                 onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/cv-srinivas.pdf';
-                  link.download = 'Srinivas-Resume.pdf';
-                  link.click();
+                  downloadResume();
                 }}
               >
                 <Download className="w-4 h-4 mr-2" />
