@@ -8,7 +8,10 @@
 - [x] Footer: working social links + correct year
 - [x] Contact form: real delivery (stored in backend + email notification edge function)
 - [x] "Schedule a Call" CTA wired to a real destination
-- [ ] Content refresh (Featured Projects / About Me / Product Launches) — awaiting user's real details
+- [x] Featured Projects replaced with real Rekart work + dedicated clickable case-study pages
+- [ ] About Me / Product Launches copy still has placeholder stats — awaiting real numbers
+- [ ] Confirm correct X (Twitter) handle — current one returns 404
 - [ ] Email notifications need a Resend API key (or verified email domain) to actually deliver
 - [ ] Re-run security scan to confirm react-router fix
 - [ ] Publish so changes are live
+
