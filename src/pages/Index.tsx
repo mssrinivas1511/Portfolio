@@ -14,11 +14,21 @@ const Index = () => {
   useEffect(() => {
     // Smooth scrolling for the entire page
     document.documentElement.style.scrollBehavior = 'smooth';
-    
+
+    // Support deep links like /#projects (e.g. coming back from a case study)
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        requestAnimationFrame(() => target.scrollIntoView({ behavior: 'smooth' }));
+      }
+    }
+
     return () => {
       document.documentElement.style.scrollBehavior = 'auto';
     };
   }, []);
+
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
