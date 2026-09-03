@@ -9,7 +9,6 @@ import {
   Rocket, 
   Code, 
   Lightbulb,
-  Shield,
   Figma
 } from 'lucide-react';
 
@@ -59,14 +58,13 @@ const SkillsSection = () => {
 
   const tools = [
     'Figma', 'Jira', 'Confluence', 'Mixpanel', 'Amplitude', 'Tableau', 
-    'Notion', 'Slack', 'GitHub', 'Balsamiq', 'Google Analytics', 'Hotjar'
+    'Notion', 'GitHub', 'SQL'
   ];
 
   const certifications = [
-    { name: 'Certified UI/UX\nDesigner', icon: Shield },
-    { name: 'Google Analytics\nCertified', icon: BarChart },
-    { name: 'Figma Expert\nDiploma', icon: Figma },
-    { name: 'Product Management\nCertificate', icon: Lightbulb },
+    { name: 'Product Management\nwith Gen AI', icon: Brain },
+    { name: 'AI Product Management\nCertificate', icon: Lightbulb },
+    { name: 'Figma\nCertified', icon: Figma },
   ];
 
   return (
@@ -128,7 +126,7 @@ const SkillsSection = () => {
         </Card>
 
         {/* Certifications */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <Card key={index} className="glass p-6 text-center hover:scale-105 transition-transform duration-300">
               <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">

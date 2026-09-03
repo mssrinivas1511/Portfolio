@@ -1,10 +1,10 @@
-import { Heart, Linkedin, Twitter, Github, Instagram, Mail } from 'lucide-react';
+import { Heart, Linkedin, MessageCircle, Github, Instagram, Mail } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
 
 const Footer = () => {
   const socials = [
     { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin },
-    { icon: Twitter, label: 'Twitter / X', url: siteConfig.social.twitter },
+    { icon: MessageCircle, label: 'WhatsApp', url: siteConfig.social.whatsapp },
     { icon: Github, label: 'GitHub', url: siteConfig.social.github },
     { icon: Instagram, label: 'Instagram', url: siteConfig.social.instagram },
     { icon: Mail, label: 'Email', url: `mailto:${siteConfig.email}` },

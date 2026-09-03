@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Download, Mail, Linkedin, Twitter, Github, Instagram } from 'lucide-react';
+import { ArrowRight, Download, Mail, Linkedin, MessageCircle, Github, Instagram } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
 import { siteConfig, downloadResume } from '@/lib/site-config';
 
@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   const socials = [
     { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin },
-    { icon: Twitter, label: 'Twitter / X', url: siteConfig.social.twitter },
+    { icon: MessageCircle, label: 'WhatsApp', url: siteConfig.social.whatsapp },
     { icon: Github, label: 'GitHub', url: siteConfig.social.github },
     { icon: Instagram, label: 'Instagram', url: siteConfig.social.instagram },
   ];

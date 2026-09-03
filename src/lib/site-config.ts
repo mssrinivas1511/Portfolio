@@ -5,14 +5,14 @@ export const siteConfig = {
   email: 'ssai55030@gmail.com',
   phone: '+91 7287070114',
   location: 'Visakhapatnam, Andhra Pradesh, India',
-  resumeUrl: '/cv-srinivas.pdf',
-  resumeFileName: 'M-S-Srinivas-Resume.pdf',
+  resumeUrl: '/MSSRINIVAS_CV.pdf',
+  resumeFileName: 'MSSRINIVAS_CV.pdf',
   // Update this to a Calendly / Google Calendar booking link when available.
   // Falls back to a pre-filled email if left empty.
   calendarUrl: '',
   social: {
     linkedin: 'https://www.linkedin.com/in/mssrinivas1511',
-    twitter: 'https://x.com/SaiSrinivaS2371',
+    whatsapp: 'https://wa.me/917287070114',
     github: 'https://github.com/mssrinivas1511',
     instagram: 'https://www.instagram.com/nivas_1511/',
   },
