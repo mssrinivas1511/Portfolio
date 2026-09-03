@@ -39,35 +39,31 @@ export const profile = {
 export const projects = [
   {
     id: 1,
-    title: "AI-Powered Analytics Platform",
-    category: "Enterprise SaaS",
-    role: "Senior Product Manager",
+    slug: "rekart-whatsapp-ai-assistant",
+    title: "Rekart WhatsApp AI Assistant",
+    category: "AI / Conversational Product",
+    role: "Product Manager",
     description:
-      "Revolutionary AI assistant that analyzes business data and provides actionable insights. Increased user productivity by 60% and reduced analysis time from hours to minutes.",
-    impact: "2M+ users, 60% productivity increase",
-    technologies: ["AI/ML", "React", "Python", "AWS"],
+      "NLP-based conversational product that turned Rekart (milk, tiffins and groceries subscriptions & delivery management) into a WhatsApp self-service experience. Phase 1 covered one-time orders, subscription pause/resume/modify/cancel, payment links, wallet and notifications; Phase 2 added customer registration, address capture and subscription creation.",
+    impact: "30% user engagement, 90%+ successful response rate, 10% reduction in churn risk",
+    technologies: ["NLP/AI", "WhatsApp Business API", "Razorpay", "Easebuzz", "Mixpanel", "Jira", "Confluence"],
+    url: "/projects/rekart-whatsapp-ai-assistant",
   },
   {
     id: 2,
-    title: "Next-Gen Fintech Mobile App",
-    category: "Fintech",
-    role: "Lead Product Manager",
-    description:
-      "Complete financial ecosystem with AI-driven insights, seamless payments, and personalized investment recommendations. Achieved 300% user growth in 12 months.",
-    impact: "300% user growth, $5M ARR",
-    technologies: ["React Native", "Node.js", "Blockchain", "ML"],
-  },
-  {
-    id: 3,
-    title: "Healthcare Data Intelligence",
-    category: "HealthTech",
+    slug: "rekart-customer-app",
+    title: "Rekart Customer App Transformation",
+    category: "SaaS / Mobile & Web App",
     role: "Product Manager",
     description:
-      "HIPAA-compliant platform that aggregates patient data across systems, providing real-time insights for healthcare providers. Improved patient outcomes by 40%.",
-    impact: "40% improved outcomes, 100+ hospitals",
-    technologies: ["Vue.js", "FHIR", "Azure", "Analytics"],
+      "End-to-end product evolution of the Rekart Customer App across three phases: subscription and plan-selection UX, payment clarity, search and history redesign, and a homepage redesign replacing internal Sales Territory selection with delivery-address-driven personalised catalogues and multi-location ordering.",
+    impact:
+      "Reduced churn through every-release improvements and increased feature adoption across national and international clients",
+    technologies: ["Mixpanel", "Jira", "Confluence", "Figma", "Razorpay", "Easebuzz", "React Native"],
+    url: "/projects/rekart-customer-app",
   },
 ] as const;
+
 
 export const skillCategories = [
   {

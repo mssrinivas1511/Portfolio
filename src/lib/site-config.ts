@@ -12,7 +12,7 @@ export const siteConfig = {
   calendarUrl: '',
   social: {
     linkedin: 'https://www.linkedin.com/in/mssrinivas1511',
-    twitter: 'https://twitter.com/SaiSrinivaS2371',
+    twitter: 'https://x.com/SaiSrinivaS2371',
     github: 'https://github.com/mssrinivas1511',
     instagram: 'https://www.instagram.com/nivas_1511/',
   },
