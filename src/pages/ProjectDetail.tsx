@@ -96,6 +96,30 @@ const ProjectDetail = () => {
           </div>
         )}
 
+        {project.wireframes && (
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4">High-fidelity designs</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {project.wireframes.map((wf) => (
+                <figure key={wf.src} className="glass rounded-xl overflow-hidden">
+                  <img
+                    src={wf.src}
+                    alt={`${project.title} high-fidelity design — ${wf.title}`}
+                    loading="lazy"
+                    width={1200}
+                    height={800}
+                    className="w-full object-cover"
+                  />
+                  <figcaption className="p-4">
+                    <div className="font-medium text-foreground mb-1">{wf.title}</div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{wf.caption}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* Overview */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">Overview</h2>
