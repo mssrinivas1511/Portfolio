@@ -1,5 +1,9 @@
 import whatsappAiImg from '@/assets/project-rekart-whatsapp-ai.jpg';
 import customerAppImg from '@/assets/project-rekart-customer-app.jpg';
+import wfWhatsappChat from '@/assets/wf-whatsapp-chat.jpg';
+import wfWhatsappSubscription from '@/assets/wf-whatsapp-subscription.jpg';
+import wfCustomerHome from '@/assets/wf-customer-home.jpg';
+import wfCustomerPayments from '@/assets/wf-customer-payments.jpg';
 
 export interface ProjectSection {
   heading: string;
@@ -18,6 +22,7 @@ export interface Project {
   product: string;
   impact: string;
   image: string;
+  wireframes?: { src: string; title: string; caption: string }[];
   technologies: string[];
   metrics?: { value: string; label: string }[];
   overview: string[];
@@ -34,10 +39,24 @@ export const projects: Project[] = [
     tagline:
       'Turning a delivery & subscription platform into a conversational self-service experience on WhatsApp.',
     category: 'AI / Conversational Product',
-    role: 'Product Manager',
+    role: 'Associate Product Manager',
     product: 'Rekart — Milk, Tiffins & Groceries Subscriptions & Delivery Management',
     impact: '30% user engagement · 90%+ successful response rate · 10% reduction in churn risk',
     image: whatsappAiImg,
+    wireframes: [
+      {
+        src: wfWhatsappChat,
+        title: 'Conversational ordering & quick replies',
+        caption:
+          'High-fidelity flow for intent detection, quick-reply menus and the order/payment confirmation card inside the WhatsApp thread.',
+      },
+      {
+        src: wfWhatsappSubscription,
+        title: 'Subscription control & wallet',
+        caption:
+          'Pause / resume / modify controls, delivery-date selection and wallet plus transaction history surfaced conversationally.',
+      },
+    ],
     technologies: ['NLP / AI', 'WhatsApp Business API', 'Razorpay', 'Easebuzz', 'Mixpanel', 'Jira', 'Confluence'],
     metrics: [
       { value: '30%', label: 'User engagement' },
@@ -187,10 +206,24 @@ Success  Analyze conversation
     tagline:
       'An end-to-end product evolution simplifying ordering, subscriptions, payments, delivery visibility and location-based catalogue personalisation.',
     category: 'SaaS / Mobile & Web App',
-    role: 'Product Manager',
+    role: 'Associate Product Manager',
     product: 'Rekart — Customer App, Web App, Client Dashboard & Driver App',
     impact: 'Reduced churn through every-release improvements and higher feature adoption',
     image: customerAppImg,
+    wireframes: [
+      {
+        src: wfCustomerHome,
+        title: 'Address-driven homepage & catalogue',
+        caption:
+          'Redesigned homepage: delivery address selector replacing internal Sales Territory, category grid and personalised catalogue.',
+      },
+      {
+        src: wfCustomerPayments,
+        title: 'Payments & order history',
+        caption:
+          'Payment-method clarity across Razorpay and Easebuzz plus a redesigned transaction and delivery history timeline with status states.',
+      },
+    ],
     technologies: ['Mixpanel', 'Jira', 'Confluence', 'Figma', 'Razorpay', 'Easebuzz', 'React Native'],
     overview: [
       'Rekart is a SaaS platform for milk, tiffins and groceries subscriptions and delivery management, serving national and international clients through a Customer App, a web app, a client dashboard and a Driver app for delivery logistics, with payments powered by Razorpay and Easebuzz.',

@@ -47,7 +47,7 @@ const HeroSection = () => {
             Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">M S SrinivaS</span>
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Product Manager | Building the Future of Tech
+            Associate Product Manager · Rekart (SaaS · Subscriptions & Delivery Management)
           </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             I design, manage, and launch digital products that solve real-world problems. 

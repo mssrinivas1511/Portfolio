@@ -3,10 +3,10 @@
 
 export const profile = {
   name: "SrinivaS",
-  title: "Product Manager",
+  title: "Associate Product Manager",
   location: "Visakhapatnam, Andhra Pradesh, India",
   summary:
-    "Product Manager focused on transforming ideas into impactful products. Combines data-driven decision making with user-centric design, ensuring every product delivers real value to end users while achieving business objectives.",
+    "Associate Product Manager focused on transforming ideas into impactful products. Combines data-driven decision making with user-centric design, ensuring every product delivers real value to end users while achieving business objectives.",
   coreExpertise: [
     "Product Strategy",
     "Roadmapping",
@@ -42,7 +42,7 @@ export const projects = [
     slug: "rekart-whatsapp-ai-assistant",
     title: "Rekart WhatsApp AI Assistant",
     category: "AI / Conversational Product",
-    role: "Product Manager",
+    role: "Associate Product Manager",
     description:
       "NLP-based conversational product that turned Rekart (milk, tiffins and groceries subscriptions & delivery management) into a WhatsApp self-service experience. Phase 1 covered one-time orders, subscription pause/resume/modify/cancel, payment links, wallet and notifications; Phase 2 added customer registration, address capture and subscription creation.",
     impact: "30% user engagement, 90%+ successful response rate, 10% reduction in churn risk",
@@ -54,7 +54,7 @@ export const projects = [
     slug: "rekart-customer-app",
     title: "Rekart Customer App Transformation",
     category: "SaaS / Mobile & Web App",
-    role: "Product Manager",
+    role: "Associate Product Manager",
     description:
       "End-to-end product evolution of the Rekart Customer App across three phases: subscription and plan-selection UX, payment clarity, search and history redesign, and a homepage redesign replacing internal Sales Territory selection with delivery-address-driven personalised catalogues and multi-location ordering.",
     impact:

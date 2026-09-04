@@ -1,7 +1,7 @@
 // Single source of truth for every outbound link / CTA destination on the site.
 export const siteConfig = {
   name: 'M S SrinivaS',
-  role: 'Product Manager',
+  role: 'Associate Product Manager',
   email: 'ssai55030@gmail.com',
   phone: '+91 7287070114',
   location: 'Visakhapatnam, Andhra Pradesh, India',
