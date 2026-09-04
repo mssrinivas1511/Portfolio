@@ -9,8 +9,10 @@
 - [x] Contact form: real delivery (stored in backend + email notification edge function)
 - [x] "Schedule a Call" CTA wired to a real destination
 - [x] Featured Projects replaced with real Rekart work + dedicated clickable case-study pages
-- [ ] About Me / Product Launches copy still has placeholder stats — awaiting real numbers
-- [ ] Confirm correct X (Twitter) handle — current one returns 404
+- [x] About Me rewritten with real story; placeholder stats removed sitewide
+- [x] Added Professional Experience section (portfolio-guide structure, no repetition)
+- [x] High-fidelity design galleries on case-study pages + thumbnails on project cards
+- [x] Role updated to Associate Product Manager everywhere
 - [ ] Email notifications need a Resend API key (or verified email domain) to actually deliver
 - [ ] Re-run security scan to confirm react-router fix
 - [ ] Publish so changes are live

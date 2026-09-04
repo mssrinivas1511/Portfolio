@@ -21,16 +21,16 @@ export const profile = {
   ],
   achievements: [
     {
-      title: "Product Launches",
-      description: "15+ successful product launches with 2M+ users",
+      title: "Conversational AI",
+      description: "Led Rekart's WhatsApp AI assistant: 30% user engagement, 90%+ successful response rate, 10% reduction in churn risk",
     },
     {
-      title: "Growth Impact",
-      description: "300% user growth and 40% revenue increase",
+      title: "Retention",
+      description: "Reduced churn through targeted customer-app improvements in every release and higher feature adoption",
     },
     {
-      title: "Team Leadership",
-      description: "Led cross-functional teams of 20+ professionals",
+      title: "Cross-functional delivery",
+      description: "Shipped across customer app, web app, client dashboard and driver app with design, development and QA teams",
     },
   ],
   resumeUrl: "/MSSRINIVAS_CV.pdf",
