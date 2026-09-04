@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Download, Mail, Linkedin, MessageCircle, Github, Instagram } from 'lucide-react';
+import { ArrowRight, Download, Mail } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
-import { siteConfig, downloadResume } from '@/lib/site-config';
+import { downloadResume } from '@/lib/site-config';
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -11,12 +11,12 @@ const HeroSection = () => {
     }
   };
 
-  const socials = [
-    { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin },
-    { icon: MessageCircle, label: 'WhatsApp', url: siteConfig.social.whatsapp },
-    { icon: Github, label: 'GitHub', url: siteConfig.social.github },
-    { icon: Instagram, label: 'Instagram', url: siteConfig.social.instagram },
+  const stats = [
+    { value: '2', label: 'Flagship products shipped' },
+    { value: '4', label: 'Apps in the Rekart suite' },
+    { value: 'National + International', label: 'Client base served' },
   ];
+
 
   return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
     backgroundImage: `url(${heroBackground})`,
@@ -47,11 +47,11 @@ const HeroSection = () => {
             Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">M S SrinivaS</span>
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Product Manager | Building the Future of Tech
+            Associate Product Manager · Rekart (SaaS · Subscriptions & Delivery Management)
           </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I design, manage, and launch digital products that solve real-world problems. 
-            Specializing in AI-driven solutions and scalable tech innovations.
+            I turn customer insight, market research and data into products people actually use —
+            currently building Rekart's subscription and delivery ecosystem for milk, tiffins and groceries.
           </p>
         </div>
 
@@ -73,22 +73,18 @@ const HeroSection = () => {
           </Button>
         </div>
 
-        {/* Social links */}
-        <div className="flex justify-center gap-4 mt-10 animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
-          {socials.map(({ icon: Icon, label, url }) => (
-            <a
-              key={label}
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={label}
-              title={label}
-              className="w-11 h-11 glass rounded-full flex items-center justify-center text-muted-foreground hover:text-primary hover:scale-110 transition-all duration-300"
-            >
-              <Icon className="w-5 h-5" />
-            </a>
+        {/* Quick stats */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
+          {stats.map(({ value, label }) => (
+            <div key={label} className="glass rounded-xl px-4 py-5">
+              <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                {value}
+              </div>
+              <div className="text-sm text-muted-foreground mt-1">{label}</div>
+            </div>
           ))}
         </div>
+
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

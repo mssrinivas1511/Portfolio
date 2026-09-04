@@ -71,6 +71,26 @@ const ProjectsSection = () => {
                     ))}
                   </div>
 
+                  {project.wireframes && (
+                    <div className="grid grid-cols-2 gap-3 mb-5">
+                      {project.wireframes.map((wf) => (
+                        <figure key={wf.src} className="rounded-lg overflow-hidden border border-card-border">
+                          <img
+                            src={wf.src}
+                            alt={`${project.title} high-fidelity design — ${wf.title}`}
+                            loading="lazy"
+                            width={1200}
+                            height={800}
+                            className="w-full h-24 object-cover"
+                          />
+                          <figcaption className="px-2 py-1.5 text-[11px] text-muted-foreground bg-background/40">
+                            {wf.title}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  )}
+
                   <span className="mt-auto inline-flex items-center text-sm font-medium text-primary group-hover:underline">
                     View full case study
                     <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />

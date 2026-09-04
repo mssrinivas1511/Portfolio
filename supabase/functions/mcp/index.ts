@@ -11,9 +11,9 @@ import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.1";
 // src/lib/mcp/portfolio-data.ts
 var profile = {
   name: "SrinivaS",
-  title: "Product Manager",
+  title: "Associate Product Manager",
   location: "Visakhapatnam, Andhra Pradesh, India",
-  summary: "Product Manager focused on transforming ideas into impactful products. Combines data-driven decision making with user-centric design, ensuring every product delivers real value to end users while achieving business objectives.",
+  summary: "Associate Product Manager focused on transforming ideas into impactful products. Combines data-driven decision making with user-centric design, ensuring every product delivers real value to end users while achieving business objectives.",
   coreExpertise: [
     "Product Strategy",
     "Roadmapping",
@@ -28,16 +28,16 @@ var profile = {
   ],
   achievements: [
     {
-      title: "Product Launches",
-      description: "15+ successful product launches with 2M+ users"
+      title: "Conversational AI",
+      description: "Led Rekart's WhatsApp AI assistant: 30% user engagement, 90%+ successful response rate, 10% reduction in churn risk"
     },
     {
-      title: "Growth Impact",
-      description: "300% user growth and 40% revenue increase"
+      title: "Retention",
+      description: "Reduced churn through targeted customer-app improvements in every release and higher feature adoption"
     },
     {
-      title: "Team Leadership",
-      description: "Led cross-functional teams of 20+ professionals"
+      title: "Cross-functional delivery",
+      description: "Shipped across customer app, web app, client dashboard and driver app with design, development and QA teams"
     }
   ],
   resumeUrl: "/MSSRINIVAS_CV.pdf"
@@ -48,7 +48,7 @@ var projects = [
     slug: "rekart-whatsapp-ai-assistant",
     title: "Rekart WhatsApp AI Assistant",
     category: "AI / Conversational Product",
-    role: "Product Manager",
+    role: "Associate Product Manager",
     description: "NLP-based conversational product that turned Rekart (milk, tiffins and groceries subscriptions & delivery management) into a WhatsApp self-service experience. Phase 1 covered one-time orders, subscription pause/resume/modify/cancel, payment links, wallet and notifications; Phase 2 added customer registration, address capture and subscription creation.",
     impact: "30% user engagement, 90%+ successful response rate, 10% reduction in churn risk",
     technologies: ["NLP/AI", "WhatsApp Business API", "Razorpay", "Easebuzz", "Mixpanel", "Jira", "Confluence"],
@@ -59,7 +59,7 @@ var projects = [
     slug: "rekart-customer-app",
     title: "Rekart Customer App Transformation",
     category: "SaaS / Mobile & Web App",
-    role: "Product Manager",
+    role: "Associate Product Manager",
     description: "End-to-end product evolution of the Rekart Customer App across three phases: subscription and plan-selection UX, payment clarity, search and history redesign, and a homepage redesign replacing internal Sales Territory selection with delivery-address-driven personalised catalogues and multi-location ordering.",
     impact: "Reduced churn through every-release improvements and increased feature adoption across national and international clients",
     technologies: ["Mixpanel", "Jira", "Confluence", "Figma", "Razorpay", "Easebuzz", "React Native"],

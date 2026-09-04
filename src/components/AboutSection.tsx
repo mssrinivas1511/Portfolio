@@ -1,82 +1,94 @@
-import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import { User, Target, Zap, Users } from 'lucide-react';
+import { User, Search, LineChart, Users } from 'lucide-react';
+import { siteConfig } from '@/lib/site-config';
+
 const AboutSection = () => {
-  const skills = ['Product Strategy', 'Roadmapping', 'User Research', 'Data Analytics', 'AI/ML Product Development', 'Agile/Scrum', 'Stakeholder Management', 'Go-to-Market', 'UX Collaboration', 'Technical Product Management'];
-  const achievements = [{
-    icon: Target,
-    title: 'Product Launches',
-    description: '15+ successful product launches with 2M+ users'
-  }, {
-    icon: Zap,
-    title: 'Growth Impact',
-    description: '300% user growth and 40% revenue increase'
-  }, {
-    icon: Users,
-    title: 'Team Leadership',
-    description: 'Led cross-functional teams of 20+ professionals'
-  }];
-  return <section id="about" className="py-24 bg-gradient-to-br from-background to-background/80">
+  const values = [
+    {
+      icon: Search,
+      title: 'Discovery first',
+      description:
+        'I start with customer and client conversations, market research and competitor analysis before a single ticket is written.',
+    },
+    {
+      icon: LineChart,
+      title: 'Data over opinion',
+      description:
+        'Mixpanel funnels, adoption and drop-off data decide what gets built next and whether a release actually worked.',
+    },
+    {
+      icon: Users,
+      title: 'Built with the team',
+      description:
+        'Close, daily collaboration with design, development and QA — clear requirements, tight feedback loops, calm releases.',
+    },
+  ];
+
+  return (
+    <section id="about" className="py-24 bg-gradient-to-br from-background to-background/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Passionate about transforming ideas into impactful products
+            The story beyond the resume — how I work and what drives me
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Profile Info */}
-          <div className="space-y-6">
-            <div className="glass p-8 rounded-xl">
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mr-4">
-                  <User className="w-8 h-8 text-white" />
-                </div>
-                 <div>
-                   <h3 className="text-2xl font-bold text-foreground">SrinivaS</h3>
-                   <p className="text-primary font-medium">Product Manager</p>
-                 </div>
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
+          {/* Story */}
+          <div className="glass p-8 rounded-xl space-y-5">
+            <div className="flex items-center">
+              <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mr-4 shrink-0">
+                <User className="w-8 h-8 text-primary-foreground" />
               </div>
-              
-              <p className="text-muted-foreground leading-relaxed">
-                My approach combines data-driven decision making with user-centric design, 
-                ensuring every product delivers real value to end users while achieving 
-                business objectives.
-              </p>
+              <div>
+                <h3 className="text-2xl font-bold text-foreground">{siteConfig.name}</h3>
+                <p className="text-primary font-medium">{siteConfig.role} · {siteConfig.location}</p>
+              </div>
             </div>
+
+            <p className="text-muted-foreground leading-relaxed">
+              I'm an Associate Product Manager working on Rekart, a SaaS platform for milk, tiffins and
+              groceries subscriptions and delivery management used by national and international clients.
+              The product spans a customer app, a web app, a client dashboard and a driver app for
+              delivery logistics — so most of my days are spent connecting what customers need with what
+              operations, clients and engineering can realistically deliver.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              My work sits at the intersection of research and execution: gathering insights from
+              customers and clients, running market and competitor analysis, translating findings into
+              requirements and use cases, and then shipping with design, development and QA. I care
+              about reducing friction in everyday journeys — ordering, subscribing, paying, tracking a
+              delivery — because those are the moments that decide whether a subscriber stays.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              I'm especially drawn to AI-assisted product experiences. Leading Rekart's NLP-based
+              WhatsApp assistant showed me how much a conversational layer can do for users who never
+              want to open an app. When I'm not working on the roadmap, I'm exploring AI and analytics
+              tooling, sharpening my UX craft in Figma, and learning from the wider product community.
+            </p>
           </div>
 
-          {/* Achievements */}
+          {/* Values */}
           <div className="space-y-6">
-            {achievements.map(({ icon: Icon, title, description }, index) => (
-              <Card key={index} className="glass p-6 hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mr-4">
-                    <Icon className="w-6 h-6 text-white" />
+            {values.map(({ icon: Icon, title, description }) => (
+              <Card key={title} className="glass p-6 hover:scale-[1.02] transition-transform duration-300">
+                <div className="flex items-center mb-3">
+                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mr-4 shrink-0">
+                    <Icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">{title}</h3>
                 </div>
-                <p className="text-muted-foreground">{description}</p>
+                <p className="text-muted-foreground leading-relaxed">{description}</p>
               </Card>
             ))}
           </div>
         </div>
-
-        {/* Skills */}
-        <div className="glass p-8 rounded-xl">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Core Expertise
-          </h3>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {skills.map((skill, index) => <Badge key={index} variant="secondary" className="px-4 py-2 text-sm font-medium bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 hover:border-primary/40 transition-colors duration-300">
-                {skill}
-              </Badge>)}
-          </div>
-        </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutSection;
