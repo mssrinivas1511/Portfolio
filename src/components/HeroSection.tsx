@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Download, Mail } from 'lucide-react';
 import heroBackground from '@/assets/hero-background.jpg';
-import { siteConfig, downloadResume } from '@/lib/site-config';
+import { downloadResume } from '@/lib/site-config';
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
