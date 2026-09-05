@@ -18,6 +18,25 @@ export const siteConfig = {
   },
 } as const;
 
+/** One predefined outreach message reused across email, WhatsApp and Instagram. */
+export const outreachMessage =
+  "Hi Srinivas, I would like to connect with you to have a discussion on those lines.";
+
+export const outreachSubject = 'Would like to connect for a discussion';
+
+/** Email with subject + message already filled in. */
+export const emailHref = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
+  outreachSubject,
+)}&body=${encodeURIComponent(`${outreachMessage}\n\n`)}`;
+
+/** WhatsApp chat that opens with the message pre-typed. */
+export const whatsappHref = `${siteConfig.social.whatsapp}?text=${encodeURIComponent(
+  outreachMessage,
+)}`;
+
+/** Instagram direct-message thread (Instagram does not allow pre-filled text). */
+export const instagramDmHref = 'https://ig.me/m/nivas_1511';
+
 export const scheduleCallHref =
   siteConfig.calendarUrl ||
   `mailto:${siteConfig.email}?subject=${encodeURIComponent(
