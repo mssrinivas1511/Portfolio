@@ -11,7 +11,9 @@
 - [x] Featured Projects replaced with real Rekart work + dedicated clickable case-study pages
 - [x] About Me rewritten with real story; placeholder stats removed sitewide
 - [x] Added Professional Experience section (portfolio-guide structure, no repetition)
-- [x] High-fidelity design galleries on case-study pages + thumbnails on project cards
+- [x] High-fidelity designs used as the project card visuals; wireframe → high-fidelity progression inside each case study (no repetition)
+- [x] Header name replaced with an MS monogram mark + portfolio label; section spacing standardised
+- [x] Pre-filled outreach message on email, WhatsApp and Instagram DM links
 - [x] Role updated to Associate Product Manager everywhere
 - [ ] Email notifications need a Resend API key (or verified email domain) to actually deliver
 - [ ] Re-run security scan to confirm react-router fix
