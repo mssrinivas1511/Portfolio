@@ -1,5 +1,3 @@
-import whatsappAiImg from '@/assets/project-rekart-whatsapp-ai.jpg';
-import customerAppImg from '@/assets/project-rekart-customer-app.jpg';
 import wfWhatsappChat from '@/assets/wf-whatsapp-chat.jpg';
 import wfWhatsappSubscription from '@/assets/wf-whatsapp-subscription.jpg';
 import wfCustomerHome from '@/assets/wf-customer-home.jpg';
