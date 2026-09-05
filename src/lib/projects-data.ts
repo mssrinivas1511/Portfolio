@@ -4,6 +4,10 @@ import wfWhatsappChat from '@/assets/wf-whatsapp-chat.jpg';
 import wfWhatsappSubscription from '@/assets/wf-whatsapp-subscription.jpg';
 import wfCustomerHome from '@/assets/wf-customer-home.jpg';
 import wfCustomerPayments from '@/assets/wf-customer-payments.jpg';
+import hifiWhatsappCover from '@/assets/hifi-whatsapp-cover.jpg';
+import hifiCustomerCover from '@/assets/hifi-customer-app-cover.jpg';
+import wireframeWhatsappFlow from '@/assets/wireframe-whatsapp-flow.jpg';
+import wireframeCustomerApp from '@/assets/wireframe-customer-app.jpg';
 
 export interface ProjectSection {
   heading: string;
@@ -22,7 +26,10 @@ export interface Project {
   product: string;
   impact: string;
   image: string;
-  wireframes?: { src: string; title: string; caption: string }[];
+  /** High-fidelity screens from the actual product work. */
+  hiFi?: { src: string; title: string; caption: string }[];
+  /** Low-fidelity wireframe / flow sheet that preceded the high-fidelity work. */
+  wireframe?: { src: string; title: string; caption: string };
   technologies: string[];
   metrics?: { value: string; label: string }[];
   overview: string[];
@@ -42,8 +49,14 @@ export const projects: Project[] = [
     role: 'Associate Product Manager',
     product: 'Rekart — Milk, Tiffins & Groceries Subscriptions & Delivery Management',
     impact: '30% user engagement · 90%+ successful response rate · 10% reduction in churn risk',
-    image: whatsappAiImg,
-    wireframes: [
+    image: hifiWhatsappCover,
+    wireframe: {
+      src: wireframeWhatsappFlow,
+      title: 'Conversation flow wireframe',
+      caption:
+        'The intent map and decision tree I wireframed first — entry points, supported intents, fallbacks and hand-off to support — before any visual design.',
+    },
+    hiFi: [
       {
         src: wfWhatsappChat,
         title: 'Conversational ordering & quick replies',
@@ -209,8 +222,14 @@ Success  Analyze conversation
     role: 'Associate Product Manager',
     product: 'Rekart — Customer App, Web App, Client Dashboard & Driver App',
     impact: 'Reduced churn through every-release improvements and higher feature adoption',
-    image: customerAppImg,
-    wireframes: [
+    image: hifiCustomerCover,
+    wireframe: {
+      src: wireframeCustomerApp,
+      title: 'Customer journey wireframes',
+      caption:
+        'Low-fidelity screens for home, catalogue, subscription calendar and cart used to align design, engineering and QA on the redesigned journey.',
+    },
+    hiFi: [
       {
         src: wfCustomerHome,
         title: 'Address-driven homepage & catalogue',
