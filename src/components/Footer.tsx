@@ -1,13 +1,13 @@
 import { Heart, Linkedin, MessageCircle, Github, Instagram, Mail } from 'lucide-react';
-import { siteConfig } from '@/lib/site-config';
+import { siteConfig, emailHref, whatsappHref, instagramDmHref } from '@/lib/site-config';
 
 const Footer = () => {
   const socials = [
     { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin },
-    { icon: MessageCircle, label: 'WhatsApp', url: siteConfig.social.whatsapp },
+    { icon: MessageCircle, label: 'WhatsApp', url: whatsappHref },
     { icon: Github, label: 'GitHub', url: siteConfig.social.github },
-    { icon: Instagram, label: 'Instagram', url: siteConfig.social.instagram },
-    { icon: Mail, label: 'Email', url: `mailto:${siteConfig.email}` },
+    { icon: Instagram, label: 'Instagram', url: instagramDmHref },
+    { icon: Mail, label: 'Email', url: emailHref },
   ];
 
   return <footer className="bg-background/80 backdrop-blur-glass border-t border-card-border">

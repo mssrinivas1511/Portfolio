@@ -8,7 +8,7 @@ import { siteConfig } from '@/lib/site-config';
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-background/50 to-muted/20">
+    <section id="projects" className="py-24 bg-gradient-to-br from-background/50 to-muted/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -33,11 +33,11 @@ const ProjectsSection = () => {
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
-                    alt={`${project.title} — ${project.category} product work by ${siteConfig.name}`}
+                    alt={`${project.title} — high-fidelity product screens designed by ${siteConfig.name}`}
                     loading="lazy"
                     width={1200}
                     height={800}
-                    className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <Badge className="absolute top-4 left-4 bg-primary/90 text-primary-foreground">
                     {project.category}
@@ -70,26 +70,6 @@ const ProjectsSection = () => {
                       </Badge>
                     ))}
                   </div>
-
-                  {project.wireframes && (
-                    <div className="grid grid-cols-2 gap-3 mb-5">
-                      {project.wireframes.map((wf) => (
-                        <figure key={wf.src} className="rounded-lg overflow-hidden border border-card-border">
-                          <img
-                            src={wf.src}
-                            alt={`${project.title} high-fidelity design — ${wf.title}`}
-                            loading="lazy"
-                            width={1200}
-                            height={800}
-                            className="w-full h-24 object-cover"
-                          />
-                          <figcaption className="px-2 py-1.5 text-[11px] text-muted-foreground bg-background/40">
-                            {wf.title}
-                          </figcaption>
-                        </figure>
-                      ))}
-                    </div>
-                  )}
 
                   <span className="mt-auto inline-flex items-center text-sm font-medium text-primary group-hover:underline">
                     View full case study

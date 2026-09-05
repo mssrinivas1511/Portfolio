@@ -38,8 +38,13 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-background text-foreground">
       <header className="glass-nav sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <Link to="/" className="text-xl font-bold">
-            SrinivaS<span className="text-primary">.</span>
+          <Link to="/" aria-label="Back to home" className="flex items-center gap-2">
+            <span className="w-9 h-9 rounded-xl bg-gradient-primary flex items-center justify-center text-sm font-bold text-primary-foreground">
+              MS
+            </span>
+            <span className="hidden sm:block text-sm text-muted-foreground">
+              Product Portfolio
+            </span>
           </Link>
           <Button variant="ghost" size="sm" asChild>
             <Link to="/#projects">
@@ -77,7 +82,7 @@ const ProjectDetail = () => {
 
         <img
           src={project.image}
-          alt={`${project.title} — product work by ${siteConfig.name}`}
+          alt={`${project.title} — high-fidelity product screens by ${siteConfig.name}`}
           width={1200}
           height={800}
           className="w-full rounded-xl border border-card-border mb-10"
@@ -96,11 +101,38 @@ const ProjectDetail = () => {
           </div>
         )}
 
-        {project.wireframes && (
-          <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4">High-fidelity designs</h2>
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-2">From wireframes to high-fidelity</h2>
+          <p className="text-muted-foreground mb-6 max-w-3xl">
+            How the work moved from early flows and low-fidelity screens to the high-fidelity
+            designs that shipped.
+          </p>
+
+          {project.wireframe && (
+            <figure className="glass rounded-xl overflow-hidden mb-6">
+              <img
+                src={project.wireframe.src}
+                alt={`${project.title} wireframe — ${project.wireframe.title}`}
+                loading="lazy"
+                width={1600}
+                height={1000}
+                className="w-full object-cover"
+              />
+              <figcaption className="p-5">
+                <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                  Wireframe
+                </div>
+                <div className="font-medium text-foreground mb-1">{project.wireframe.title}</div>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {project.wireframe.caption}
+                </p>
+              </figcaption>
+            </figure>
+          )}
+
+          {project.hiFi && (
             <div className="grid md:grid-cols-2 gap-6">
-              {project.wireframes.map((wf) => (
+              {project.hiFi.map((wf) => (
                 <figure key={wf.src} className="glass rounded-xl overflow-hidden">
                   <img
                     src={wf.src}
@@ -110,15 +142,18 @@ const ProjectDetail = () => {
                     height={800}
                     className="w-full object-cover"
                   />
-                  <figcaption className="p-4">
+                  <figcaption className="p-5">
+                    <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
+                      High-fidelity
+                    </div>
                     <div className="font-medium text-foreground mb-1">{wf.title}</div>
                     <p className="text-sm text-muted-foreground leading-relaxed">{wf.caption}</p>
                   </figcaption>
                 </figure>
               ))}
             </div>
-          </section>
-        )}
+          )}
+        </section>
 
         {/* Overview */}
         <section className="mb-12">

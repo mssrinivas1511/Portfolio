@@ -41,11 +41,23 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-[68px]">
           {/* Logo */}
-          <div className="text-xl font-bold text-foreground">
-            SrinivaS<span className="text-primary">.</span>
-          </div>
+          <button
+            onClick={() => scrollToSection('#home')}
+            aria-label="Back to top"
+            className="flex items-center gap-2.5 group"
+          >
+            <span className="w-9 h-9 rounded-xl bg-gradient-primary flex items-center justify-center text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform duration-300 group-hover:scale-105">
+              MS
+            </span>
+            <span className="hidden sm:flex flex-col items-start leading-none">
+              <span className="text-sm font-semibold text-foreground">Product Portfolio</span>
+              <span className="text-[11px] text-muted-foreground mt-0.5">
+                Associate Product Manager
+              </span>
+            </span>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
