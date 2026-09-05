@@ -42,9 +42,10 @@ const ContactSection = () => {
             Let's <span className="bg-gradient-primary bg-clip-text text-transparent">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to discuss your next big idea? Email, WhatsApp or Instagram — your message
-            starts with "" already written for you.
+            Ready to discuss your next big idea? Email, WhatsApp or Instagram — the message
+            &ldquo;{outreachMessage}&rdquo; is already written for you.
           </p>
+
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
