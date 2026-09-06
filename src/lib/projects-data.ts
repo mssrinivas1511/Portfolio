@@ -6,6 +6,15 @@ import hifiWhatsappCover from '@/assets/hifi-whatsapp-cover.jpg';
 import hifiCustomerCover from '@/assets/hifi-customer-app-cover.jpg';
 import wireframeWhatsappFlow from '@/assets/wireframe-whatsapp-flow.jpg';
 import wireframeCustomerApp from '@/assets/wireframe-customer-app.jpg';
+import waViewOptions from '@/assets/shipped/wa-view-options.png';
+import waSelectProduct from '@/assets/shipped/wa-select-product.png';
+import waSubscriptionFlow from '@/assets/shipped/wa-subscription-flow.png';
+import waAddressLocation from '@/assets/shipped/wa-address-location.png';
+import appHomeAddress from '@/assets/shipped/app-home-address.png';
+import appUpcomingDeliveries from '@/assets/shipped/app-upcoming-deliveries.png';
+import appTrialOffers from '@/assets/shipped/app-trial-offers.png';
+import appRichPush from '@/assets/shipped/app-rich-push.png';
+
 
 export interface ProjectSection {
   heading: string;
