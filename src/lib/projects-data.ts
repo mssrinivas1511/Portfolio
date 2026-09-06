@@ -37,7 +37,10 @@ export interface Project {
   hiFi?: { src: string; title: string; caption: string }[];
   /** Low-fidelity wireframe / flow sheet that preceded the high-fidelity work. */
   wireframe?: { src: string; title: string; caption: string };
+  /** Screens from the live product, as shipped to clients. */
+  realScreens?: { src: string; title: string; caption: string }[];
   technologies: string[];
+
   metrics?: { value: string; label: string }[];
   overview: string[];
   sections: ProjectSection[];
