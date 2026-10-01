@@ -1,5 +1,4 @@
 import { Card } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { 
   Brain, 
@@ -18,40 +17,40 @@ const SkillsSection = () => {
       title: 'Product Strategy',
       icon: Target,
       skills: [
-        { name: 'Roadmapping', level: 95 },
-        { name: 'Market Research', level: 90 },
-        { name: 'Competitive Analysis', level: 88 },
-        { name: 'Product Vision', level: 93 },
+        'Roadmapping',
+        'Market Research',
+        'Competitive Analysis',
+        'Product Vision',
       ],
     },
     {
       title: 'Analytics & Data',
       icon: BarChart,
       skills: [
-        { name: 'Data Analytics', level: 92 },
-        { name: 'A/B Testing', level: 89 },
-        { name: 'SQL', level: 85 },
-        { name: 'Product Metrics', level: 94 },
+        'Data Analytics',
+        'A/B Testing',
+        'SQL',
+        'Product Metrics',
       ],
     },
     {
       title: 'Leadership',
       icon: Users,
       skills: [
-        { name: 'Team Management', level: 91 },
-        { name: 'Stakeholder Management', level: 93 },
-        { name: 'Cross-functional Collaboration', level: 96 },
-        { name: 'Agile/Scrum', level: 88 },
+        'Team Management',
+        'Stakeholder Management',
+        'Cross-functional Collaboration',
+        'Agile / Scrum',
       ],
     },
     {
       title: 'Technical',
       icon: Code,
       skills: [
-        { name: 'API Integration', level: 83 },
-        { name: 'Technical Documentation', level: 90 },
-        { name: 'System Architecture', level: 79 },
-        { name: 'Cloud Platforms', level: 82 },
+        'API Integration',
+        'Technical Documentation',
+        'System Architecture',
+        'Cloud Platforms',
       ],
     },
   ];
@@ -89,18 +88,11 @@ const SkillsSection = () => {
                 </div>
                 <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
               </div>
-              <div className="space-y-4">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium text-foreground">{skill.name}</span>
-                      <span className="text-sm text-primary">{skill.level}%</span>
-                    </div>
-                    <Progress 
-                      value={skill.level} 
-                      className="h-2 bg-muted"
-                    />
-                  </div>
+                  <Badge key={skill} variant="outline" className="px-3 py-2 border-primary/30">
+                    {skill}
+                  </Badge>
                 ))}
               </div>
             </Card>

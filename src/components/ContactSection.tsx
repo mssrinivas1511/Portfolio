@@ -28,10 +28,10 @@ const ContactSection = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin, color: 'hover:text-blue-500' },
-    { icon: MessageCircle, label: 'WhatsApp', url: whatsappHref, color: 'hover:text-green-400' },
-    { icon: Github, label: 'GitHub', url: siteConfig.social.github, color: 'hover:text-purple-400' },
-    { icon: Instagram, label: 'Instagram', url: instagramDmHref, color: 'hover:text-pink-400' },
+    { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin },
+    { icon: MessageCircle, label: 'WhatsApp', url: whatsappHref },
+    { icon: Github, label: 'GitHub', url: siteConfig.social.github },
+    { icon: Instagram, label: 'Instagram', url: instagramDmHref },
   ];
 
   return (
@@ -88,7 +88,7 @@ const ContactSection = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center p-4 glass rounded-lg hover:scale-105 transition-all duration-300 ${social.color}`}
+                   className="flex items-center p-4 glass rounded-lg hover:text-primary hover:border-primary/30 transition-colors duration-300"
                 >
                   <social.icon className="w-6 h-6 mr-3 shrink-0" />
                   <span className="font-medium text-sm">{social.label}</span>

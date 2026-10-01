@@ -3,11 +3,9 @@ import wireframeCustomerApp from '@/assets/wireframe-customer-app.jpg';
 import waViewOptions from '@/assets/shipped/wa-view-options.png';
 import waSelectProduct from '@/assets/shipped/wa-select-product.png';
 import waSubscriptionFlow from '@/assets/shipped/wa-subscription-flow.png';
-import waAddressLocation from '@/assets/shipped/wa-address-location.png';
 import appHomeAddress from '@/assets/shipped/app-home-address.png';
 import appUpcomingDeliveries from '@/assets/shipped/app-upcoming-deliveries.png';
 import appTrialOffers from '@/assets/shipped/app-trial-offers.png';
-import appRichPush from '@/assets/shipped/app-rich-push.png';
 
 
 export interface ProjectSection {
@@ -70,12 +68,6 @@ export const projects: Project[] = [
         title: 'Subscription creation in chat',
         caption:
           'Customers choose frequency and delivery preferences through a structured conversation designed for quick completion.',
-      },
-      {
-        src: waAddressLocation,
-        title: 'Address and location capture',
-        caption:
-          'The assistant collects an address and pinned location so registration and delivery setup happen inside the same conversation.',
       },
     ],
     technologies: ['NLP / AI', 'WhatsApp Business API', 'Razorpay', 'Easebuzz', 'Mixpanel', 'Jira', 'Confluence'],
@@ -249,12 +241,6 @@ Success  Analyze conversation
         title: 'Eligible trial offers',
         caption:
           'A targeted trial-offer widget appears only for eligible customers and clears after redemption.',
-      },
-      {
-        src: appRichPush,
-        title: 'Rich product communication',
-        caption:
-          'Image-led notifications help clients communicate offers and updates consistently across mobile and web.',
       },
     ],
     technologies: ['Mixpanel', 'Jira', 'Confluence', 'Figma', 'Razorpay', 'Easebuzz', 'React Native'],
