@@ -4,12 +4,11 @@ import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
+import ReleasesSection from '@/components/ReleasesSection';
 import SkillsSection from '@/components/SkillsSection';
 
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { ArrowUp } from 'lucide-react';
 
 const Index = () => {
   useEffect(() => {
@@ -30,11 +29,6 @@ const Index = () => {
     };
   }, []);
 
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
@@ -44,21 +38,12 @@ const Index = () => {
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
+        <ReleasesSection />
         <SkillsSection />
         <ContactSection />
       </main>
       
       <Footer />
-      
-      {/* Back to top button */}
-      <Button
-        variant="hero"
-        size="icon"
-        className="fixed bottom-8 right-8 z-40 rounded-full shadow-lg animate-float"
-        onClick={scrollToTop}
-      >
-        <ArrowUp className="w-5 h-5" />
-      </Button>
     </div>
   );
 };

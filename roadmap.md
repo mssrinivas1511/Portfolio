@@ -15,6 +15,9 @@
 - [x] Header name replaced with an MS monogram mark + portfolio label; section spacing standardised
 - [x] Pre-filled outreach message on email, WhatsApp and Instagram DM links
 - [x] Role updated to Associate Product Manager everywhere
+- [x] Real newsletter screenshots integrated into case studies and selected launches
+- [x] Continuous floating icons removed; portfolio spacing and interaction patterns unified
+- [x] Portfolio narrative rebalanced around personal ownership and outcomes
 - [ ] Email notifications need a Resend API key (or verified email domain) to actually deliver
 - [ ] Re-run security scan to confirm react-router fix
 - [ ] Publish so changes are live

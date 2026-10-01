@@ -28,21 +28,21 @@ const ContactSection = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin, color: 'hover:text-blue-500' },
-    { icon: MessageCircle, label: 'WhatsApp', url: whatsappHref, color: 'hover:text-green-400' },
-    { icon: Github, label: 'GitHub', url: siteConfig.social.github, color: 'hover:text-purple-400' },
-    { icon: Instagram, label: 'Instagram', url: instagramDmHref, color: 'hover:text-pink-400' },
+    { icon: Linkedin, label: 'LinkedIn', url: siteConfig.social.linkedin },
+    { icon: MessageCircle, label: 'WhatsApp', url: whatsappHref },
+    { icon: Github, label: 'GitHub', url: siteConfig.social.github },
+    { icon: Instagram, label: 'Instagram', url: instagramDmHref },
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-background to-muted/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section id="contact" className="portfolio-section bg-gradient-to-br from-background to-muted/20">
+      <div className="portfolio-container">
+        <div className="section-heading">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Let's <span className="bg-gradient-primary bg-clip-text text-transparent">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Ready to discuss your next big idea? Email, WhatsApp or Instagram — the message
+             Interested in my work or exploring a product opportunity? Email, WhatsApp or Instagram — the message
             &ldquo;{outreachMessage}&rdquo; is already written for you.
           </p>
 
@@ -88,7 +88,7 @@ const ContactSection = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`flex items-center p-4 glass rounded-lg hover:scale-105 transition-all duration-300 ${social.color}`}
+                   className="flex items-center p-4 glass rounded-lg hover:text-primary hover:border-primary/30 transition-colors duration-300"
                 >
                   <social.icon className="w-6 h-6 mr-3 shrink-0" />
                   <span className="font-medium text-sm">{social.label}</span>

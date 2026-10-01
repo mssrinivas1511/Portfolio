@@ -8,16 +8,15 @@ import { siteConfig } from '@/lib/site-config';
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-24 bg-gradient-to-br from-background/50 to-muted/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section id="projects" className="portfolio-section bg-gradient-to-br from-background/50 to-muted/20">
+      <div className="portfolio-container">
+        <div className="section-heading">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="bg-gradient-primary bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Product work on Rekart — a SaaS platform for milk, tiffins and groceries subscriptions
-            and delivery management, serving national and international clients. Click a project to
-            see the full case study and my role.
+            Two case studies showing how I moved from discovery and product decisions to
+            cross-functional delivery and measurable outcomes.
           </p>
         </div>
 
@@ -25,19 +24,19 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <Card
               key={project.slug}
-              className="glass overflow-hidden group hover:scale-[1.02] transition-all duration-500 hover:shadow-2xl hover:shadow-primary/20 flex flex-col"
+              className="glass overflow-hidden group transition-colors duration-300 hover:border-primary/30 flex flex-col"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Link to={`/projects/${project.slug}`} className="flex flex-col flex-1">
                 {/* Project Image */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden bg-muted/20">
                   <img
                     src={project.image}
-                    alt={`${project.title} — high-fidelity product screens designed by ${siteConfig.name}`}
+                    alt={`${project.title} — shipped product screen from work led by ${siteConfig.name}`}
                     loading="lazy"
                     width={1200}
                     height={800}
-                    className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-72 object-contain p-3 transition-transform duration-300 group-hover:scale-[1.01]"
                   />
                   <Badge className="absolute top-4 left-4 bg-primary/90 text-primary-foreground">
                     {project.category}

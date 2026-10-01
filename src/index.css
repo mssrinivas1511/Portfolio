@@ -102,6 +102,18 @@ All colors MUST be HSL for proper theming.
   .glass-nav {
     @apply backdrop-blur-[20px] bg-card-glass border-b border-card-border;
   }
+
+  .portfolio-section {
+    @apply py-20 md:py-24 scroll-mt-16;
+  }
+
+  .portfolio-container {
+    @apply max-w-6xl mx-auto px-5 sm:px-6 lg:px-8;
+  }
+
+  .section-heading {
+    @apply text-center mb-12 md:mb-14;
+  }
   
   /* Glow effects */
   .glow-primary {

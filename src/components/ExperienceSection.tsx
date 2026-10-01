@@ -21,9 +21,9 @@ const roles = [
 ];
 
 const ExperienceSection = () => (
-  <section id="experience" className="py-24 bg-gradient-to-br from-muted/10 to-background">
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="text-center mb-16">
+  <section id="experience" className="portfolio-section bg-gradient-to-br from-muted/10 to-background">
+    <div className="portfolio-container max-w-5xl">
+      <div className="section-heading">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           Professional <span className="bg-gradient-primary bg-clip-text text-transparent">Experience</span>
         </h2>

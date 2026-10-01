@@ -1,19 +1,11 @@
-import wfWhatsappChat from '@/assets/wf-whatsapp-chat.jpg';
-import wfWhatsappSubscription from '@/assets/wf-whatsapp-subscription.jpg';
-import wfCustomerHome from '@/assets/wf-customer-home.jpg';
-import wfCustomerPayments from '@/assets/wf-customer-payments.jpg';
-import hifiWhatsappCover from '@/assets/hifi-whatsapp-cover.jpg';
-import hifiCustomerCover from '@/assets/hifi-customer-app-cover.jpg';
 import wireframeWhatsappFlow from '@/assets/wireframe-whatsapp-flow.jpg';
 import wireframeCustomerApp from '@/assets/wireframe-customer-app.jpg';
 import waViewOptions from '@/assets/shipped/wa-view-options.png';
 import waSelectProduct from '@/assets/shipped/wa-select-product.png';
 import waSubscriptionFlow from '@/assets/shipped/wa-subscription-flow.png';
-import waAddressLocation from '@/assets/shipped/wa-address-location.png';
 import appHomeAddress from '@/assets/shipped/app-home-address.png';
 import appUpcomingDeliveries from '@/assets/shipped/app-upcoming-deliveries.png';
 import appTrialOffers from '@/assets/shipped/app-trial-offers.png';
-import appRichPush from '@/assets/shipped/app-rich-push.png';
 
 
 export interface ProjectSection {
@@ -37,8 +29,6 @@ export interface Project {
   hiFi?: { src: string; title: string; caption: string }[];
   /** Low-fidelity wireframe / flow sheet that preceded the high-fidelity work. */
   wireframe?: { src: string; title: string; caption: string };
-  /** Screens from the live product, as shipped to clients. */
-  realScreens?: { src: string; title: string; caption: string }[];
   technologies: string[];
 
   metrics?: { value: string; label: string }[];
@@ -59,7 +49,7 @@ export const projects: Project[] = [
     role: 'Associate Product Manager',
     product: 'Rekart — Milk, Tiffins & Groceries Subscriptions & Delivery Management',
     impact: '30% user engagement · 90%+ successful response rate · 10% reduction in churn risk',
-    image: hifiWhatsappCover,
+    image: waViewOptions,
     wireframe: {
       src: wireframeWhatsappFlow,
       title: 'Conversation flow wireframe',
@@ -68,16 +58,16 @@ export const projects: Project[] = [
     },
     hiFi: [
       {
-        src: wfWhatsappChat,
-        title: 'Conversational ordering & quick replies',
+        src: waSelectProduct,
+        title: 'Guided product selection',
         caption:
-          'High-fidelity flow for intent detection, quick-reply menus and the order/payment confirmation card inside the WhatsApp thread.',
+          'The shipped in-chat flow guides customers from category selection to the exact product without leaving WhatsApp.',
       },
       {
-        src: wfWhatsappSubscription,
-        title: 'Subscription control & wallet',
+        src: waSubscriptionFlow,
+        title: 'Subscription creation in chat',
         caption:
-          'Pause / resume / modify controls, delivery-date selection and wallet plus transaction history surfaced conversationally.',
+          'Customers choose frequency and delivery preferences through a structured conversation designed for quick completion.',
       },
     ],
     technologies: ['NLP / AI', 'WhatsApp Business API', 'Razorpay', 'Easebuzz', 'Mixpanel', 'Jira', 'Confluence'],
@@ -232,7 +222,7 @@ Success  Analyze conversation
     role: 'Associate Product Manager',
     product: 'Rekart — Customer App, Web App, Client Dashboard & Driver App',
     impact: 'Reduced churn through every-release improvements and higher feature adoption',
-    image: hifiCustomerCover,
+    image: appHomeAddress,
     wireframe: {
       src: wireframeCustomerApp,
       title: 'Customer journey wireframes',
@@ -241,16 +231,16 @@ Success  Analyze conversation
     },
     hiFi: [
       {
-        src: wfCustomerHome,
-        title: 'Address-driven homepage & catalogue',
+        src: appUpcomingDeliveries,
+        title: 'Upcoming deliveries at a glance',
         caption:
-          'Redesigned homepage: delivery address selector replacing internal Sales Territory, category grid and personalised catalogue.',
+          'The shipped navigation gives customers one-tap access to deliveries grouped by date.',
       },
       {
-        src: wfCustomerPayments,
-        title: 'Payments & order history',
+        src: appTrialOffers,
+        title: 'Eligible trial offers',
         caption:
-          'Payment-method clarity across Razorpay and Easebuzz plus a redesigned transaction and delivery history timeline with status states.',
+          'A targeted trial-offer widget appears only for eligible customers and clears after redemption.',
       },
     ],
     technologies: ['Mixpanel', 'Jira', 'Confluence', 'Figma', 'Razorpay', 'Easebuzz', 'React Native'],

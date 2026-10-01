@@ -12,13 +12,13 @@ const HeroSection = () => {
   };
 
   const stats = [
-    { value: '2', label: 'Flagship products shipped' },
-    { value: '4', label: 'Apps in the Rekart suite' },
-    { value: 'National + International', label: 'Client base served' },
+    { value: '30%', label: 'User engagement achieved' },
+    { value: '90%+', label: 'Successful AI response rate' },
+    { value: '10%', label: 'Reduction in churn risk' },
   ];
 
 
-  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
+  return <section id="home" className="relative min-h-[calc(100svh-3rem)] flex items-center justify-center overflow-hidden pt-28 pb-20" style={{
     backgroundImage: `url(${heroBackground})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center'
@@ -26,20 +26,6 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80" />
       
-      {/* Animated particles */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-float" />
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-accent rounded-full animate-float" style={{
-        animationDelay: '2s'
-      }} />
-        <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-secondary rounded-full animate-float" style={{
-        animationDelay: '4s'
-      }} />
-        <div className="absolute top-2/3 right-1/4 w-1 h-1 bg-primary rounded-full animate-float" style={{
-        animationDelay: '1s'
-      }} />
-      </div>
-
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="animate-slide-in-up">
@@ -47,11 +33,11 @@ const HeroSection = () => {
             Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">M S SrinivaS</span>
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Associate Product Manager · Rekart (SaaS · Subscriptions & Delivery Management)
+            Associate Product Manager turning customer insight into products people use
           </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I turn customer insight, market research and data into products people actually use —
-            currently building Rekart's subscription and delivery ecosystem for milk, tiffins and groceries.
+            I lead discovery and cross-functional delivery for customer journeys, subscriptions,
+            payments and conversational AI at Rekart.
           </p>
         </div>
 
@@ -76,7 +62,7 @@ const HeroSection = () => {
         {/* Quick stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
           {stats.map(({ value, label }) => (
-            <div key={label} className="glass rounded-xl px-4 py-5">
+            <div key={label} className="glass rounded-lg px-4 py-5">
               <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 {value}
               </div>
@@ -86,12 +72,6 @@ const HeroSection = () => {
         </div>
 
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
-          </div>
-        </div>
       </div>
     </section>;
 };
