@@ -25,14 +25,14 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-gradient-to-br from-background to-background/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+    <section id="about" className="portfolio-section bg-gradient-to-br from-background to-background/80">
+      <div className="portfolio-container">
+        <div className="section-heading">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            The story beyond the resume — how I work and what drives me
+            How I approach discovery, decisions and delivery as a product manager
           </p>
         </div>
 
@@ -74,7 +74,7 @@ const AboutSection = () => {
           {/* Values */}
           <div className="space-y-6">
             {values.map(({ icon: Icon, title, description }) => (
-              <Card key={title} className="glass p-6 hover:scale-[1.02] transition-transform duration-300">
+              <Card key={title} className="glass p-6 transition-colors duration-300 hover:border-primary/30">
                 <div className="flex items-center mb-3">
                   <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mr-4 shrink-0">
                     <Icon className="w-6 h-6 text-primary-foreground" />

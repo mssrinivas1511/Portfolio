@@ -102,10 +102,9 @@ const ProjectDetail = () => {
         )}
 
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-2">From wireframes to high-fidelity</h2>
+          <h2 className="text-2xl font-bold mb-2">From wireframes to shipped product</h2>
           <p className="text-muted-foreground mb-6 max-w-3xl">
-            How the work moved from early flows and low-fidelity screens to the high-fidelity
-            designs that shipped.
+            How the work moved from early flows to the real screens released to customers and clients.
           </p>
 
           {project.wireframe && (
@@ -136,7 +135,7 @@ const ProjectDetail = () => {
                 <figure key={wf.src} className="glass rounded-xl overflow-hidden">
                   <img
                     src={wf.src}
-                    alt={`${project.title} high-fidelity design — ${wf.title}`}
+                       alt={`${project.title} shipped product screen — ${wf.title}`}
                     loading="lazy"
                     width={1200}
                     height={800}
@@ -144,7 +143,7 @@ const ProjectDetail = () => {
                   />
                   <figcaption className="p-5">
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
-                      High-fidelity
+                       Shipped product
                     </div>
                     <div className="font-medium text-foreground mb-1">{wf.title}</div>
                     <p className="text-sm text-muted-foreground leading-relaxed">{wf.caption}</p>
