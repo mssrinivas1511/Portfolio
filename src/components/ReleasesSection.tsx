@@ -20,29 +20,29 @@ const ReleasesSection = () => (
       <div className="grid md:grid-cols-2 gap-8">
         {releases.map((release) => (
           <Card key={release.slug} className="glass overflow-hidden flex flex-col transition-colors duration-300 hover:border-primary/30">
-            <figure className="h-40 sm:h-44 bg-muted/20 border-b border-card-border p-5">
-              <img
-                src={release.screens[release.screens.length - 1]?.src}
-                alt={`${release.title} — ${release.screens[release.screens.length - 1]?.caption}`}
-                loading="lazy"
-                className="w-full h-full object-contain"
-              />
-            </figure>
-
             <div className="p-6 flex flex-col flex-1">
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-3">
-                <div className="text-xs uppercase tracking-wide text-primary font-medium">
-                  {release.version}
+              <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="min-w-0">
+                  <div className="text-xs uppercase tracking-wide text-primary font-medium mb-2">
+                    {release.version}
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">{release.title}</h3>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {release.surfaces.slice(0, 2).map((surface) => (
-                    <Badge key={surface} variant="outline" className="border-primary/30">
-                      {surface}
-                    </Badge>
-                  ))}
-                </div>
+                <img
+                  src={release.screens[release.screens.length - 1]?.src}
+                  alt={`${release.title} — ${release.screens[release.screens.length - 1]?.caption}`}
+                  loading="lazy"
+                  className="w-24 h-20 sm:w-28 sm:h-24 object-contain rounded-lg border border-card-border bg-muted/20 p-2 shrink-0"
+                />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">{release.title}</h3>
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {release.surfaces.slice(0, 2).map((surface) => (
+                  <Badge key={surface} variant="outline" className="border-primary/30">
+                    {surface}
+                  </Badge>
+                ))}
+              </div>
               <p className="text-muted-foreground leading-relaxed mb-5">{release.summary}</p>
 
               <ul className="space-y-3 mb-6">

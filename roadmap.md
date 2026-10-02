@@ -26,4 +26,4 @@
 - [x] Update location to Pune, Maharashtra
 - [x] Add 0→1 discovery-to-launch positioning to the home page and featured projects
 - [x] Create a dedicated detail page for every selected launch
-- [ ] Add a personal photo to About when a suitable uploaded portrait is available
+- [ ] Add a personal photo to About — blocked until Srinivas uploads a portrait photo
