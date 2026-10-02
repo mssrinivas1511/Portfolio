@@ -4,7 +4,7 @@
 export const profile = {
   name: "SrinivaS",
   title: "Associate Product Manager",
-  location: "Visakhapatnam, Andhra Pradesh, India",
+  location: "Pune, Maharashtra, India",
   summary:
     "Associate Product Manager focused on transforming ideas into impactful products. Combines data-driven decision making with user-centric design, ensuring every product delivers real value to end users while achieving business objectives.",
   coreExpertise: [
@@ -128,7 +128,7 @@ export const certifications = [
 export const contact = {
   email: "ssai55030@gmail.com",
   phone: "+91 7287070114",
-  location: "Visakhapatnam, Andhra Pradesh",
+  location: "Pune, Maharashtra",
   social: {
     linkedin: "https://www.linkedin.com/in/mssrinivas1511",
     whatsapp: "https://wa.me/917287070114",

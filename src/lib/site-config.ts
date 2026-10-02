@@ -4,7 +4,7 @@ export const siteConfig = {
   role: 'Associate Product Manager',
   email: 'ssai55030@gmail.com',
   phone: '+91 7287070114',
-  location: 'Visakhapatnam, Andhra Pradesh, India',
+  location: 'Pune, Maharashtra, India',
   resumeUrl: '/MSSRINIVAS_CV.pdf',
   resumeFileName: 'MSSRINIVAS_CV.pdf',
   // Update this to a Calendly / Google Calendar booking link when available.

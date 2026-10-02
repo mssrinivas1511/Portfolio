@@ -10,6 +10,7 @@ import waViewOptions from '@/assets/shipped/wa-view-options.png';
 import waAddressLocation from '@/assets/shipped/wa-address-location.png';
 
 export interface Release {
+  slug: string;
   version: string;
   title: string;
   summary: string;
@@ -26,6 +27,7 @@ export interface Release {
  */
 export const releases: Release[] = [
   {
+    slug: 'release-3-51-smarter-store-tools',
     version: 'Release 3.51.0',
     title: 'Smarter tools for the store',
     summary:
@@ -44,6 +46,7 @@ export const releases: Release[] = [
     ],
   },
   {
+    slug: 'release-3-49-refreshed-rekart-experience',
     version: 'Release 3.49.0',
     title: 'The refreshed Rekart experience',
     summary:
@@ -65,6 +68,7 @@ export const releases: Release[] = [
     caseStudySlug: 'rekart-customer-app',
   },
   {
+    slug: 'release-3-47-ticketing-system',
     version: 'Release 3.47.0',
     title: 'Ticketing system for customer support',
     summary:
@@ -83,6 +87,7 @@ export const releases: Release[] = [
     ],
   },
   {
+    slug: 'rekart-assistant-whatsapp-launch',
     version: 'Product launch',
     title: 'Rekart Assistant on WhatsApp',
     summary:

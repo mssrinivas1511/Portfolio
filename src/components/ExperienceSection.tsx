@@ -5,8 +5,9 @@ import { Briefcase } from 'lucide-react';
 const roles = [
   {
     title: 'Associate Product Manager',
-    company: 'Rekart — Milk, Tiffins & Groceries Subscriptions & Delivery Management',
-    period: 'Current',
+    company: 'Abmiro Solutions Pvt Ltd',
+    product: 'Product: Rekart — Milk, Tiffins & Groceries Subscriptions & Delivery Management',
+    period: 'Dec 2025 — Present',
     summary:
       'Own discovery and delivery across the Rekart suite: customer app, web app, client dashboard and driver app, serving national and international clients with Razorpay and Easebuzz payments.',
     highlights: [
@@ -43,6 +44,7 @@ const ExperienceSection = () => (
                 <div>
                   <h3 className="text-2xl font-bold text-foreground">{role.title}</h3>
                   <p className="text-primary">{role.company}</p>
+                  <p className="text-sm text-muted-foreground mt-1">{role.product}</p>
                 </div>
               </div>
               <Badge variant="outline" className="border-primary/30 self-start">

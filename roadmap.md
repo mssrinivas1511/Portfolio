@@ -21,4 +21,9 @@
 - [ ] Email notifications need a Resend API key (or verified email domain) to actually deliver
 - [ ] Re-run security scan to confirm react-router fix
 - [ ] Publish so changes are live
-
+- [x] Reduce Selected Launch image sizing
+- [x] Add Abmiro Solutions Pvt Ltd, Dec 2025–Present, with Rekart as the product
+- [x] Update location to Pune, Maharashtra
+- [x] Add 0→1 discovery-to-launch positioning to the home page and featured projects
+- [x] Create a dedicated detail page for every selected launch
+- [ ] Add a personal photo to About — blocked until Srinivas uploads a portrait photo
