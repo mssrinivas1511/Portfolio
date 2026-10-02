@@ -1,5 +1,7 @@
 import { Card } from '@/components/ui/card';
-import { User, Search, LineChart, Users } from 'lucide-react';
+import { Search, LineChart, Users } from 'lucide-react';
+import { siteConfig } from '@/lib/site-config';
+import portraitAsset from '@/assets/srinivas-portrait.jpg.asset.json';
 import { siteConfig } from '@/lib/site-config';
 
 const AboutSection = () => {
