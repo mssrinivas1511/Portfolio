@@ -15,8 +15,8 @@ const ProjectsSection = () => {
             Featured <span className="bg-gradient-primary bg-clip-text text-transparent">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Two case studies showing how I moved from discovery and product decisions to
-            cross-functional delivery and measurable outcomes.
+            Two 0 → 1 case studies showing how I moved from discovery and product decisions to
+            launch, cross-functional delivery and measurable outcomes.
           </p>
         </div>
 
@@ -47,6 +47,9 @@ const ProjectsSection = () => {
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-foreground mb-1">{project.title}</h3>
                   <p className="text-sm text-primary mb-3">{project.subtitle}</p>
+                  <Badge variant="outline" className="w-fit text-xs border-primary/30 mb-3">
+                    Discovery → Launch · 0 → 1
+                  </Badge>
                   <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                     {project.tagline}
                   </p>

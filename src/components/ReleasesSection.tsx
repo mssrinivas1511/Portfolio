@@ -19,8 +19,8 @@ const ReleasesSection = () => (
 
       <div className="grid md:grid-cols-2 gap-8">
         {releases.map((release) => (
-          <Card key={release.version} className="glass overflow-hidden flex flex-col transition-colors duration-300 hover:border-primary/30">
-            <figure className="h-64 bg-muted/20 border-b border-card-border p-4">
+          <Card key={release.slug} className="glass overflow-hidden flex flex-col transition-colors duration-300 hover:border-primary/30">
+            <figure className="h-40 sm:h-44 bg-muted/20 border-b border-card-border p-5">
               <img
                 src={release.screens[release.screens.length - 1]?.src}
                 alt={`${release.title} — ${release.screens[release.screens.length - 1]?.caption}`}
@@ -54,15 +54,13 @@ const ReleasesSection = () => (
                 ))}
               </ul>
 
-              {release.caseStudySlug && (
-                <Link
-                  to={`/projects/${release.caseStudySlug}`}
-                  className="mt-auto inline-flex items-center text-sm font-medium text-primary hover:underline"
-                >
-                  Read the related case study
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              )}
+              <Link
+                to={`/launches/${release.slug}`}
+                className="mt-auto inline-flex items-center text-sm font-medium text-primary hover:underline"
+              >
+                View launch case study
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </div>
           </Card>
         ))}

@@ -33,11 +33,11 @@ const HeroSection = () => {
             Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">M S SrinivaS</span>
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Associate Product Manager turning customer insight into products people use
+            Associate Product Manager taking products from 0 → 1
           </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I lead discovery and cross-functional delivery for customer journeys, subscriptions,
-            payments and conversational AI at Rekart.
+            I lead products from discovery to launch — turning customer insight into customer
+            journeys, subscriptions, payments and conversational AI experiences at Rekart.
           </p>
         </div>
 
