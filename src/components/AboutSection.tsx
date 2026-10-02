@@ -42,9 +42,11 @@ const AboutSection = () => {
           {/* Story */}
           <div className="glass p-8 rounded-xl space-y-5">
             <div className="flex items-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mr-4 shrink-0">
-                <User className="w-8 h-8 text-primary-foreground" />
-              </div>
+              <img
+                src={portraitAsset.url}
+                alt={`${siteConfig.name} portrait`}
+                className="w-20 h-20 rounded-full object-cover ring-2 ring-primary/40 mr-4 shrink-0"
+              />
               <div>
                 <h3 className="text-2xl font-bold text-foreground">{siteConfig.name}</h3>
                 <p className="text-primary font-medium">{siteConfig.role} · {siteConfig.location}</p>
