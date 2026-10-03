@@ -2,7 +2,6 @@ import { Card } from '@/components/ui/card';
 import { Search, LineChart, Users } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
 import portraitAsset from '@/assets/srinivas-portrait.jpg.asset.json';
-import { siteConfig } from '@/lib/site-config';
 
 const AboutSection = () => {
   const values = [
@@ -41,11 +40,13 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           {/* Story */}
           <div className="glass p-8 rounded-xl space-y-5">
-            <div className="flex items-center">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-5">
               <img
                 src={portraitAsset.url}
                 alt={`${siteConfig.name} portrait`}
-                className="w-20 h-20 rounded-full object-cover ring-2 ring-primary/40 mr-4 shrink-0"
+                width={776}
+                height={788}
+                className="w-28 h-28 rounded-lg object-cover object-top ring-1 ring-primary/40 shrink-0"
               />
               <div>
                 <h3 className="text-2xl font-bold text-foreground">{siteConfig.name}</h3>

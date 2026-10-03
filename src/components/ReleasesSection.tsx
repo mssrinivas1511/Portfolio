@@ -20,20 +20,22 @@ const ReleasesSection = () => (
       <div className="grid md:grid-cols-2 gap-8">
         {releases.map((release) => (
           <Card key={release.slug} className="glass overflow-hidden flex flex-col transition-colors duration-300 hover:border-primary/30">
+            <div className="h-56 bg-muted/20 border-b border-card-border flex items-center justify-center p-5">
+              <img
+                src={release.screens[0]?.src}
+                alt={`${release.title} — ${release.screens[0]?.caption}`}
+                loading="lazy"
+                className="w-auto h-full max-w-full object-contain"
+              />
+            </div>
             <div className="p-6 flex flex-col flex-1">
-              <div className="flex items-start justify-between gap-4 mb-4">
+              <div className="mb-4">
                 <div className="min-w-0">
                   <div className="text-xs uppercase tracking-wide text-primary font-medium mb-2">
                     {release.version}
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">{release.title}</h3>
                 </div>
-                <img
-                  src={release.screens[release.screens.length - 1]?.src}
-                  alt={`${release.title} — ${release.screens[release.screens.length - 1]?.caption}`}
-                  loading="lazy"
-                  className="w-24 h-20 sm:w-28 sm:h-24 object-contain rounded-lg border border-card-border bg-muted/20 p-2 shrink-0"
-                />
               </div>
 
               <div className="flex flex-wrap gap-2 mb-4">

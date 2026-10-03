@@ -80,13 +80,15 @@ const ProjectDetail = () => {
           </Card>
         </div>
 
-        <img
-          src={project.image}
-          alt={`${project.title} — high-fidelity product screens by ${siteConfig.name}`}
-          width={1200}
-          height={800}
-          className="w-full rounded-xl border border-card-border mb-10"
-        />
+        <div className="h-72 md:h-96 rounded-lg border border-card-border bg-muted/20 p-6 mb-10 flex items-center justify-center">
+          <img
+            src={project.image}
+            alt={`${project.title} — high-fidelity product screen by ${siteConfig.name}`}
+            width={1200}
+            height={800}
+            className="w-auto h-full max-w-full object-contain"
+          />
+        </div>
 
         {project.metrics && (
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
@@ -108,15 +110,17 @@ const ProjectDetail = () => {
           </p>
 
           {project.wireframe && (
-            <figure className="glass rounded-xl overflow-hidden mb-6">
-              <img
-                src={project.wireframe.src}
-                alt={`${project.title} wireframe — ${project.wireframe.title}`}
-                loading="lazy"
-                width={1600}
-                height={1000}
-                className="w-full object-cover"
-              />
+            <figure className="glass rounded-lg overflow-hidden mb-6">
+              <div className="h-72 md:h-96 bg-muted/20 p-5 flex items-center justify-center">
+                <img
+                  src={project.wireframe.src}
+                  alt={`${project.title} wireframe — ${project.wireframe.title}`}
+                  loading="lazy"
+                  width={1600}
+                  height={1000}
+                  className="w-auto h-full max-w-full object-contain"
+                />
+              </div>
               <figcaption className="p-5">
                 <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
                   Wireframe
@@ -132,15 +136,17 @@ const ProjectDetail = () => {
           {project.hiFi && (
             <div className="grid md:grid-cols-2 gap-6">
               {project.hiFi.map((wf) => (
-                <figure key={wf.src} className="glass rounded-xl overflow-hidden">
-                  <img
-                    src={wf.src}
-                       alt={`${project.title} shipped product screen — ${wf.title}`}
-                    loading="lazy"
-                    width={1200}
-                    height={800}
-                    className="w-full object-cover"
-                  />
+                <figure key={wf.src} className="glass rounded-lg overflow-hidden">
+                  <div className="h-80 md:h-[26rem] bg-muted/20 p-5 flex items-center justify-center">
+                    <img
+                      src={wf.src}
+                      alt={`${project.title} shipped product screen — ${wf.title}`}
+                      loading="lazy"
+                      width={1200}
+                      height={800}
+                      className="w-auto h-full max-w-full object-contain"
+                    />
+                  </div>
                   <figcaption className="p-5">
                     <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">
                        Shipped product

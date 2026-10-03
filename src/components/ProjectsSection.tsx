@@ -21,22 +21,21 @@ const ProjectsSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <Card
               key={project.slug}
               className="glass overflow-hidden group transition-colors duration-300 hover:border-primary/30 flex flex-col"
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Link to={`/projects/${project.slug}`} className="flex flex-col flex-1">
                 {/* Project Image */}
-                <div className="relative overflow-hidden bg-muted/20">
+                <div className="relative h-64 overflow-hidden bg-muted/20 flex items-center justify-center p-5">
                   <img
                     src={project.image}
                     alt={`${project.title} — shipped product screen from work led by ${siteConfig.name}`}
                     loading="lazy"
                     width={1200}
                     height={800}
-                    className="w-full h-72 object-contain p-3 transition-transform duration-300 group-hover:scale-[1.01]"
+                    className="w-auto h-full max-w-full object-contain"
                   />
                   <Badge className="absolute top-4 left-4 bg-primary/90 text-primary-foreground">
                     {project.category}
