@@ -27,3 +27,7 @@
 - [x] Add 0→1 discovery-to-launch positioning to the home page and featured projects
 - [x] Create a dedicated detail page for every selected launch
 - [ ] Add a personal photo to About — blocked until Srinivas uploads a portrait photo
+- [ ] Fix the About section portrait build issue and confirm the uploaded photo renders
+- [ ] Standardize screenshot sizing and clarity across Featured Projects, Selected Launches, and detail pages
+- [ ] Rebuild all four launch pages with a consistent product-management case-study structure
+- [ ] Clearly distinguish verified outcomes from proposed success metrics and KPIs
