@@ -10,7 +10,7 @@ import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.1";
 
 // src/lib/mcp/portfolio-data.ts
 var profile = {
-  name: "SrinivaS",
+  name: "Manda Sai Srinivas",
   title: "Associate Product Manager",
   location: "Pune, Maharashtra, India",
   summary: "Associate Product Manager focused on transforming ideas into impactful products. Combines data-driven decision making with user-centric design, ensuring every product delivers real value to end users while achieving business objectives.",
@@ -29,11 +29,11 @@ var profile = {
   achievements: [
     {
       title: "Conversational AI",
-      description: "Led Rekart's WhatsApp AI assistant: 30% user engagement, 90%+ successful response rate, 10% reduction in churn risk"
+      description: "Owned product definition and launch of the NLP-based WhatsApp AI Assistant: 30% user engagement and 90%+ successful response rate"
     },
     {
-      title: "Retention",
-      description: "Reduced churn through targeted customer-app improvements in every release and higher feature adoption"
+      title: "Feature adoption",
+      description: "Shipped targeted customer-app improvements in every release and increased feature adoption"
     },
     {
       title: "Cross-functional delivery",
@@ -49,8 +49,8 @@ var projects = [
     title: "Rekart WhatsApp AI Assistant",
     category: "AI / Conversational Product",
     role: "Associate Product Manager",
-    description: "NLP-based conversational product that turned Rekart (milk, tiffins and groceries subscriptions & delivery management) into a WhatsApp self-service experience. Phase 1 covered one-time orders, subscription pause/resume/modify/cancel, payment links, wallet and notifications; Phase 2 added customer registration, address capture and subscription creation.",
-    impact: "30% user engagement, 90%+ successful response rate, 10% reduction in churn risk",
+    description: "Owned product definition and launch of the NLP-based WhatsApp AI Assistant for Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses.",
+    impact: "30% user engagement and 90%+ successful response rate",
     technologies: ["NLP/AI", "WhatsApp Business API", "Razorpay", "Easebuzz", "Mixpanel", "Jira", "Confluence"],
     url: "/projects/rekart-whatsapp-ai-assistant"
   },
@@ -61,7 +61,7 @@ var projects = [
     category: "SaaS / Mobile & Web App",
     role: "Associate Product Manager",
     description: "End-to-end product evolution of the Rekart Customer App across three phases: subscription and plan-selection UX, payment clarity, search and history redesign, and a homepage redesign replacing internal Sales Territory selection with delivery-address-driven personalised catalogues and multi-location ordering.",
-    impact: "Reduced churn through every-release improvements and increased feature adoption across national and international clients",
+    impact: "Increased feature adoption through iterative customer-app improvements across client businesses",
     technologies: ["Mixpanel", "Jira", "Confluence", "Figma", "Razorpay", "Easebuzz", "React Native"],
     url: "/projects/rekart-customer-app"
   }
@@ -126,7 +126,7 @@ var certifications = [
 var contact = {
   email: "ssai55030@gmail.com",
   phone: "+91 7287070114",
-  location: "Pune, Maharashtra",
+  location: "Pune, Maharashtra, India",
   social: {
     linkedin: "https://www.linkedin.com/in/mssrinivas1511",
     whatsapp: "https://wa.me/917287070114",
