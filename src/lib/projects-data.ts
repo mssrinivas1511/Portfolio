@@ -45,7 +45,7 @@ export const projects: Project[] = [
     title: 'Rekart WhatsApp AI Assistant',
     subtitle: 'NLP-based conversational product',
     tagline:
-      'Turning a delivery & subscription platform into a conversational self-service experience on WhatsApp.',
+      'Owned product definition and launch of the NLP-based WhatsApp AI Assistant for Rekart.',
     category: 'AI / Conversational Product',
     role: 'Associate Product Manager',
     product: 'Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses.',
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     ],
     overview: [
       'Rekart customers traditionally had to open the Customer App or contact support to place an order, manage a subscription, pay a bill or check their wallet. The opportunity I framed was simple: what if customers could do all of that just by messaging the business on WhatsApp?',
-      'I owned this conversational AI initiative end to end — product discovery, conversational UX, requirements and use cases, cross-functional execution, release validation, analytics, feedback loops and go-to-market. It shipped across two phases and now serves both national and international clients on the Rekart platform.',
+      'I owned this conversational AI initiative end to end — product discovery, conversational UX, requirements and use cases, cross-functional execution, release validation, analytics, feedback loops and go-to-market. It shipped across two phases for Rekart\'s 300+ client businesses.',
     ],
     sections: [
       {
