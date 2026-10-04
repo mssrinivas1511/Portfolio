@@ -1,6 +1,6 @@
 // Single source of truth for every outbound link / CTA destination on the site.
 export const siteConfig = {
-  name: 'M S SrinivaS',
+  name: 'Manda Sai Srinivas',
   role: 'Associate Product Manager',
   email: 'ssai55030@gmail.com',
   phone: '+91 7287070114',
@@ -40,7 +40,7 @@ export const instagramDmHref = 'https://ig.me/m/nivas_1511';
 export const scheduleCallHref =
   siteConfig.calendarUrl ||
   `mailto:${siteConfig.email}?subject=${encodeURIComponent(
-    'Schedule a call with M S SrinivaS',
+    'Schedule a call with Manda Sai Srinivas',
   )}&body=${encodeURIComponent(
     "Hi Srinivas,\n\nI'd like to schedule a call. Here are a few times that work for me:\n\n- \n- \n\nThanks!",
   )}`;

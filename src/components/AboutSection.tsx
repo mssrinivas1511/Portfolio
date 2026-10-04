@@ -55,8 +55,9 @@ const AboutSection = () => {
             </div>
 
             <p className="text-muted-foreground leading-relaxed">
-              I'm an Associate Product Manager working on Rekart, a SaaS platform for milk, tiffins and
-              groceries subscriptions and delivery management used by national and international clients.
+              I'm an Associate Product Manager working on Rekart - a SaaS delivery management platform
+              for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+
+              client businesses.
               The product spans a customer app, a web app, a client dashboard and a driver app for
               delivery logistics — so most of my days are spent connecting what customers need with what
               operations, clients and engineering can realistically deliver.

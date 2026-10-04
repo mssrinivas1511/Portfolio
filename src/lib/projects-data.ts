@@ -23,6 +23,7 @@ export interface Project {
   category: string;
   role: string;
   product: string;
+  caseStudyLabel: string;
   impact: string;
   image: string;
   /** High-fidelity screens from the actual product work. */
@@ -44,11 +45,12 @@ export const projects: Project[] = [
     title: 'Rekart WhatsApp AI Assistant',
     subtitle: 'NLP-based conversational product',
     tagline:
-      'Turning a delivery & subscription platform into a conversational self-service experience on WhatsApp.',
+      'Owned product definition and launch of the NLP-based WhatsApp AI Assistant for Rekart.',
     category: 'AI / Conversational Product',
     role: 'Associate Product Manager',
-    product: 'Rekart — Milk, Tiffins & Groceries Subscriptions & Delivery Management',
-    impact: '30% user engagement · 90%+ successful response rate · 10% reduction in churn risk',
+    product: 'Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses.',
+    caseStudyLabel: 'Discovery → Launch · 0 → 1',
+    impact: '30% user engagement · 90%+ successful response rate',
     image: waViewOptions,
     wireframe: {
       src: wireframeWhatsappFlow,
@@ -74,11 +76,11 @@ export const projects: Project[] = [
     metrics: [
       { value: '30%', label: 'User engagement' },
       { value: '90%+', label: 'Successful response rate' },
-      { value: '10%', label: 'Reduction in churn risk' },
+      { value: '300+', label: 'Client businesses served' },
     ],
     overview: [
       'Rekart customers traditionally had to open the Customer App or contact support to place an order, manage a subscription, pay a bill or check their wallet. The opportunity I framed was simple: what if customers could do all of that just by messaging the business on WhatsApp?',
-      'I owned this conversational AI initiative end to end — product discovery, conversational UX, requirements and use cases, cross-functional execution, release validation, analytics, feedback loops and go-to-market. It shipped across two phases and now serves both national and international clients on the Rekart platform.',
+      'I owned this conversational AI initiative end to end — product discovery, conversational UX, requirements and use cases, cross-functional execution, release validation, analytics, feedback loops and go-to-market. It shipped across two phases for Rekart\'s 300+ client businesses.',
     ],
     sections: [
       {
@@ -220,8 +222,9 @@ Success  Analyze conversation
       'An end-to-end product evolution simplifying ordering, subscriptions, payments, delivery visibility and location-based catalogue personalisation.',
     category: 'SaaS / Mobile & Web App',
     role: 'Associate Product Manager',
-    product: 'Rekart — Customer App, Web App, Client Dashboard & Driver App',
-    impact: 'Reduced churn through every-release improvements and higher feature adoption',
+    product: 'Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses.',
+    caseStudyLabel: 'Redesign',
+    impact: 'Higher feature adoption through iterative customer-app improvements',
     image: appHomeAddress,
     wireframe: {
       src: wireframeCustomerApp,
@@ -245,7 +248,7 @@ Success  Analyze conversation
     ],
     technologies: ['Mixpanel', 'Jira', 'Confluence', 'Figma', 'Razorpay', 'Easebuzz', 'React Native'],
     overview: [
-      'Rekart is a SaaS platform for milk, tiffins and groceries subscriptions and delivery management, serving national and international clients through a Customer App, a web app, a client dashboard and a Driver app for delivery logistics, with payments powered by Razorpay and Easebuzz.',
+      'Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses. It includes a Customer App, web app, client dashboard and Driver app, with payments powered by Razorpay and Easebuzz.',
       'I gathered insights from customers and clients, ran market research and competitor analysis, and used that to shape the Customer App roadmap. My work covered customer journey redesign, the ordering experience, personalisation, subscriptions, payments, history, navigation and territory-based catalogues — released iteratively with design, development and QA teams.',
     ],
     sections: [
@@ -352,7 +355,7 @@ Browse Products                ↓
           'Gathered insights from customers and clients, plus market research and competitor analysis',
           'Reframed business concepts into customer language (Sales Territory → Delivery Address)',
           'Reduced cognitive load to: Where → What → When → How much → What\'s next',
-          'Shipped improvements in every release, reducing churn and increasing feature adoption',
+          'Shipped improvements in every release and increased feature adoption',
           'Worked closely with design, development and QA teams; tracked behaviour in Mixpanel and managed delivery in Jira and Confluence',
         ],
       },

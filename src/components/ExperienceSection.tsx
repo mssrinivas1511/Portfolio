@@ -6,13 +6,13 @@ const roles = [
   {
     title: 'Associate Product Manager',
     company: 'Abmiro Solutions Pvt Ltd',
-    product: 'Product: Rekart — Milk, Tiffins & Groceries Subscriptions & Delivery Management',
+    product: 'Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses.',
     period: 'Dec 2025 — Present',
     summary:
-      'Own discovery and delivery across the Rekart suite: customer app, web app, client dashboard and driver app, serving national and international clients with Razorpay and Easebuzz payments.',
+      'Own discovery and delivery across Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses.',
     highlights: [
-      'Led the NLP-based WhatsApp AI assistant end to end — 30% user engagement, 90%+ successful response rate and a 10% reduction in churn risk.',
-      'Reduced churn by shipping targeted customer-app improvements in every release and lifting feature adoption across client accounts.',
+      'Owned product definition and launch of the NLP-based WhatsApp AI Assistant — achieving 30% user engagement and a 90%+ successful response rate.',
+      'Shipped targeted customer-app improvements in every release and increased feature adoption across client accounts.',
       'Replaced internal Sales Territory selection with delivery-address-driven personalised catalogues, enabling multi-location ordering.',
       'Ran customer and client interviews, market research and competitor analysis to shape the roadmap and prioritise releases.',
       'Partnered daily with design, development and QA — requirements, use cases, release validation and post-launch measurement in Mixpanel.',

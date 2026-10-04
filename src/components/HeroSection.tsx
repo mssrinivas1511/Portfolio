@@ -14,7 +14,7 @@ const HeroSection = () => {
   const stats = [
     { value: '30%', label: 'User engagement achieved' },
     { value: '90%+', label: 'Successful AI response rate' },
-    { value: '10%', label: 'Reduction in churn risk' },
+    { value: '300+', label: 'Client businesses served' },
   ];
 
 
@@ -30,14 +30,14 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="animate-slide-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">M S SrinivaS</span>
+            Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">Manda Sai Srinivas</span>
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Associate Product Manager taking products from 0 → 1
+            Associate Product Manager turning customer insight into shipped products
           </div>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I lead products from discovery to launch — turning customer insight into customer
-            journeys, subscriptions, payments and conversational AI experiences at Rekart.
+            I lead discovery and cross-functional delivery for customer journeys, subscriptions,
+            payments and conversational AI experiences at Rekart.
           </p>
         </div>
 

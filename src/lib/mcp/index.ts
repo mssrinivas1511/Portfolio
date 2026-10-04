@@ -12,7 +12,7 @@ export default defineMcp({
   title: "mssrinivas1511",
   version: "0.1.0",
   instructions:
-    "Tools for SrinivaS's product management portfolio. Use `get_profile` for background and expertise, `list_projects` for featured case studies (optionally filtered), `get_skills` for skills, tools and certifications, `get_contact_info` for contact and social links, and `get_resume` for the downloadable resume URL. Callers must sign in to this app via OAuth.",
+    "Tools for Manda Sai Srinivas's product management portfolio. Use `get_profile` for background and expertise, `list_projects` for featured case studies (optionally filtered), `get_skills` for skills, tools and certifications, `get_contact_info` for contact and social links, and `get_resume` for the downloadable resume URL. Callers must sign in to this app via OAuth.",
   auth: auth.oauth.issuer({
     issuer: `https://${projectRef}.supabase.co/auth/v1`,
     acceptedAudiences: "authenticated",
