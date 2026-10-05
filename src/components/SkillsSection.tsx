@@ -70,9 +70,7 @@ const SkillsSection = () => {
     <section id="skills" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
-          <h2 className="text-4xl font-bold mb-6">
-            Skills & <span className="text-primary">Expertise</span>
-          </h2>
+          <h2 className="text-4xl font-bold mb-6">Skills &amp; Expertise</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive skill set spanning strategy, analytics, leadership, and technology
           </p>
@@ -83,7 +81,7 @@ const SkillsSection = () => {
           {skillCategories.map((category, index) => (
             <Card key={index} className="glass p-6 transition-colors duration-300 hover:border-primary/30">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
                   <category.icon className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
@@ -121,7 +119,7 @@ const SkillsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <Card key={index} className="glass p-6 text-center transition-colors duration-300 hover:border-primary/30">
-              <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <cert.icon className="w-8 h-8 text-primary-foreground" />
               </div>
               <h4 className="text-sm font-semibold text-foreground leading-tight whitespace-pre-line">

@@ -38,9 +38,7 @@ const ContactSection = () => {
     <section id="contact" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
-          <h2 className="text-4xl font-bold mb-4">
-            Let's <span className="text-primary">Connect</span>
-          </h2>
+          <h2 className="text-4xl font-bold mb-4">Let's Connect</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
              Interested in my work or exploring a product opportunity? Email, WhatsApp or Instagram — the message
             &ldquo;{outreachMessage}&rdquo; is already written for you.
@@ -55,7 +53,7 @@ const ContactSection = () => {
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mr-4 shrink-0">
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 shrink-0">
                     <info.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>

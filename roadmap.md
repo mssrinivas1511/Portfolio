@@ -35,3 +35,4 @@
 - [x] Restyle the portfolio with a light-first editorial theme and muted dark mode
 - [x] Replace the monogram header with the full name, role, reordered navigation, and mobile menu
 - [x] Simplify project and launch back links while retaining detail-page navigation
+- [x] Verify the updated header, mobile menu, resume download, portrait, and detail-page navigation

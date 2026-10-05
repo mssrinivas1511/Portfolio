@@ -1,7 +1,7 @@
 import { Card } from '@/components/ui/card';
 import { Search, LineChart, Users } from 'lucide-react';
 import { siteConfig } from '@/lib/site-config';
-import portraitAsset from '@/assets/srinivas-portrait.jpg.asset.json';
+import portrait from '@/assets/srinivas-portrait.jpeg';
 
 const AboutSection = () => {
   const values = [
@@ -29,9 +29,7 @@ const AboutSection = () => {
     <section id="about" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
-          <h2 className="text-4xl font-bold mb-6">
-            About <span className="text-primary">Me</span>
-          </h2>
+          <h2 className="text-4xl font-bold mb-6">About Me</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             How I approach discovery, decisions and delivery as a product manager
           </p>
@@ -42,7 +40,7 @@ const AboutSection = () => {
           <div className="glass p-8 rounded-xl space-y-5">
             <div className="flex flex-col sm:flex-row sm:items-center gap-5">
               <img
-                src={portraitAsset.url}
+                src={portrait}
                 alt={`${siteConfig.name} portrait`}
                 width={776}
                 height={788}
@@ -82,7 +80,7 @@ const AboutSection = () => {
             {values.map(({ icon: Icon, title, description }) => (
               <Card key={title} className="glass p-6 transition-colors duration-300 hover:border-primary/30">
                 <div className="flex items-center mb-3">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center mr-4 shrink-0">
+                  <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4 shrink-0">
                     <Icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <h3 className="text-xl font-bold text-foreground">{title}</h3>
