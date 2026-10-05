@@ -37,3 +37,4 @@
 - [x] Simplify project and launch back links while retaining detail-page navigation
 - [x] Verify the updated header, mobile menu, resume download, portrait, and detail-page navigation
 - [x] Replace the hero with updated positioning, four proof points, actions, and responsive portrait placement
+- [x] Rebuild Featured Projects as two concise Selected work case-study cards
