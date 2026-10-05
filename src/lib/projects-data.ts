@@ -26,6 +26,13 @@ export interface Project {
   caseStudyLabel: string;
   impact: string;
   image: string;
+  selectedWork: {
+    tag: string;
+    title: string;
+    summary: string;
+    timeline: string;
+    outcome: string;
+  };
   /** High-fidelity screens from the actual product work. */
   hiFi?: { src: string; title: string; caption: string }[];
   /** Low-fidelity wireframe / flow sheet that preceded the high-fidelity work. */
@@ -52,6 +59,15 @@ export const projects: Project[] = [
     caseStudyLabel: 'Discovery → Launch · 0 → 1',
     impact: '30% user engagement · 90%+ successful response rate',
     image: waViewOptions,
+    selectedWork: {
+      tag: 'AI · Conversational Product · 0 → 1',
+      title: 'Rekart WhatsApp AI Assistant',
+      summary:
+        'Turning ordering, subscriptions, payments and support into a self-service conversation on WhatsApp.',
+      timeline: 'Apr 2026 – Present',
+      outcome:
+        'Live with 130+ clients · ~30% of registered customers engaged · 90%+ supported queries resolved',
+    },
     wireframe: {
       src: wireframeWhatsappFlow,
       title: 'Conversation flow wireframe',
@@ -226,6 +242,15 @@ Success  Analyze conversation
     caseStudyLabel: 'Redesign',
     impact: 'Higher feature adoption through iterative customer-app improvements',
     image: appHomeAddress,
+    selectedWork: {
+      tag: 'SaaS · Mobile & Web · Redesign',
+      title: 'Rekart Customer App: from internal territories to address-led ordering',
+      summary:
+        'Simplifying ordering, subscriptions, payments and delivery visibility, and replacing Sales Territory selection with delivery-address-driven catalogues.',
+      timeline: 'Dec 2025 – Present',
+      outcome:
+        'Customer-reported issues fell ~30% and adoption of shipped features rose ~25% after these releases',
+    },
     wireframe: {
       src: wireframeCustomerApp,
       title: 'Customer journey wireframes',
