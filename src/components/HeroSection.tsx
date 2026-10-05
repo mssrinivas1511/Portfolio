@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Download, Mail } from 'lucide-react';
-import heroBackground from '@/assets/hero-background.jpg';
 import { downloadResume } from '@/lib/site-config';
 
 const HeroSection = () => {

@@ -37,7 +37,7 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="glass-nav sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="portfolio-container h-16 flex items-center justify-between">
           <Link to="/" aria-label="Back to home" className="flex items-center gap-2">
             <span className="w-9 h-9 rounded-xl bg-gradient-primary flex items-center justify-center text-sm font-bold text-primary-foreground">
               MS
@@ -55,7 +55,7 @@ const ProjectDetail = () => {
         </div>
       </header>
 
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <main className="portfolio-container py-12">
         {/* Hero */}
         <Badge className="bg-primary/90 text-primary-foreground mb-4">{project.category}</Badge>
         <h1 className="text-3xl font-bold mb-4">

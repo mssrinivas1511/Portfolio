@@ -23,7 +23,7 @@ const roles = [
 
 const ExperienceSection = () => (
   <section id="experience" className="portfolio-section">
-    <div className="portfolio-container max-w-5xl">
+    <div className="portfolio-container">
       <div className="section-heading">
         <h2 className="text-4xl font-bold mb-6">
           Professional <span className="text-primary">Experience</span>

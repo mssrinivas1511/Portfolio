@@ -39,7 +39,7 @@ const ReleaseDetail = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="glass-nav sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="portfolio-container h-16 flex items-center justify-between">
           <Link to="/" aria-label="Back to home" className="flex items-center gap-2">
             <span className="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center text-sm font-bold text-primary-foreground">MS</span>
             <span className="hidden sm:block text-sm text-muted-foreground">Product Portfolio</span>
@@ -50,10 +50,10 @@ const ReleaseDetail = () => {
         </div>
       </header>
 
-      <main className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-12 md:py-16">
+      <main className="portfolio-container py-12 md:py-16">
         <Badge className="bg-primary/90 text-primary-foreground mb-4">{release.version}</Badge>
         <h1 className="text-3xl font-bold mb-4">{release.title}</h1>
-        <p className="max-w-[720px] text-lg md:text-xl text-muted-foreground max-w-4xl mb-8 leading-relaxed">{release.summary}</p>
+        <p className="max-w-[720px] text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">{release.summary}</p>
 
         <div className="flex flex-wrap gap-2 mb-8">
           {release.surfaces.map((surface) => (
