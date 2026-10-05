@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/card';
 import { getProjectBySlug, projects } from '@/lib/projects-data';
 import { siteConfig } from '@/lib/site-config';
 import WhatsappProjectCaseStudy from '@/components/WhatsappProjectCaseStudy';
+import CustomerAppProjectCaseStudy from '@/components/CustomerAppProjectCaseStudy';
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -55,6 +56,8 @@ const ProjectDetail = () => {
       <main className="portfolio-container py-12">
         {project.slug === 'rekart-whatsapp-ai-assistant' ? (
           <WhatsappProjectCaseStudy project={project} />
+        ) : project.slug === 'rekart-customer-app' ? (
+          <CustomerAppProjectCaseStudy project={project} />
         ) : (
           <>
         {/* Hero */}

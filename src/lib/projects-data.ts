@@ -59,6 +59,26 @@ export interface WhatsappCaseStudyContent {
   toolkit: string[];
 }
 
+export interface CustomerAppCaseStudyContent {
+  tldr: { label: string; value: string }[];
+  context: string;
+  problem: string[];
+  users: { name: string; need: string }[];
+  decision: {
+    intro: string;
+    before: string[];
+    after: string[];
+    outcome: string;
+  };
+  tradeoffs: string[];
+  improvements: string[];
+  payments: string[];
+  measurements: { name: string; definition: string }[];
+  results: { value: string; label: string }[];
+  learnings: string[];
+  toolkit: string[];
+}
+
 export const whatsappCaseStudy: WhatsappCaseStudyContent = {
   tldr: [
     { label: 'Role', value: 'Associate Product Manager — owned product definition and launch' },
@@ -104,6 +124,75 @@ export const whatsappCaseStudy: WhatsappCaseStudyContent = {
     'Reviewing real conversations after release was as important as the initial intent and flow design.',
   ],
   toolkit: ['NLP / Conversational AI', 'WhatsApp Business API', 'Razorpay', 'Easebuzz', 'Mixpanel', 'Jira', 'Confluence'],
+};
+
+export const customerAppCaseStudy: CustomerAppCaseStudyContent = {
+  tldr: [
+    { label: 'Role', value: 'Associate Product Manager' },
+    { label: 'Timeline', value: 'Dec 2025 – Present · Releases 3.47 → 3.51' },
+    { label: 'Team', value: 'Design, Engineering, QA, Business, Customer Support' },
+    { label: 'Surfaces', value: 'Customer App, Web App, Admin Panel, Driver App' },
+    { label: 'Outcomes', value: 'Customer-reported issues fell ~30% · Adoption of shipped features rose ~25% · Multi-location ordering enabled' },
+  ],
+  context:
+    'Rekart is a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses. I shaped the Customer App roadmap using customer and client insight, market research, competitor analysis and post-release feedback, then worked with Design, Engineering and QA to ship the work iteratively.',
+  problem: [
+    'Customers had to understand internal Sales Territory and Map Zone concepts before they could browse the right catalogue.',
+    'Ordering, subscription and payment journeys exposed too much operational complexity and made routine actions harder to complete.',
+    'Delivery, transaction and payment states did not always make the next step clear to customers.',
+    'The experience needed to support clients with different operating models without adding unnecessary steps for everyone.',
+  ],
+  users: [
+    { name: 'Recurring customer', need: 'Manage subscriptions, payments and upcoming deliveries with fewer steps.' },
+    { name: 'Multi-location customer', need: 'Order for different addresses or cities from one account.' },
+    { name: 'Client operations team', need: 'Serve the right catalogue and delivery rules without exposing internal territory logic.' },
+  ],
+  decision: {
+    intro:
+      'The headline decision was to replace an internal business concept with a customer-understood input: delivery address. The selected address now determines the territory and personalises the catalogue behind the scenes.',
+    before: ['Login', 'Select Sales Territory / Map Zone', 'Open homepage', 'Browse products'],
+    after: ['Login', 'Open homepage', 'Select delivery address', 'Address determines territory', 'See personalised catalogue', 'Place order'],
+    outcome:
+      'This enabled address-led catalogue personalisation and multi-location ordering without asking customers to understand Rekart’s internal operating structure.',
+  },
+  tradeoffs: [
+    'Address selection is mandatory only for clients using Sales Territories and hidden for others, so non-territory clients see no extra step.',
+    'We derived the catalogue from the selected address rather than asking customers to choose a territory, keeping the interface simple while preserving each client’s fulfilment rules.',
+    'We kept address switching available after selection so customers could order across locations without creating separate accounts.',
+  ],
+  improvements: [
+    'Made subscription status, quantity, delivery information, address and available actions easier to understand and edit.',
+    'Improved plan selection, switching, trial visibility and discount presentation so customers could compare options with less friction.',
+    'Redesigned transaction history with clearer category and status filters.',
+    'Redesigned delivery history with quick filters and smoother browsing.',
+    'Defined precise product-search matching across names, categories, descriptions, volume and variants.',
+    'Improved product-detail performance and separated product name from volume for clearer product information.',
+    'Promoted Upcoming Deliveries into bottom navigation and made wallet and profile access more prominent.',
+    'Plus UI consistency fixes across icons, empty states and loading.',
+  ],
+  payments: [
+    'Emphasised the total bill, number of items and wallet balance before payment.',
+    'Replaced generic success messaging with distinct states for order placed, subscription created, verification pending and cash pickup initiated.',
+    'Defined clear status states across orders, subscriptions, wallet recharge and bill payment.',
+    'Supported multiple payment methods through Razorpay and Easebuzz.',
+  ],
+  measurements: [
+    { name: 'Customer-reported issues', definition: 'Tracked issue volume and themes after releases to identify whether the redesigned journeys removed recurring friction.' },
+    { name: 'Feature adoption', definition: 'Monitored usage of newly shipped experiences in Mixpanel to understand whether customers discovered and used them.' },
+    { name: 'Journey completion', definition: 'Reviewed ordering, subscription and payment journeys for drop-offs and unclear states.' },
+    { name: 'Qualitative feedback', definition: 'Combined feedback from customers, clients and Customer Support with behavioural data to prioritise follow-up improvements.' },
+  ],
+  results: [
+    { value: '~30%', label: 'Fewer customer-reported issues' },
+    { value: '~25%', label: 'Higher adoption of shipped features' },
+    { value: 'Enabled', label: 'Multi-location ordering from one account' },
+  ],
+  learnings: [
+    'Replacing internal business language with a customer-understood input can simplify the experience without removing operational control.',
+    'The clearest product decisions came from combining customer feedback with support patterns and behavioural data, rather than relying on one source alone.',
+    'Shipping in focused releases made it easier to validate each change, learn from real usage and improve the next iteration.',
+  ],
+  toolkit: ['Mixpanel', 'Jira', 'Confluence', 'Figma', 'Razorpay', 'Easebuzz'],
 };
 
 export const projects: Project[] = [
@@ -292,15 +381,15 @@ Success  Analyze conversation
   },
   {
     slug: 'rekart-customer-app',
-    title: 'Rekart Customer App Transformation',
+    title: 'Rekart Customer App: from internal territories to address-led ordering',
     subtitle: 'From complex workflows to a simpler, personalised experience',
     tagline:
       'An end-to-end product evolution simplifying ordering, subscriptions, payments, delivery visibility and location-based catalogue personalisation.',
-    category: 'SaaS / Mobile & Web App',
+    category: 'SaaS · Mobile & Web · Redesign',
     role: 'Associate Product Manager',
     product: 'Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses.',
     caseStudyLabel: 'Redesign',
-    impact: 'Higher feature adoption through iterative customer-app improvements',
+    impact: 'After these releases, customer-reported issues fell ~30% and adoption of shipped features rose ~25%.',
     image: appHomeAddress,
     selectedWork: {
       tag: 'SaaS · Mobile & Web · Redesign',
@@ -331,7 +420,7 @@ Success  Analyze conversation
           'A targeted trial-offer widget appears only for eligible customers and clears after redemption.',
       },
     ],
-    technologies: ['Mixpanel', 'Jira', 'Confluence', 'Figma', 'Razorpay', 'Easebuzz', 'React Native'],
+    technologies: ['Mixpanel', 'Jira', 'Confluence', 'Figma', 'Razorpay', 'Easebuzz'],
     overview: [
       'Rekart - a SaaS delivery management platform for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+ client businesses. It includes a Customer App, web app, client dashboard and Driver app, with payments powered by Razorpay and Easebuzz.',
       'I gathered insights from customers and clients, ran market research and competitor analysis, and used that to shape the Customer App roadmap. My work covered customer journey redesign, the ordering experience, personalisation, subscriptions, payments, history, navigation and territory-based catalogues — released iteratively with design, development and QA teams.',
