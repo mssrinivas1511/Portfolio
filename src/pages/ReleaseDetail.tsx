@@ -40,13 +40,14 @@ const ReleaseDetail = () => {
     <div className="min-h-screen bg-background text-foreground">
       <header className="glass-nav sticky top-0 z-50">
         <div className="portfolio-container h-16 flex items-center justify-between">
-          <Link to="/" aria-label="Back to home" className="flex items-center gap-2">
-            <span className="w-9 h-9 rounded-lg bg-gradient-primary flex items-center justify-center text-sm font-bold text-primary-foreground">MS</span>
-            <span className="hidden sm:block text-sm text-muted-foreground">Product Portfolio</span>
+          <Link to="/" aria-label="Back to home" className="flex min-w-0 flex-col leading-tight">
+            <span className="truncate text-sm font-semibold text-foreground sm:text-base">Manda Sai Srinivas</span>
+            <span className="truncate text-[11px] text-muted-foreground sm:text-xs">Associate Product Manager</span>
           </Link>
-          <Button variant="ghost" size="sm" asChild>
-            <Link to="/#releases"><ArrowLeft className="w-4 h-4 mr-2" />All launches</Link>
-          </Button>
+          <Link to="/#releases" className="ml-4 inline-flex shrink-0 items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+            <ArrowLeft className="h-4 w-4" />
+            All launches
+          </Link>
         </div>
       </header>
 

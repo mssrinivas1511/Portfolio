@@ -32,3 +32,6 @@
 - [x] Rebuild all four launch pages with a consistent product-management case-study structure
 - [x] Clearly distinguish verified outcomes from proposed success metrics and KPIs
 - [x] Apply the seven site-wide name, location, product-description, churn-copy, ownership, and case-study label fixes
+- [x] Restyle the portfolio with a light-first editorial theme and muted dark mode
+- [x] Replace the monogram header with the full name, role, reordered navigation, and mobile menu
+- [x] Simplify project and launch back links while retaining detail-page navigation
