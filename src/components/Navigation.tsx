@@ -18,12 +18,10 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
+    { name: 'Work', href: '#projects' },
     { name: 'Launches', href: '#releases' },
-    { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -38,38 +36,36 @@ const Navigation = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass-nav' : 'bg-transparent'
+        isScrolled ? 'bg-card border-b border-border' : 'bg-transparent border-b border-transparent'
       }`}
     >
       <div className="portfolio-container">
-        <div className="flex items-center justify-between h-[68px]">
-          {/* Logo */}
-          <button
+        <div className="flex items-center justify-between h-[72px]">
+          <Button
+            variant="ghost"
             onClick={() => scrollToSection('#home')}
             aria-label="Back to top"
-            className="flex items-center gap-2.5 group"
+            className="h-auto min-w-0 justify-start px-0 text-left hover:bg-transparent"
           >
-            <span className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-sm font-bold text-primary-foreground transition-transform duration-300 group-hover:scale-105">
-              MS
-            </span>
-            <span className="hidden sm:flex flex-col items-start leading-none">
-              <span className="text-sm font-semibold text-foreground">Product Portfolio</span>
-              <span className="text-[11px] text-muted-foreground mt-0.5">
+            <span className="flex min-w-0 flex-col items-start leading-tight">
+              <span className="truncate text-sm font-semibold text-foreground sm:text-base">Manda Sai Srinivas</span>
+              <span className="truncate text-[11px] font-normal text-muted-foreground sm:text-xs">
                 Associate Product Manager
               </span>
             </span>
-          </button>
+          </Button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-5 lg:gap-7">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
             {navItems.map((item) => (
-              <button
+              <Button
                 key={item.name}
+                variant="link"
                 onClick={() => scrollToSection(item.href)}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium"
+                className="h-auto p-0 text-sm font-medium text-muted-foreground hover:text-primary"
               >
                 {item.name}
-              </button>
+              </Button>
             ))}
             <ThemeToggle />
             <Button 
@@ -86,11 +82,14 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center gap-1"><ThemeToggle />
+          <div className="md:hidden flex items-center gap-1">
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X /> : <Menu />}
             </Button>
@@ -99,16 +98,17 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden glass rounded-lg mt-2 p-4">
-            <div className="flex flex-col space-y-4">
+          <div className="md:hidden glass absolute left-5 right-5 top-[72px] p-4 sm:left-6 sm:right-6">
+            <div className="flex flex-col gap-1">
               {navItems.map((item) => (
-                <button
+                <Button
                   key={item.name}
+                  variant="ghost"
                   onClick={() => scrollToSection(item.href)}
-                  className="text-muted-foreground hover:text-primary transition-colors text-left"
+                  className="justify-start text-muted-foreground hover:text-primary"
                 >
                   {item.name}
-                </button>
+                </Button>
               ))}
               <Button 
                 variant="hero" 

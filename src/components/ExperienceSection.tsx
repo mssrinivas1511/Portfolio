@@ -25,9 +25,7 @@ const ExperienceSection = () => (
   <section id="experience" className="portfolio-section">
     <div className="portfolio-container">
       <div className="section-heading">
-        <h2 className="text-4xl font-bold mb-6">
-          Professional <span className="text-primary">Experience</span>
-        </h2>
+        <h2 className="text-4xl font-bold mb-6">Professional Experience</h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
           Impact, not duties — what I owned and what changed because of it
         </p>
@@ -38,7 +36,7 @@ const ExperienceSection = () => (
           <Card key={role.title} className="glass p-8">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center shrink-0">
                   <Briefcase className="w-6 h-6 text-primary-foreground" />
                 </div>
                 <div>

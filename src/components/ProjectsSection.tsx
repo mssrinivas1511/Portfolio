@@ -11,9 +11,7 @@ const ProjectsSection = () => {
     <section id="projects" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
-          <h2 className="text-4xl font-bold mb-4">
-            Featured <span className="text-primary">Projects</span>
-          </h2>
+          <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Two case studies showing how I moved from discovery and product decisions to
             launch, cross-functional delivery and measurable outcomes.
