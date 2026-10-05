@@ -25,7 +25,7 @@ const ExperienceSection = () => (
   <section id="experience" className="portfolio-section">
     <div className="portfolio-container max-w-5xl">
       <div className="section-heading">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-4xl font-bold mb-6">
           Professional <span className="text-primary">Experience</span>
         </h2>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">

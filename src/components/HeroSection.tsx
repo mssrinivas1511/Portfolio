@@ -18,18 +18,12 @@ const HeroSection = () => {
   ];
 
 
-  return <section id="home" className="relative min-h-[calc(100svh-3rem)] flex items-center justify-center overflow-hidden pt-28 pb-20" style={{
-    backgroundImage: `url(${heroBackground})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center'
-  }}>
-      {/* Overlay */}
-      <div className="absolute inset-0" />
+  return <section id="home" className="relative min-h-[calc(100svh-3rem)] flex items-center justify-center overflow-hidden pt-28 pb-20">
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="animate-slide-in-up">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl font-bold mb-6">
             Hi, I'm Manda Sai Srinivas
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-4">
@@ -42,7 +36,7 @@ const HeroSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 animate-slide-in-up" style={{
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8" style={{
         animationDelay: '0.2s'
       }}>
           <Button variant="hero" size="lg" onClick={() => scrollToSection('#projects')} className="text-lg px-8 py-3">
@@ -60,7 +54,7 @@ const HeroSection = () => {
         </div>
 
         {/* Quick stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12" style={{ animationDelay: '0.3s' }}>
           {stats.map(({ value, label }) => (
             <div key={label} className="glass rounded-lg px-4 py-5">
               <div className="text-2xl font-bold text-primary">

@@ -52,8 +52,8 @@ const ReleaseDetail = () => {
 
       <main className="max-w-6xl mx-auto px-5 sm:px-6 lg:px-8 py-12 md:py-16">
         <Badge className="bg-primary/90 text-primary-foreground mb-4">{release.version}</Badge>
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">{release.title}</h1>
-        <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mb-8 leading-relaxed">{release.summary}</p>
+        <h1 className="text-3xl font-bold mb-4">{release.title}</h1>
+        <p className="max-w-[720px] text-lg md:text-xl text-muted-foreground max-w-4xl mb-8 leading-relaxed">{release.summary}</p>
 
         <div className="flex flex-wrap gap-2 mb-8">
           {release.surfaces.map((surface) => (
@@ -65,7 +65,7 @@ const ReleaseDetail = () => {
           <Briefcase className="w-5 h-5 text-primary mt-0.5 shrink-0" />
           <div>
             <div className="text-xs uppercase tracking-wide text-muted-foreground mb-1">My contribution</div>
-            <p className="text-foreground">Discovery, requirements, prioritisation, cross-functional delivery, release validation and client launch communication.</p>
+            <p className="max-w-[720px] text-foreground">Discovery, requirements, prioritisation, cross-functional delivery, release validation and client launch communication.</p>
           </div>
         </Card>
 
@@ -75,7 +75,7 @@ const ReleaseDetail = () => {
               <Target className="w-5 h-5 text-primary" />
               <h2 className="text-2xl font-bold">The actual problem</h2>
             </div>
-            <p className="text-muted-foreground leading-relaxed">{release.problem}</p>
+            <p className="max-w-[720px] text-muted-foreground leading-relaxed">{release.problem}</p>
           </Card>
           <Card className="glass p-6">
             <div className="flex items-center gap-3 mb-4">
@@ -86,7 +86,7 @@ const ReleaseDetail = () => {
               {release.personas.map((persona) => (
                 <div key={persona.name}>
                   <h3 className="font-semibold text-foreground mb-1">{persona.name}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{persona.need}</p>
+                  <p className="max-w-[720px] text-sm text-muted-foreground leading-relaxed">{persona.need}</p>
                 </div>
               ))}
             </div>
@@ -101,7 +101,7 @@ const ReleaseDetail = () => {
           <div className="grid md:grid-cols-3 gap-5">
             {release.requirements.map((requirement) => (
               <Card key={requirement} className="glass p-5">
-                <p className="text-sm text-muted-foreground leading-relaxed">{requirement}</p>
+                <p className="max-w-[720px] text-sm text-muted-foreground leading-relaxed">{requirement}</p>
               </Card>
             ))}
           </div>
@@ -148,7 +148,7 @@ const ReleaseDetail = () => {
                 <span className="w-7 h-7 rounded-md bg-primary/15 text-primary text-xs font-bold flex items-center justify-center shrink-0">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <p className="text-sm text-muted-foreground leading-relaxed">{requirement}</p>
+                <p className="max-w-[720px] text-sm text-muted-foreground leading-relaxed">{requirement}</p>
               </Card>
             ))}
           </div>
@@ -156,12 +156,12 @@ const ReleaseDetail = () => {
 
         <section className="mb-14">
           <h2 className="text-2xl font-bold mb-2">Shipped solution</h2>
-          <p className="text-muted-foreground mb-6 max-w-3xl">Verified capabilities documented in the client release communication.</p>
+          <p className="max-w-[720px] text-muted-foreground mb-6 max-w-3xl">Verified capabilities documented in the client release communication.</p>
           <div className="grid md:grid-cols-2 gap-5">
             {release.highlights.map((highlight) => (
               <Card key={highlight} className="glass p-5 flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <p className="text-sm text-muted-foreground leading-relaxed">{highlight}</p>
+                <p className="max-w-[720px] text-sm text-muted-foreground leading-relaxed">{highlight}</p>
               </Card>
             ))}
           </div>
@@ -169,7 +169,7 @@ const ReleaseDetail = () => {
 
         <section className="mb-14">
           <h2 className="text-2xl font-bold mb-2">Release evidence</h2>
-          <p className="text-muted-foreground mb-6">Original product screens from the newsletters shared with clients.</p>
+          <p className="max-w-[720px] text-muted-foreground mb-6">Original product screens from the newsletters shared with clients.</p>
           <div className="grid md:grid-cols-2 gap-6">
             {release.screens.map((screen) => (
               <figure key={screen.src} className="glass rounded-lg overflow-hidden">
@@ -193,7 +193,7 @@ const ReleaseDetail = () => {
             {release.process.map((step, index) => (
               <Card key={step} className="glass p-5 flex items-start gap-4">
                 <span className="w-8 h-8 rounded-md bg-secondary/20 text-foreground text-sm font-bold flex items-center justify-center shrink-0">{index + 1}</span>
-                <p className="text-sm text-muted-foreground leading-relaxed">{step}</p>
+                <p className="max-w-[720px] text-sm text-muted-foreground leading-relaxed">{step}</p>
               </Card>
             ))}
           </div>
@@ -204,12 +204,12 @@ const ReleaseDetail = () => {
             <BarChart3 className="w-5 h-5 text-primary" />
             <h2 className="text-2xl font-bold">Success metrics and KPIs</h2>
           </div>
-          <p className="text-muted-foreground mb-6 max-w-3xl">Measurement framework for evaluating adoption and operational impact. Values are not shown where the supplied release notes did not include measured results.</p>
+          <p className="max-w-[720px] text-muted-foreground mb-6 max-w-3xl">Measurement framework for evaluating adoption and operational impact. Values are not shown where the supplied release notes did not include measured results.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {release.successMetrics.map((item) => (
               <Card key={item.metric} className="glass p-5">
                 <h3 className="font-semibold text-foreground mb-2">{item.metric}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{item.signal}</p>
+                <p className="max-w-[720px] text-sm text-muted-foreground leading-relaxed">{item.signal}</p>
               </Card>
             ))}
           </div>
@@ -218,7 +218,7 @@ const ReleaseDetail = () => {
         <section className="mb-12">
           <Card className="glass p-6 md:p-8 border-primary/20">
             <div className="text-xs uppercase tracking-wide text-primary font-medium mb-2">Outcome</div>
-            <p className="text-lg text-foreground leading-relaxed">{release.outcome}</p>
+            <p className="max-w-[720px] text-lg text-foreground leading-relaxed">{release.outcome}</p>
           </Card>
         </section>
 

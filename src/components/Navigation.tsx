@@ -97,7 +97,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden glass rounded-lg mt-2 p-4 animate-slide-in-up">
+          <div className="md:hidden glass rounded-lg mt-2 p-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button

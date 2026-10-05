@@ -58,10 +58,10 @@ const ProjectDetail = () => {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero */}
         <Badge className="bg-primary/90 text-primary-foreground mb-4">{project.category}</Badge>
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
+        <h1 className="text-3xl font-bold mb-4">
           {project.title}
         </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl">{project.tagline}</p>
+        <p className="max-w-[720px] text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl">{project.tagline}</p>
 
         <div className="grid sm:grid-cols-2 gap-4 mb-10">
           <Card className="glass p-4 flex items-start gap-3">
@@ -105,7 +105,7 @@ const ProjectDetail = () => {
 
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-2">From wireframes to shipped product</h2>
-          <p className="text-muted-foreground mb-6 max-w-3xl">
+          <p className="max-w-[720px] text-muted-foreground mb-6 max-w-3xl">
             How the work moved from early flows to the real screens released to customers and clients.
           </p>
 
@@ -126,7 +126,7 @@ const ProjectDetail = () => {
                   Wireframe
                 </div>
                 <div className="font-medium text-foreground mb-1">{project.wireframe.title}</div>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="max-w-[720px] text-sm text-muted-foreground leading-relaxed">
                   {project.wireframe.caption}
                 </p>
               </figcaption>
@@ -152,7 +152,7 @@ const ProjectDetail = () => {
                        Shipped product
                     </div>
                     <div className="font-medium text-foreground mb-1">{wf.title}</div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{wf.caption}</p>
+                    <p className="max-w-[720px] text-sm text-muted-foreground leading-relaxed">{wf.caption}</p>
                   </figcaption>
                 </figure>
               ))}
@@ -178,7 +178,7 @@ const ProjectDetail = () => {
             <section key={section.heading}>
               <h2 className="text-2xl font-bold mb-3">{section.heading}</h2>
               {section.intro && (
-                <p className="text-muted-foreground leading-relaxed mb-4">{section.intro}</p>
+                <p className="max-w-[720px] text-muted-foreground leading-relaxed mb-4">{section.intro}</p>
               )}
               {section.bullets && (
                 <ul className="space-y-3">
@@ -219,7 +219,7 @@ const ProjectDetail = () => {
           <Card className="glass p-6">
             <div className="flex items-start mb-6">
               <TrendingUp className="w-5 h-5 mr-3 mt-0.5 text-accent shrink-0" />
-              <p className="text-muted-foreground">{project.impact}</p>
+              <p className="max-w-[720px] text-muted-foreground">{project.impact}</p>
             </div>
             <div className="flex flex-wrap gap-2 mb-6">
               {project.technologies.map((t) => (
