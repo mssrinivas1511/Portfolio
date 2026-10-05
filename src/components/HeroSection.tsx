@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Download, Mail } from 'lucide-react';
-import { downloadResume } from '@/lib/site-config';
+import { ArrowRight, Download, Linkedin } from 'lucide-react';
+import { downloadResume, siteConfig } from '@/lib/site-config';
+import portrait from '@/assets/srinivas-portrait.jpeg';
 
 const HeroSection = () => {
   const scrollToSection = (href: string) => {
@@ -11,61 +12,71 @@ const HeroSection = () => {
   };
 
   const stats = [
-    { value: '30%', label: 'User engagement achieved' },
-    { value: '90%+', label: 'Successful AI response rate' },
-    { value: '300+', label: 'Client businesses served' },
+    { value: '300+', label: 'Client businesses on Rekart' },
+    { value: '130+', label: 'Clients live on the WhatsApp AI Assistant' },
+    { value: '20+', label: 'Product enhancements shipped' },
+    { value: '90%+', label: 'Supported AI queries resolved' },
   ];
 
+  return (
+    <section id="home" className="pt-28 pb-12 md:pt-36 md:pb-16">
+      <div className="portfolio-container">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-16">
+          <div className="order-2 text-center lg:order-1 lg:text-left">
+            <h1 className="mb-4">Manda Sai Srinivas</h1>
+            <p className="mb-5 text-xl font-medium text-foreground md:text-2xl">
+              Associate Product Manager · B2B SaaS · Conversational AI
+            </p>
+            <p className="mx-auto max-w-[720px] text-lg leading-relaxed text-muted-foreground lg:mx-0">
+              I build subscription, payments and conversational AI experiences for Rekart - a delivery
+              platform used by 300+ businesses. Most recently I owned the WhatsApp AI Assistant, now
+              live with 130+ of them.
+            </p>
 
-  return <section id="home" className="relative flex items-center justify-center overflow-hidden pt-32 pb-12 md:pt-40 md:pb-12">
-      
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="animate-slide-in-up">
-          <h1 className="text-5xl font-bold mb-6">
-            Hi, I'm Manda Sai Srinivas
-          </h1>
-          <div className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Associate Product Manager turning customer insight into shipped products
+            <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center lg:justify-start">
+              <Button variant="hero" size="lg" onClick={() => scrollToSection('#projects')}>
+                View case studies
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              <Button variant="outline" size="lg" onClick={downloadResume}>
+                <Download className="mr-2 h-5 w-5" />
+                Download resume
+              </Button>
+              <a
+                href={siteConfig.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+              >
+                <Linkedin className="mr-2 h-4 w-4" />
+                LinkedIn
+              </a>
+            </div>
           </div>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            I lead discovery and cross-functional delivery for customer journeys, subscriptions,
-            payments and conversational AI experiences at Rekart.
-          </p>
+
+          <div className="order-1 mx-auto lg:order-2">
+            <div className="overflow-hidden rounded-xl border border-border bg-card p-2 shadow-sm">
+              <img
+                src={portrait}
+                alt="Manda Sai Srinivas portrait"
+                width={776}
+                height={788}
+                className="h-48 w-48 rounded-lg object-cover object-top sm:h-56 sm:w-56 lg:h-64 lg:w-64"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8" style={{
-        animationDelay: '0.2s'
-      }}>
-          <Button variant="hero" size="lg" onClick={() => scrollToSection('#projects')} className="text-lg px-8 py-3">
-            View My Work
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
-          <Button variant="glass" size="lg" className="text-lg px-8 py-3" onClick={downloadResume}>
-            <Download className="w-5 h-5 mr-2" />
-            Download Resume
-          </Button>
-          <Button variant="outline" size="lg" onClick={() => scrollToSection('#contact')} className="text-lg px-8 py-3">
-            <Mail className="w-5 h-5 mr-2" />
-            Contact Me
-          </Button>
-        </div>
-
-        {/* Quick stats */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12" style={{ animationDelay: '0.3s' }}>
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map(({ value, label }) => (
-            <div key={label} className="glass rounded-lg px-4 py-5">
-              <div className="text-2xl font-bold text-primary">
-                {value}
-              </div>
+            <div key={label} className="glass rounded-lg px-4 py-5 text-center">
+              <div className="text-2xl font-bold text-primary">{value}</div>
               <div className="text-sm text-muted-foreground mt-1">{label}</div>
             </div>
           ))}
         </div>
-
-
       </div>
-    </section>;
+    </section>
+  );
 };
 export default HeroSection;
