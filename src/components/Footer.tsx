@@ -10,7 +10,7 @@ const Footer = () => {
     { icon: Mail, label: 'Email', url: emailHref },
   ];
 
-  return <footer className="bg-background/80 backdrop-blur-glass border-t border-card-border">
+  return <footer className="bg-background border-t border-border">
       <div className="portfolio-container py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
