@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Download } from 'lucide-react';
 import { downloadResume } from '@/lib/site-config';
+import ThemeToggle from "./ThemeToggle";
 
 
 const Navigation = () => {
@@ -40,7 +41,7 @@ const Navigation = () => {
         isScrolled ? 'glass-nav' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="portfolio-container">
         <div className="flex items-center justify-between h-[68px]">
           {/* Logo */}
           <button
@@ -48,7 +49,7 @@ const Navigation = () => {
             aria-label="Back to top"
             className="flex items-center gap-2.5 group"
           >
-            <span className="w-9 h-9 rounded-xl bg-gradient-primary flex items-center justify-center text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform duration-300 group-hover:scale-105">
+            <span className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-sm font-bold text-primary-foreground transition-transform duration-300 group-hover:scale-105">
               MS
             </span>
             <span className="hidden sm:flex flex-col items-start leading-none">
@@ -70,10 +71,11 @@ const Navigation = () => {
                 {item.name}
               </button>
             ))}
+            <ThemeToggle />
             <Button 
               variant="hero" 
               size="sm" 
-              className="ml-4"
+              className="ml-1"
               onClick={() => {
                 downloadResume();
               }}
@@ -84,7 +86,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-1"><ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
@@ -97,7 +99,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden glass rounded-lg mt-2 p-4 animate-slide-in-up">
+          <div className="md:hidden glass rounded-lg mt-2 p-4">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
                 <button

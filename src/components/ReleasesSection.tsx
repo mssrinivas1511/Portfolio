@@ -5,11 +5,11 @@ import { ArrowRight } from 'lucide-react';
 import { releases } from '@/lib/releases-data';
 
 const ReleasesSection = () => (
-  <section id="releases" className="portfolio-section bg-gradient-to-br from-background to-muted/10">
+  <section id="releases" className="portfolio-section">
     <div className="portfolio-container">
       <div className="section-heading">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Selected <span className="bg-gradient-primary bg-clip-text text-transparent">Launches</span>
+        <h2 className="text-4xl font-bold mb-6">
+          Selected <span className="text-primary">Launches</span>
         </h2>
         <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
           A concise record of releases I helped take from customer insight and requirements to

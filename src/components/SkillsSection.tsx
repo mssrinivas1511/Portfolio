@@ -67,11 +67,11 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section id="skills" className="portfolio-section bg-gradient-to-br from-background to-muted/10">
+    <section id="skills" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Skills & <span className="bg-gradient-primary bg-clip-text text-transparent">Expertise</span>
+          <h2 className="text-4xl font-bold mb-6">
+            Skills & <span className="text-primary">Expertise</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Comprehensive skill set spanning strategy, analytics, leadership, and technology

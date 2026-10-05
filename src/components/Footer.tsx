@@ -10,8 +10,8 @@ const Footer = () => {
     { icon: Mail, label: 'Email', url: emailHref },
   ];
 
-  return <footer className="bg-background/80 backdrop-blur-glass border-t border-card-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  return <footer className="bg-background border-t border-border">
+      <div className="portfolio-container py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-center md:text-left">
             <p className="text-muted-foreground">© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
@@ -35,7 +35,7 @@ const Footer = () => {
 
           <div className="flex items-center text-muted-foreground">
             <span>Made with</span>
-            <Heart className="w-4 h-4 mx-1 text-accent animate-pulse" fill="currentColor" />
+            <Heart className="w-4 h-4 mx-1 text-accent" fill="currentColor" />
             <span>& Lovable</span>
           </div>
         </div>

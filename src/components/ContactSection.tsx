@@ -35,11 +35,11 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="portfolio-section bg-gradient-to-br from-background to-muted/20">
+    <section id="contact" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Let's <span className="bg-gradient-primary bg-clip-text text-transparent">Connect</span>
+          <h2 className="text-4xl font-bold mb-4">
+            Let's <span className="text-primary">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
              Interested in my work or exploring a product opportunity? Email, WhatsApp or Instagram — the message

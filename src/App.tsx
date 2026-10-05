@@ -9,6 +9,8 @@ import ReleaseDetail from "./pages/ReleaseDetail";
 import Auth from "./pages/Auth";
 import OAuthConsent from "./pages/OAuthConsent";
 import NotFound from "./pages/NotFound";
+import { ThemeProvider } from "next-themes";
+import ScrollReveal from "./components/ScrollReveal";
 
 
 const queryClient = new QueryClient();
@@ -16,6 +18,8 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+      <ScrollReveal />
       <Toaster />
       <Sonner />
       <BrowserRouter>
@@ -30,6 +34,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      </ThemeProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

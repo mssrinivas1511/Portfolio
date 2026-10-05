@@ -26,11 +26,11 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="about" className="portfolio-section bg-gradient-to-br from-background to-background/80">
+    <section id="about" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="bg-gradient-primary bg-clip-text text-transparent">Me</span>
+          <h2 className="text-4xl font-bold mb-6">
+            About <span className="text-primary">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             How I approach discovery, decisions and delivery as a product manager
