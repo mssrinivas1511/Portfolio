@@ -46,6 +46,66 @@ export interface Project {
   skills: string[];
 }
 
+export interface WhatsappCaseStudyContent {
+  tldr: { label: string; value: string }[];
+  context: string;
+  users: { name: string; need: string }[];
+  discovery: string[];
+  decisions: string[];
+  measurements: { name: string; definition: string }[];
+  results: { value: string; label: string }[];
+  next: string;
+  learnings: string[];
+  toolkit: string[];
+}
+
+export const whatsappCaseStudy: WhatsappCaseStudyContent = {
+  tldr: [
+    { label: 'Role', value: 'Associate Product Manager — owned product definition and launch' },
+    { label: 'Timeline', value: 'Apr 2026 – Present · Phase 1 live Jun 2026 · Phase 2 live Aug 2026' },
+    { label: 'Team', value: 'Engineering, Design, QA, Business, Customer Support' },
+    { label: 'Platform', value: 'WhatsApp Business Platform · Razorpay & Easebuzz' },
+    { label: 'Outcomes', value: '130+ clients live · ~30% of registered customers engaged · 90%+ supported queries resolved' },
+  ],
+  context:
+    'Rekart customers traditionally had to open the Customer App or contact support to place an order, manage a subscription, pay a bill or check their wallet. I owned this conversational AI initiative from product discovery and conversational UX through requirements, cross-functional delivery, release validation, analytics, feedback loops and go-to-market.',
+  users: [
+    { name: 'Messaging-first customer', need: 'Order and manage deliveries without installing or opening an app.' },
+    { name: 'Recurring subscriber', need: 'Change a subscription and pay within a guided conversation.' },
+    { name: 'Support agent', need: 'Take over when automation cannot safely complete the request.' },
+  ],
+  discovery: [
+    'Ordering, subscription, payment and wallet questions represented frequent, repeatable support needs.',
+    'These were high-frequency customer actions with clear inputs, validations and confirmation states.',
+    'WhatsApp created a lightweight path for customers who never install or regularly open the app.',
+  ],
+  decisions: [
+    'We chose registered-number-only interaction over open access because identity, wallet and billing actions needed a trusted customer match.',
+    'We chose explicit unsupported states over guessing because inaccurate answers would damage trust in payment and delivery journeys.',
+    'We chose a controllable human hand-off over automation-only support because agents needed to take over without breaking the conversation.',
+    'We chose defined edge cases, validation rules and acceptance criteria over implicit flow assumptions because every confirmed action affected a real order, subscription or payment.',
+  ],
+  measurements: [
+    { name: 'Engagement', definition: 'Share of registered customers who used the assistant in the period.' },
+    { name: 'Successful response rate', definition: 'Supported messages correctly handled.' },
+    { name: 'Fallback / hand-off rate', definition: 'Conversations sent to fallback or a human agent, segmented by reason.' },
+    { name: 'Unsupported queries', definition: 'Queries reviewed after every release to identify gaps.' },
+  ],
+  results: [
+    { value: '130+', label: 'Clients live' },
+    { value: '~30%', label: 'Registered customers engaged' },
+    { value: '90%+', label: 'Supported queries resolved' },
+  ],
+  next:
+    'Regional-language understanding through LLM/ML training and image reading are next priorities because unsupported-query analysis showed these were the biggest gaps.',
+  learnings: [
+    'Saying no to unsupported inputs protected trust more than trying to answer everything.',
+    'The best first conversational workflows were frequent, structured actions with a clear success state.',
+    'Reviewing real conversations after release was as important as the initial intent and flow design.',
+  ],
+  toolkit: ['NLP / Conversational AI', 'WhatsApp Business API', 'Razorpay', 'Easebuzz', 'Mixpanel', 'Jira', 'Confluence'],
+};
+
 export const projects: Project[] = [
   {
     slug: 'rekart-whatsapp-ai-assistant',
