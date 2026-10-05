@@ -8,11 +8,11 @@ import { siteConfig } from '@/lib/site-config';
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="portfolio-section bg-gradient-to-br from-background/50 to-muted/20">
+    <section id="projects" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Featured <span className="bg-gradient-primary bg-clip-text text-transparent">Projects</span>
+            Featured <span className="text-primary">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Two case studies showing how I moved from discovery and product decisions to

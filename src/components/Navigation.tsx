@@ -48,7 +48,7 @@ const Navigation = () => {
             aria-label="Back to top"
             className="flex items-center gap-2.5 group"
           >
-            <span className="w-9 h-9 rounded-xl bg-gradient-primary flex items-center justify-center text-sm font-bold text-primary-foreground shadow-lg shadow-primary/20 transition-transform duration-300 group-hover:scale-105">
+            <span className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-sm font-bold text-primary-foreground transition-transform duration-300 group-hover:scale-105">
               MS
             </span>
             <span className="hidden sm:flex flex-col items-start leading-none">

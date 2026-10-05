@@ -94,7 +94,7 @@ const ProjectDetail = () => {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
             {project.metrics.map((m) => (
               <Card key={m.label} className="glass p-6 text-center">
-                <div className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+                <div className="text-3xl font-bold text-primary">
                   {m.value}
                 </div>
                 <div className="text-sm text-muted-foreground mt-1">{m.label}</div>

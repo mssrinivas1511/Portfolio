@@ -35,7 +35,7 @@ const Footer = () => {
 
           <div className="flex items-center text-muted-foreground">
             <span>Made with</span>
-            <Heart className="w-4 h-4 mx-1 text-accent animate-pulse" fill="currentColor" />
+            <Heart className="w-4 h-4 mx-1 text-accent" fill="currentColor" />
             <span>& Lovable</span>
           </div>
         </div>

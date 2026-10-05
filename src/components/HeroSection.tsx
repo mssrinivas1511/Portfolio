@@ -24,13 +24,13 @@ const HeroSection = () => {
     backgroundPosition: 'center'
   }}>
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/60 to-background/80" />
+      <div className="absolute inset-0" />
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="animate-slide-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm <span className="bg-gradient-primary bg-clip-text text-transparent">Manda Sai Srinivas</span>
+            Hi, I'm Manda Sai Srinivas
           </h1>
           <div className="text-xl md:text-2xl text-muted-foreground mb-4">
             Associate Product Manager turning customer insight into shipped products
@@ -63,7 +63,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12 animate-slide-in-up" style={{ animationDelay: '0.3s' }}>
           {stats.map(({ value, label }) => (
             <div key={label} className="glass rounded-lg px-4 py-5">
-              <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              <div className="text-2xl font-bold text-primary">
                 {value}
               </div>
               <div className="text-sm text-muted-foreground mt-1">{label}</div>
