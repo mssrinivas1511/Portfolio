@@ -26,8 +26,9 @@
 - [x] Update location to Pune, Maharashtra
 - [x] Add 0→1 discovery-to-launch positioning to the home page and featured projects
 - [x] Create a dedicated detail page for every selected launch
-- [ ] Add a personal photo to About — blocked until Srinivas uploads a portrait photo
-- [ ] Fix the About section portrait build issue and confirm the uploaded photo renders
-- [ ] Standardize screenshot sizing and clarity across Featured Projects, Selected Launches, and detail pages
-- [ ] Rebuild all four launch pages with a consistent product-management case-study structure
-- [ ] Clearly distinguish verified outcomes from proposed success metrics and KPIs
+- [x] Add the uploaded personal photo to About
+- [x] Fix the About section portrait issue and confirm the uploaded photo renders
+- [x] Standardize screenshot sizing and clarity across Featured Projects, Selected Launches, and detail pages
+- [x] Rebuild all four launch pages with a consistent product-management case-study structure
+- [x] Clearly distinguish verified outcomes from proposed success metrics and KPIs
+- [x] Apply the seven site-wide name, location, product-description, churn-copy, ownership, and case-study label fixes
