@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { getProjectBySlug, projects } from '@/lib/projects-data';
 import { siteConfig } from '@/lib/site-config';
+import WhatsappProjectCaseStudy from '@/components/WhatsappProjectCaseStudy';
 
 const ProjectDetail = () => {
   const { slug } = useParams();
@@ -52,6 +53,10 @@ const ProjectDetail = () => {
       </header>
 
       <main className="portfolio-container py-12">
+        {project.slug === 'rekart-whatsapp-ai-assistant' ? (
+          <WhatsappProjectCaseStudy project={project} />
+        ) : (
+          <>
         {/* Hero */}
         <Badge className="bg-primary/90 text-primary-foreground mb-4">{project.category}</Badge>
         <h1 className="text-3xl font-bold mb-4">
@@ -254,6 +259,8 @@ const ProjectDetail = () => {
             ))}
           </div>
         </section>
+          </>
+        )}
       </main>
     </div>
   );
