@@ -17,7 +17,7 @@ const HeroSection = () => {
   ];
 
 
-  return <section id="home" className="relative min-h-[calc(100svh-3rem)] flex items-center justify-center overflow-hidden pt-28 pb-20">
+  return <section id="home" className="relative flex items-center justify-center overflow-hidden pt-32 pb-12 md:pt-40 md:pb-12">
       
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
