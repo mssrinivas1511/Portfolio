@@ -86,6 +86,16 @@ const WhatsappProjectCaseStudy = ({ project }: WhatsappProjectCaseStudyProps) =>
               </Card>
             ))}
           </div>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <Card className="glass p-6">
+              <h3 className="mb-4">In scope</h3>
+              <BulletList items={whatsappCaseStudy.scope} />
+            </Card>
+            <Card className="glass p-6">
+              <h3 className="mb-4">Out of scope</h3>
+              <BulletList items={whatsappCaseStudy.outOfScope} />
+            </Card>
+          </div>
         </section>
 
         <section>
@@ -114,6 +124,17 @@ const WhatsappProjectCaseStudy = ({ project }: WhatsappProjectCaseStudyProps) =>
                 <h3 className="mb-2">{phase.heading}</h3>
                 {phase.intro && <p className="mb-4 text-sm text-muted-foreground">{phase.intro}</p>}
                 {phase.bullets && <BulletList items={phase.bullets} />}
+              </Card>
+            ))}
+          </div>
+          <h3 className="mt-10 mb-4">Functional requirements</h3>
+          <div className="grid gap-4 md:grid-cols-2">
+            {whatsappCaseStudy.functionalRequirements.map((requirement, index) => (
+              <Card key={requirement} className="glass flex items-start gap-4 p-5">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-primary/10 text-xs font-bold text-primary">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <p className="text-sm text-muted-foreground">{requirement}</p>
               </Card>
             ))}
           </div>

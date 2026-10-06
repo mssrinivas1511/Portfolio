@@ -50,6 +50,9 @@ export interface WhatsappCaseStudyContent {
   tldr: { label: string; value: string }[];
   context: string;
   users: { name: string; need: string }[];
+  scope: string[];
+  outOfScope: string[];
+  functionalRequirements: string[];
   discovery: string[];
   decisions: string[];
   measurements: { name: string; definition: string }[];
@@ -93,6 +96,26 @@ export const whatsappCaseStudy: WhatsappCaseStudyContent = {
     { name: 'Messaging-first customer', need: 'Order and manage deliveries without installing or opening an app.' },
     { name: 'Recurring subscriber', need: 'Change a subscription and pay within a guided conversation.' },
     { name: 'Support agent', need: 'Take over when automation cannot safely complete the request.' },
+  ],
+  scope: [
+    'Registration and delivery-address capture',
+    'Ordering and subscription management',
+    'UPI and wallet payments',
+    'Order updates and confirmations',
+    'Human support hand-off',
+    'Rekart dashboard synchronisation',
+  ],
+  outOfScope: [
+    'Open-ended advice outside supported Rekart intents',
+    'Processing unsupported image or audio requests',
+    'Replacing the Customer App and web app',
+  ],
+  functionalRequirements: [
+    'Register customers and capture a pinned delivery location in chat.',
+    'Support guided order and subscription creation, pause, cancel, modify and renew actions.',
+    'Provide UPI or wallet payment, recharge and payment-history flows.',
+    'Synchronise confirmed actions with the Rekart dashboard.',
+    'Hand the conversation to an agent when the assistant cannot complete it.',
   ],
   discovery: [
     'Ordering, subscription, payment and wallet questions represented frequent, repeatable support needs.',

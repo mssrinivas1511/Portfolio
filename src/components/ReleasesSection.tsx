@@ -16,7 +16,7 @@ const ReleasesSection = () => (
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {releases.map((release) => (
+        {releases.filter((release) => release.version.startsWith('Release 3.')).map((release) => (
           <Card key={release.slug} className="glass overflow-hidden flex flex-col transition-colors duration-300 hover:border-primary/30">
             <div className="h-56 bg-muted/20 border-b border-card-border flex items-center justify-center p-5">
               <img
@@ -33,6 +33,7 @@ const ReleasesSection = () => (
                     {release.version}
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">{release.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">{release.releaseMonth}</p>
                 </div>
               </div>
 
