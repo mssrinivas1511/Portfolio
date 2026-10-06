@@ -39,4 +39,4 @@
 - [x] Replace the hero with updated positioning, four proof points, actions, and responsive portrait placement
 - [x] Rebuild Featured Projects as two concise Selected work case-study cards
 - [x] Restructure the WhatsApp AI case study into the requested 16-part product narrative
-- [ ] Restructure the Customer App case study around the address-led ordering decision and verified outcomes
+- [x] Restructure the Customer App case study around the address-led ordering decision and verified outcomes
