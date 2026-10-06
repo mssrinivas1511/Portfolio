@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import ProjectDetail from "./pages/ProjectDetail";
 import ReleaseDetail from "./pages/ReleaseDetail";
@@ -26,6 +26,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/projects/:slug" element={<ProjectDetail />} />
+          <Route path="/launches/rekart-assistant-whatsapp-launch" element={<Navigate to="/projects/rekart-whatsapp-ai-assistant" replace />} />
           <Route path="/launches/:slug" element={<ReleaseDetail />} />
           <Route path="/auth" element={<Auth />} />
 

@@ -12,6 +12,7 @@ import waAddressLocation from '@/assets/shipped/wa-address-location.png';
 export interface Release {
   slug: string;
   version: string;
+  releaseMonth: string;
   title: string;
   summary: string;
   surfaces: string[];
@@ -38,6 +39,7 @@ export const releases: Release[] = [
   {
     slug: 'release-3-51-smarter-store-tools',
     version: 'Release 3.51.0',
+    releaseMonth: 'August 2026',
     title: 'Smarter tools for the store',
     summary:
       'Catalogue, storefront and dashboard improvements that gave clients more control over how their products are priced, grouped and delivered.',
@@ -75,6 +77,7 @@ export const releases: Release[] = [
   {
     slug: 'release-3-49-refreshed-rekart-experience',
     version: 'Release 3.49.0',
+    releaseMonth: 'July 2026',
     title: 'The refreshed Rekart experience',
     summary:
       'A full redesign of the Customer App and Admin Panel — cleaner, faster and more intuitive, with no change to existing client workflows.',
@@ -115,6 +118,7 @@ export const releases: Release[] = [
   {
     slug: 'release-3-47-ticketing-system',
     version: 'Release 3.47.0',
+    releaseMonth: 'June 2026',
     title: 'Ticketing system for customer support',
     summary:
       'Support moved inside the product: customers raise and track tickets in the app, while support teams manage every concern from one workspace in the Admin Panel.',
@@ -152,6 +156,7 @@ export const releases: Release[] = [
   {
     slug: 'rekart-assistant-whatsapp-launch',
     version: 'Product launch',
+    releaseMonth: 'August 2026',
     title: 'Rekart Assistant on WhatsApp',
     summary:
       'A conversational assistant on the official WhatsApp Business Platform: customers order, subscribe, pay and get support inside the chat — no app download, no waiting on support.',

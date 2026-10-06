@@ -40,3 +40,5 @@
 - [x] Rebuild Featured Projects as two concise Selected work case-study cards
 - [x] Restructure the WhatsApp AI case study into the requested 16-part product narrative
 - [x] Restructure the Customer App case study around the address-led ordering decision and verified outcomes
+- [x] Refine Selected Launches to releases 3.51, 3.49 and 3.47 with dates and consistent measurement labels
+- [x] Consolidate the WhatsApp launch scope and requirements into its main case study and redirect the old launch route

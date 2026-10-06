@@ -54,6 +54,9 @@ const ReleaseDetail = () => {
       <main className="portfolio-container py-12 md:py-16">
         <Badge className="bg-primary/90 text-primary-foreground mb-4">{release.version}</Badge>
         <h1 className="text-3xl font-bold mb-4">{release.title}</h1>
+        <p className="mb-4 text-sm font-medium text-muted-foreground">
+          My role: Associate Product Manager <span aria-hidden="true">·</span> Released: {release.releaseMonth}
+        </p>
         <p className="max-w-[720px] text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">{release.summary}</p>
 
         <div className="flex flex-wrap gap-2 mb-8">
@@ -203,9 +206,9 @@ const ReleaseDetail = () => {
         <section className="mb-14">
           <div className="flex items-center gap-3 mb-2">
             <BarChart3 className="w-5 h-5 text-primary" />
-            <h2 className="text-2xl font-bold">Success metrics and KPIs</h2>
+            <h2 className="text-2xl font-bold">How I’d measure success</h2>
           </div>
-          <p className="max-w-[720px] text-muted-foreground mb-6 max-w-3xl">Measurement framework for evaluating adoption and operational impact. Values are not shown where the supplied release notes did not include measured results.</p>
+          <p className="max-w-[720px] text-muted-foreground mb-6">Measurement framework for evaluating adoption and operational impact.</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {release.successMetrics.map((item) => (
               <Card key={item.metric} className="glass p-5">
@@ -225,7 +228,12 @@ const ReleaseDetail = () => {
 
         {release.caseStudySlug && (
           <Button variant="hero" size="lg" asChild>
-            <Link to={`/projects/${release.caseStudySlug}`}>Read the broader product case study<ArrowRight className="w-5 h-5 ml-2" /></Link>
+            <Link to={`/projects/${release.caseStudySlug}`}>
+              {release.slug === 'release-3-49-refreshed-rekart-experience'
+                ? 'Read the full Customer App case study'
+                : 'Read the broader product case study'}
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </Button>
         )}
       </main>
