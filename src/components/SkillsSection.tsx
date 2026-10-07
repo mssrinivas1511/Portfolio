@@ -1,132 +1,113 @@
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { 
-  Brain, 
-  Target, 
-  Users, 
-  BarChart, 
-  Rocket, 
-  Code, 
-  Lightbulb,
-  Figma
-} from 'lucide-react';
-
 const SkillsSection = () => {
-  const skillCategories = [
+  const skillGroups = [
     {
-      title: 'Product Strategy',
-      icon: Target,
+      title: 'Product Management',
       skills: [
+        'Product Discovery',
+        'Requirement Gathering',
+        'PRDs',
+        'User Stories & Acceptance Criteria',
+        'User Journeys',
+        'Prioritisation (RICE, MoSCoW)',
         'Roadmapping',
-        'Market Research',
-        'Competitive Analysis',
-        'Product Vision',
-      ],
-    },
-    {
-      title: 'Analytics & Data',
-      icon: BarChart,
-      skills: [
-        'Data Analytics',
-        'A/B Testing',
-        'SQL',
-        'Product Metrics',
-      ],
-    },
-    {
-      title: 'Leadership',
-      icon: Users,
-      skills: [
-        'Team Management',
+        'Go-to-Market',
         'Stakeholder Management',
-        'Cross-functional Collaboration',
-        'Agile / Scrum',
       ],
     },
     {
-      title: 'Technical',
-      icon: Code,
+      title: 'Analytics & Research',
       skills: [
-        'API Integration',
-        'Technical Documentation',
-        'System Architecture',
-        'Cloud Platforms',
+        'Mixpanel',
+        'KPI & Success Metrics',
+        'Adoption & Retention Analysis',
+        'Market Research',
+        'Competitor Analysis',
+        'User Personas',
+      ],
+    },
+    {
+      title: 'Delivery',
+      skills: [
+        'Agile/Scrum',
+        'Jira',
+        'Confluence',
+        'UAT',
+        'Release Management',
+        'Cross-functional Collaboration',
+      ],
+    },
+    {
+      title: 'Domain & AI',
+      skills: [
+        'Subscription Commerce',
+        'Payments (Razorpay, Easebuzz)',
+        'WhatsApp Business API',
+        'NLP-based Conversational AI',
+        'Generative AI',
+      ],
+    },
+    {
+      title: 'Tools',
+      skills: [
+        'Figma',
+        'Balsamiq',
+        'Zoho Campaigns',
+        'MS Excel',
+        'PowerPoint',
       ],
     },
   ];
 
-  const tools = [
-    'Figma', 'Jira', 'Confluence', 'Mixpanel', 'Amplitude', 'Tableau', 
-    'Notion', 'GitHub', 'SQL'
-  ];
-
-  const certifications = [
-    { name: 'Product Management\nwith Gen AI', icon: Brain },
-    { name: 'AI Product Management\nCertificate', icon: Lightbulb },
-    { name: 'Figma\nCertified', icon: Figma },
+  const education = [
+    {
+      title: 'B.Tech, Mechanical Engineering',
+      detail: 'Andhra University, Visakhapatnam · 2022',
+    },
+    {
+      title: 'Product Management with Gen AI',
+      detail: 'PW Skills',
+    },
   ];
 
   return (
     <section id="skills" className="portfolio-section">
       <div className="portfolio-container">
         <div className="section-heading">
-          <h2 className="text-4xl font-bold mb-6">Skills &amp; Expertise</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive skill set spanning strategy, analytics, leadership, and technology
+          <p className="eyebrow mb-3">Capabilities</p>
+          <h2 className="mb-6">Skills &amp; Expertise</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            How I turn customer problems into shipped, measured product.
           </p>
         </div>
 
-        {/* Skill Categories */}
-        <div className="grid md:grid-cols-2 gap-8 mb-14">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="glass p-6 transition-colors duration-300 hover:border-primary/30">
-              <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
-                  <category.icon className="w-6 h-6 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">{category.title}</h3>
-              </div>
+        <div className="space-y-8 max-w-[720px] mx-auto">
+          {skillGroups.map((group) => (
+            <div key={group.title}>
+              <h3 className="eyebrow mb-4">{group.title}</h3>
               <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill) => (
-                  <Badge key={skill} variant="outline" className="px-3 py-2 border-primary/30">
+                {group.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="inline-flex items-center rounded-full border bg-card px-3.5 py-1.5 text-sm text-foreground"
+                  >
                     {skill}
-                  </Badge>
+                  </span>
                 ))}
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
-        {/* Tools & Technologies */}
-        <Card className="glass p-8 mb-12">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Tools & Technologies
-          </h3>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {tools.map((tool, index) => (
-              <Badge
-                key={index}
-                variant="outline"
-                className="px-4 py-2 text-sm font-medium border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
-              >
-                {tool}
-              </Badge>
+        <div className="max-w-[720px] mx-auto mt-14 pt-10 border-t">
+          <h3 className="eyebrow mb-6">Education &amp; Certifications</h3>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {education.map((item) => (
+              <div key={item.title} className="rounded-xl border bg-card p-5">
+                <p className="font-semibold text-foreground">{item.title}</p>
+                <p className="text-sm text-muted-foreground mt-1">{item.detail}</p>
+              </div>
             ))}
           </div>
-        </Card>
-
-        {/* Certifications */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((cert, index) => (
-            <Card key={index} className="glass p-6 text-center transition-colors duration-300 hover:border-primary/30">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                <cert.icon className="w-8 h-8 text-primary-foreground" />
-              </div>
-              <h4 className="text-sm font-semibold text-foreground leading-tight whitespace-pre-line">
-                {cert.name}
-              </h4>
-            </Card>
-          ))}
         </div>
       </div>
     </section>
