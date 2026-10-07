@@ -133,6 +133,5 @@ export const contact = {
     linkedin: "https://www.linkedin.com/in/mssrinivas1511",
     whatsapp: "https://wa.me/917287070114",
     github: "https://github.com/mssrinivas1511",
-    instagram: "https://www.instagram.com/nivas_1511/",
   },
 } as const;
