@@ -53,25 +53,13 @@ const AboutSection = () => {
             </div>
 
             <p className="text-muted-foreground leading-relaxed">
-              I'm an Associate Product Manager working on Rekart - a SaaS delivery management platform
-              for subscription and recurring-delivery businesses (milk, tiffin, grocery), used by 300+
-              client businesses.
-              The product spans a customer app, a web app, a client dashboard and a driver app for
-              delivery logistics — so most of my days are spent connecting what customers need with what
-              operations, clients and engineering can realistically deliver.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              My work sits at the intersection of research and execution: gathering insights from
-              customers and clients, running market and competitor analysis, translating findings into
-              requirements and use cases, and then shipping with design, development and QA. I care
-              about reducing friction in everyday journeys — ordering, subscribing, paying, tracking a
-              delivery — because those are the moments that decide whether a subscriber stays.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              I'm especially drawn to AI-assisted product experiences. Leading Rekart's NLP-based
-              WhatsApp assistant showed me how much a conversational layer can do for users who never
-              want to open an app. When I'm not working on the roadmap, I'm exploring AI and analytics
-              tooling, sharpening my UX craft in Figma, and learning from the wider product community.
+              I'm an Associate Product Manager on Rekart, a SaaS platform that runs subscriptions and
+              deliveries for 300+ milk, tiffin and grocery businesses across a customer app, web app,
+              client dashboard and driver app. I spend my days connecting what customers need with what
+              operations, clients and engineering can realistically ship — and I care most about
+              everyday moments like ordering, subscribing, paying and tracking a delivery. Building
+              Rekart's WhatsApp assistant made me especially interested in AI products for people who
+              never want to open an app.
             </p>
           </div>
 
