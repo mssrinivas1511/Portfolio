@@ -15,7 +15,7 @@ const AboutSection = () => {
       icon: LineChart,
       title: 'Data over opinion',
       description:
-        'Mixpanel funnels, adoption and drop-off data decide what gets built next and whether a release actually worked.',
+'Mixpanel adoption and drop-off data, plus real customer conversations, decide what gets built next and whether a release worked.',
     },
     {
       icon: Users,
