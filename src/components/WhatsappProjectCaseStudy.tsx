@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { type Project, whatsappCaseStudy } from '@/lib/projects-data';
+import { ConversationalArchitecture, FailureHandlingLoop } from '@/components/CaseStudyDiagrams';
 
 interface WhatsappProjectCaseStudyProps {
   project: Project;
@@ -19,24 +20,10 @@ const BulletList = ({ items }: { items: string[] }) => (
   </ul>
 );
 
-const FlowDiagram = ({ flow }: { flow?: string }) => {
-  if (!flow) return null;
-
-  return (
-    <Card className="glass mt-5 overflow-x-auto p-5 sm:p-7">
-      <pre className="min-w-max text-xs leading-relaxed text-muted-foreground sm:text-sm">
-        {flow}
-      </pre>
-    </Card>
-  );
-};
-
 const WhatsappProjectCaseStudy = ({ project }: WhatsappProjectCaseStudyProps) => {
   const problem = project.sections.find((section) => section.heading === 'The problem');
-  const architecture = project.sections.find((section) => section.heading === 'Conversational architecture I defined');
   const phaseOne = project.sections.find((section) => section.heading === 'Phase 1 — Core self-service');
   const phaseTwo = project.sections.find((section) => section.heading === 'Phase 2 — Expanding the conversational journey');
-  const failureLoop = project.sections.find((section) => section.heading === 'Failure handling & continuous improvement loop');
   const goToMarket = project.sections.find((section) => section.heading === 'Go-to-market');
   const screens = [
     project.wireframe && { ...project.wireframe, label: 'Wireframe' },
@@ -140,7 +127,7 @@ const WhatsappProjectCaseStudy = ({ project }: WhatsappProjectCaseStudyProps) =>
           </div>
           <h3 className="mt-10 mb-2">Conversational architecture</h3>
           <p className="max-w-[720px] text-muted-foreground">How a customer message moves from intent detection to a confirmed Rekart action.</p>
-          <FlowDiagram flow={architecture?.flow} />
+          <ConversationalArchitecture />
         </section>
 
         <section>
@@ -174,7 +161,7 @@ const WhatsappProjectCaseStudy = ({ project }: WhatsappProjectCaseStudyProps) =>
         <section>
           <h2 className="mb-2">Failure handling & improvement loop</h2>
           <p className="max-w-[720px] text-muted-foreground">Unsupported and unsuccessful conversations fed directly into flow and prompt improvements.</p>
-          <FlowDiagram flow={failureLoop?.flow} />
+          <FailureHandlingLoop />
         </section>
 
         <section>

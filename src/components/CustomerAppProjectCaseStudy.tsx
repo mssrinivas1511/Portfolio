@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { customerAppCaseStudy, type Project } from '@/lib/projects-data';
+import { BeforeAfterJourney, CustomerJourney } from '@/components/CaseStudyDiagrams';
 
 interface CustomerAppProjectCaseStudyProps {
   project: Project;
@@ -73,25 +74,7 @@ const CustomerAppProjectCaseStudy = ({ project }: CustomerAppProjectCaseStudyPro
           <p className="eyebrow mb-2">Key decision</p>
           <h2 className="mb-4">Sales Territory → Delivery Address</h2>
           <p className="mb-7 max-w-[720px] text-muted-foreground">{customerAppCaseStudy.decision.intro}</p>
-          <div className="grid gap-5 md:grid-cols-2">
-            {[
-              { label: 'Before', steps: customerAppCaseStudy.decision.before },
-              { label: 'After', steps: customerAppCaseStudy.decision.after },
-            ].map((journey) => (
-              <Card key={journey.label} className="glass p-6">
-                <p className="eyebrow mb-5">{journey.label}</p>
-                <ol className="space-y-0">
-                  {journey.steps.map((step, index) => (
-                    <li key={step} className="relative flex gap-4 pb-6 last:pb-0">
-                      {index < journey.steps.length - 1 && <span className="absolute left-[15px] top-8 h-[calc(100%-1rem)] w-px bg-border" />}
-                      <span className="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border bg-card text-sm font-semibold text-primary">{index + 1}</span>
-                      <span className="pt-1 text-muted-foreground">{step}</span>
-                    </li>
-                  ))}
-                </ol>
-              </Card>
-            ))}
-          </div>
+          <BeforeAfterJourney />
           <p className="mt-6 max-w-[720px] font-medium text-foreground">{customerAppCaseStudy.decision.outcome}</p>
         </section>
 
@@ -114,6 +97,11 @@ const CustomerAppProjectCaseStudy = ({ project }: CustomerAppProjectCaseStudyPro
           <h2 className="mb-4">Payment experience & status clarity</h2>
           <p className="mb-5 max-w-[720px] text-muted-foreground">Payment screens are a high-risk conversion point, so I focused the redesign on making what the customer is paying, how much, and what happens next immediately clear.</p>
           <BulletList items={customerAppCaseStudy.payments} />
+        </section>
+
+        <section>
+          <h2 className="mb-4">Customer journey</h2>
+          <CustomerJourney />
         </section>
 
         <section>
