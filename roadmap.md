@@ -1,7 +1,7 @@
 # Roadmap
 
 ## In progress
-- [ ] Replace and verify all four case-study diagrams with responsive boxes, arrows and captions
+- [x] Replace and verify all four case-study diagrams with responsive boxes, arrows and captions
 - [x] Central site config for all links (social, email, phone, resume, calendar)
 - [x] Fix Download Resume CTAs (nav + hero) so the PDF downloads instead of navigating/being blocked
 - [x] Hero: add working social links + Contact CTA
