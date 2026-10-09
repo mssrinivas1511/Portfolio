@@ -1,11 +1,11 @@
 import wireframeWhatsappFlow from '@/assets/wireframe-whatsapp-flow.jpg';
 import wireframeCustomerApp from '@/assets/wireframe-customer-app.jpg';
-import waViewOptions from '@/assets/shipped/wa-view-options.png';
-import waSelectProduct from '@/assets/shipped/wa-select-product.png';
-import waSubscriptionFlow from '@/assets/shipped/wa-subscription-flow.png';
-import appHomeAddress from '@/assets/shipped/app-home-address.png';
-import appUpcomingDeliveries from '@/assets/shipped/app-upcoming-deliveries.png';
-import appTrialOffers from '@/assets/shipped/app-trial-offers.png';
+import waViewOptions from '@/assets/shipped/wa-view-options.webp';
+import waSelectProduct from '@/assets/shipped/wa-select-product.webp';
+import waSubscriptionFlow from '@/assets/shipped/wa-subscription-flow.webp';
+import appHomeAddress from '@/assets/shipped/app-home-address.webp';
+import appUpcomingDeliveries from '@/assets/shipped/app-upcoming-deliveries.webp';
+import appTrialOffers from '@/assets/shipped/app-trial-offers.webp';
 
 
 export interface ProjectSection {
