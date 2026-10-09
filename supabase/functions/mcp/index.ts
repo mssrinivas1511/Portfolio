@@ -10,6 +10,7 @@ import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.1";
 
 // src/lib/site-config.ts
 import resumeAsset from "npm:@/assets/final-resume.pdf.asset.json";
+import { toast } from "npm:sonner@^1.7.4";
 var siteConfig = {
   name: "Manda Sai Srinivas",
   role: "Associate Product Manager",
