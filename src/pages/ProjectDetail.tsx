@@ -88,6 +88,7 @@ const ProjectDetail = () => {
           <img
             src={project.image}
             alt={`${project.title} — high-fidelity product screen by ${siteConfig.name}`}
+            loading="lazy"
             width={1200}
             height={800}
             className="w-auto h-full max-w-full object-contain"
