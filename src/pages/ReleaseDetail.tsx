@@ -24,7 +24,10 @@ const ReleaseDetail = () => {
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
-    if (release) document.title = `${release.title} — ${siteConfig.name}`;
+    if (release) {
+      document.title = `${release.title} - ${siteConfig.name}`;
+      document.querySelector('meta[name="description"]')?.setAttribute('content', release.summary);
+    }
   }, [release]);
 
   if (!release) {
@@ -180,7 +183,7 @@ const ReleaseDetail = () => {
                 <div className="h-80 md:h-[28rem] bg-muted/20 p-5 flex items-center justify-center">
                   <img
                     src={screen.src}
-                    alt={`${release.title} — ${screen.caption}`}
+                     alt={`${release.title} — ${screen.caption}, release work by ${siteConfig.name}`}
                     loading="lazy"
                     className="w-auto h-full max-w-full object-contain"
                   />

@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { customerAppCaseStudy, type Project } from '@/lib/projects-data';
 import { BeforeAfterJourney, CustomerJourney } from '@/components/CaseStudyDiagrams';
+import { siteConfig } from '@/lib/site-config';
 
 interface CustomerAppProjectCaseStudyProps {
   project: Project;
@@ -114,7 +115,7 @@ const CustomerAppProjectCaseStudy = ({ project }: CustomerAppProjectCaseStudyPro
                   <div className="flex h-full max-w-full items-center justify-center overflow-hidden rounded-[24px] border-[5px] border-foreground/90 bg-card">
                     <img
                       src={screen.src}
-                      alt={`${project.title} ${screen.label.toLowerCase()} — ${screen.title}`}
+                       alt={`${project.title} ${screen.label.toLowerCase()} — ${screen.title}, product work by ${siteConfig.name}`}
                       loading="lazy"
                       width={1200}
                       height={800}

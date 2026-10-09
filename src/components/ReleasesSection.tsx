@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { releases } from '@/lib/releases-data';
+import { siteConfig } from '@/lib/site-config';
 
 const ReleasesSection = () => (
   <section id="releases" className="portfolio-section">
@@ -21,7 +22,7 @@ const ReleasesSection = () => (
             <div className="h-56 bg-muted/20 border-b border-card-border flex items-center justify-center p-5">
               <img
                 src={release.screens[0]?.src}
-                alt={`${release.title} — ${release.screens[0]?.caption}`}
+                 alt={`${release.title} — ${release.screens[0]?.caption}, release work by ${siteConfig.name}`}
                 loading="lazy"
                 className="w-auto h-full max-w-full object-contain"
               />

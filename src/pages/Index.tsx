@@ -12,6 +12,8 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
+    document.title = 'Manda Sai Srinivas - Associate Product Manager';
+    document.querySelector('meta[name="description"]')?.setAttribute('content', 'Associate Product Manager building subscription, payments and conversational AI products for Rekart, a B2B SaaS platform used by 300+ businesses.');
     // Smooth scrolling for the entire page
     document.documentElement.style.scrollBehavior = 'smooth';
 

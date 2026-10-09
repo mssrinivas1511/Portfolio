@@ -58,7 +58,7 @@ const HeroSection = () => {
             <div className="overflow-hidden rounded-xl border border-border bg-card p-2 shadow-sm">
               <img
                 src={portrait}
-                alt="Manda Sai Srinivas portrait"
+                 alt="Manda Sai Srinivas, Associate Product Manager at Abmiro Solutions working on Rekart"
                 width={776}
                 height={788}
                 className="h-48 w-48 rounded-lg object-cover object-top sm:h-56 sm:w-56 lg:h-64 lg:w-64"

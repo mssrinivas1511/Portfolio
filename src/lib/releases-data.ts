@@ -1,13 +1,13 @@
-import variantsProductCard from '@/assets/shipped/variants-product-card.png';
-import dashboardPending from '@/assets/shipped/dashboard-pending.png';
-import appHomeAddress from '@/assets/shipped/app-home-address.png';
-import appTrialOffers from '@/assets/shipped/app-trial-offers.png';
-import appUpcomingDeliveries from '@/assets/shipped/app-upcoming-deliveries.png';
-import appRichPush from '@/assets/shipped/app-rich-push.png';
-import ticketsMyTickets from '@/assets/shipped/tickets-my-tickets.png';
-import ticketsAdmin from '@/assets/shipped/tickets-admin.png';
-import waViewOptions from '@/assets/shipped/wa-view-options.png';
-import waAddressLocation from '@/assets/shipped/wa-address-location.png';
+import variantsProductCard from '@/assets/shipped/variants-product-card.webp';
+import dashboardPending from '@/assets/shipped/dashboard-pending.webp';
+import appHomeAddress from '@/assets/shipped/app-home-address.webp';
+import appTrialOffers from '@/assets/shipped/app-trial-offers.webp';
+import appUpcomingDeliveries from '@/assets/shipped/app-upcoming-deliveries.webp';
+import appRichPush from '@/assets/shipped/app-rich-push.webp';
+import ticketsMyTickets from '@/assets/shipped/tickets-my-tickets.webp';
+import ticketsAdmin from '@/assets/shipped/tickets-admin.webp';
+import waViewOptions from '@/assets/shipped/wa-view-options.webp';
+import waAddressLocation from '@/assets/shipped/wa-address-location.webp';
 
 export interface Release {
   slug: string;
