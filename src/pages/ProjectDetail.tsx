@@ -16,7 +16,7 @@ const ProjectDetail = () => {
   useEffect(() => {
     window.scrollTo({ top: 0 });
     if (project) {
-      document.title = `${project.title} — ${siteConfig.name}`;
+      document.title = `${project.title} - ${siteConfig.name}`;
       document
         .querySelector('meta[name="description"]')
         ?.setAttribute('content', project.tagline);
@@ -118,7 +118,7 @@ const ProjectDetail = () => {
               <div className="h-72 md:h-96 bg-muted/20 p-5 flex items-center justify-center">
                 <img
                   src={project.wireframe.src}
-                  alt={`${project.title} wireframe — ${project.wireframe.title}`}
+                   alt={`${project.title} wireframe — ${project.wireframe.title}, product work by ${siteConfig.name}`}
                   loading="lazy"
                   width={1600}
                   height={1000}
@@ -144,7 +144,7 @@ const ProjectDetail = () => {
                   <div className="h-80 md:h-[26rem] bg-muted/20 p-5 flex items-center justify-center">
                     <img
                       src={wf.src}
-                      alt={`${project.title} shipped product screen — ${wf.title}`}
+                       alt={`${project.title} shipped product screen — ${wf.title}, product work by ${siteConfig.name}`}
                       loading="lazy"
                       width={1200}
                       height={800}

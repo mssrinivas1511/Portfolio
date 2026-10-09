@@ -1,3 +1,5 @@
+import resumeAsset from '@/assets/final-resume.pdf.asset.json';
+
 // Single source of truth for every outbound link / CTA destination on the site.
 export const siteConfig = {
   name: 'Manda Sai Srinivas',
@@ -5,8 +7,8 @@ export const siteConfig = {
   email: 'ssai55030@gmail.com',
   phone: '+91 7287070114',
   location: 'Pune, Maharashtra, India',
-  resumeUrl: '/MSSRINIVAS_CV.pdf',
-  resumeFileName: 'MSSRINIVAS_CV.pdf',
+  resumeUrl: resumeAsset.url,
+  resumeFileName: 'Manda_Sai_Srinivas_APM_Resume.pdf',
   social: {
     linkedin: 'https://www.linkedin.com/in/mssrinivas1511',
     whatsapp: 'https://wa.me/917287070114',

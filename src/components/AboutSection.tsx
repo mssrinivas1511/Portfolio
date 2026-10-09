@@ -41,7 +41,8 @@ const AboutSection = () => {
             <div className="flex flex-col sm:flex-row sm:items-center gap-5">
               <img
                 src={portrait}
-                alt={`${siteConfig.name} portrait`}
+                 alt={`${siteConfig.name}, Associate Product Manager — professional portrait in the About section`}
+                 loading="lazy"
                 width={776}
                 height={788}
                 className="w-28 h-28 rounded-lg object-cover object-top ring-1 ring-primary/40 shrink-0"

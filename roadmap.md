@@ -1,6 +1,7 @@
 # Roadmap
 
 ## In progress
+- [ ] Connect final resume, update metadata and image descriptions, compress screenshots, check links and 375px layouts, hide badge
 - [x] Replace and verify all four case-study diagrams with responsive boxes, arrows and captions
 - [x] Central site config for all links (social, email, phone, resume, calendar)
 - [x] Fix Download Resume CTAs (nav + hero) so the PDF downloads instead of navigating/being blocked

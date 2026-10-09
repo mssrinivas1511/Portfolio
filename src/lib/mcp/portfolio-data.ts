@@ -1,5 +1,6 @@
 // Public portfolio content exposed through the MCP server.
 // Mirrors what is already published on the site.
+import { siteConfig } from '../site-config';
 
 export const profile = {
   name: "Manda Sai Srinivas",
@@ -33,7 +34,7 @@ export const profile = {
       description: "Shipped across customer app, web app, client dashboard and driver app with design, development and QA teams",
     },
   ],
-  resumeUrl: "/MSSRINIVAS_CV.pdf",
+  resumeUrl: siteConfig.resumeUrl,
 } as const;
 
 export const projects = [

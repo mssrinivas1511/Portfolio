@@ -8,6 +8,28 @@ import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.26.1";
 // src/lib/mcp/tools/get-profile.ts
 import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.1";
 
+// src/lib/site-config.ts
+import resumeAsset from "npm:@/assets/final-resume.pdf.asset.json";
+var siteConfig = {
+  name: "Manda Sai Srinivas",
+  role: "Associate Product Manager",
+  email: "ssai55030@gmail.com",
+  phone: "+91 7287070114",
+  location: "Pune, Maharashtra, India",
+  resumeUrl: resumeAsset.url,
+  resumeFileName: "Manda_Sai_Srinivas_APM_Resume.pdf",
+  social: {
+    linkedin: "https://www.linkedin.com/in/mssrinivas1511",
+    whatsapp: "https://wa.me/917287070114",
+    github: "https://github.com/mssrinivas1511"
+  }
+};
+var outreachMessage = "Hi Srinivas, I came across your portfolio and would like to connect.";
+var emailHref = `mailto:${siteConfig.email}`;
+var whatsappHref = `${siteConfig.social.whatsapp}?text=${encodeURIComponent(
+  outreachMessage
+)}`;
+
 // src/lib/mcp/portfolio-data.ts
 var profile = {
   name: "Manda Sai Srinivas",
@@ -40,7 +62,7 @@ var profile = {
       description: "Shipped across customer app, web app, client dashboard and driver app with design, development and QA teams"
     }
   ],
-  resumeUrl: "/MSSRINIVAS_CV.pdf"
+  resumeUrl: siteConfig.resumeUrl
 };
 var projects = [
   {
