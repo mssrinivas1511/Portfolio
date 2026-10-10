@@ -8,8 +8,15 @@ export default defineTool({
     "Get the portfolio owner's public profile: name, title, location, summary, core expertise and headline achievements.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: () => ({
-    content: [{ type: "text", text: JSON.stringify(profile, null, 2) }],
-    structuredContent: { profile },
-  }),
+  handler: () => {
+    const result = {
+      ...profile,
+      coreExpertise: [...profile.coreExpertise],
+      achievements: profile.achievements.map((achievement) => ({ ...achievement })),
+    };
+    return {
+      content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+      structuredContent: { profile: result },
+    };
+  },
 });

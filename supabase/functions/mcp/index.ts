@@ -3,21 +3,32 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@3.0.5";
 
 // src/lib/mcp/tools/get-profile.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool } from "npm:@lovable.dev/mcp-js@3.0.5";
 
-// src/lib/site-config.ts
-import resumeAsset from "npm:@/assets/final-resume.pdf.asset.json";
-import { toast } from "npm:sonner@^1.7.4";
+// src/assets/final-resume.pdf.asset.json
+var final_resume_pdf_asset_default = {
+  version: 1,
+  asset_id: "3157cac1-1e8c-467b-a294-c9761400f2e5",
+  project_id: "2f9e33ed-2b3d-49ed-a93d-9fa5511cd947",
+  url: "/__l5e/assets-v1/3157cac1-1e8c-467b-a294-c9761400f2e5/Manda_Sai_Srinivas_APM_Resume.pdf",
+  r2_key: "a/v1/2f9e33ed-2b3d-49ed-a93d-9fa5511cd947/3157cac1-1e8c-467b-a294-c9761400f2e5/Manda_Sai_Srinivas_APM_Resume.pdf",
+  original_filename: "Manda_Sai_Srinivas_APM_Resume.pdf",
+  size: 79722,
+  content_type: "application/pdf",
+  created_at: "2026-10-09T04:34:08Z"
+};
+
+// src/lib/site-data.ts
 var siteConfig = {
   name: "Manda Sai Srinivas",
   role: "Associate Product Manager",
   email: "ssai55030@gmail.com",
   phone: "+91 7287070114",
   location: "Pune, Maharashtra, India",
-  resumeUrl: resumeAsset.url,
+  resumeUrl: final_resume_pdf_asset_default.url,
   resumeFileName: "Manda_Sai_Srinivas_APM_Resume.pdf",
   social: {
     linkedin: "https://www.linkedin.com/in/mssrinivas1511",
@@ -25,11 +36,6 @@ var siteConfig = {
     github: "https://github.com/mssrinivas1511"
   }
 };
-var outreachMessage = "Hi Srinivas, I came across your portfolio and would like to connect.";
-var emailHref = `mailto:${siteConfig.email}`;
-var whatsappHref = `${siteConfig.social.whatsapp}?text=${encodeURIComponent(
-  outreachMessage
-)}`;
 
 // src/lib/mcp/portfolio-data.ts
 var profile = {
@@ -164,14 +170,21 @@ var get_profile_default = defineTool({
   description: "Get the portfolio owner's public profile: name, title, location, summary, core expertise and headline achievements.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: () => ({
-    content: [{ type: "text", text: JSON.stringify(profile, null, 2) }],
-    structuredContent: { profile }
-  })
+  handler: () => {
+    const result = {
+      ...profile,
+      coreExpertise: [...profile.coreExpertise],
+      achievements: profile.achievements.map((achievement) => ({ ...achievement }))
+    };
+    return {
+      content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+      structuredContent: { profile: result }
+    };
+  }
 });
 
 // src/lib/mcp/tools/list-projects.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@3.0.5";
 import { z } from "npm:zod@^3.25.76";
 var list_projects_default = defineTool2({
   name: "list_projects",
@@ -190,7 +203,7 @@ var list_projects_default = defineTool2({
       const haystack = [project.title, project.description, project.role, ...project.technologies].join(" ").toLowerCase();
       const matchesQuery = !needle || haystack.includes(needle);
       return matchesCategory && matchesQuery;
-    });
+    }).map((project) => ({ ...project, technologies: [...project.technologies] }));
     return {
       content: [{ type: "text", text: JSON.stringify(results, null, 2) }],
       structuredContent: { count: results.length, projects: results }
@@ -199,7 +212,7 @@ var list_projects_default = defineTool2({
 });
 
 // src/lib/mcp/tools/get-skills.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@3.0.5";
 var get_skills_default = defineTool3({
   name: "get_skills",
   title: "Get skills and expertise",
@@ -207,7 +220,14 @@ var get_skills_default = defineTool3({
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
-    const payload = { skillCategories, tools, certifications };
+    const payload = {
+      skillCategories: skillCategories.map((category) => ({
+        title: category.title,
+        skills: category.skills.map((skill) => ({ ...skill }))
+      })),
+      tools: [...tools],
+      certifications: [...certifications]
+    };
     return {
       content: [{ type: "text", text: JSON.stringify(payload, null, 2) }],
       structuredContent: payload
@@ -216,7 +236,7 @@ var get_skills_default = defineTool3({
 });
 
 // src/lib/mcp/tools/get-contact-info.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@3.0.5";
 var get_contact_info_default = defineTool4({
   name: "get_contact_info",
   title: "Get contact info",
@@ -230,7 +250,7 @@ var get_contact_info_default = defineTool4({
 });
 
 // src/lib/mcp/tools/get-resume.ts
-import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@3.0.5";
 var get_resume_default = defineTool5({
   name: "get_resume",
   title: "Get resume link",
@@ -263,5 +283,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.26.1/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@3.0.5/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));

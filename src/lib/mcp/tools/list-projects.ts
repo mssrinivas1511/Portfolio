@@ -29,7 +29,7 @@ export default defineTool({
         .toLowerCase();
       const matchesQuery = !needle || haystack.includes(needle);
       return matchesCategory && matchesQuery;
-    });
+    }).map((project) => ({ ...project, technologies: [...project.technologies] }));
 
     return {
       content: [{ type: "text", text: JSON.stringify(results, null, 2) }],
