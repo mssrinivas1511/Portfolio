@@ -21,8 +21,7 @@ var final_resume_pdf_asset_default = {
   created_at: "2026-10-09T04:34:08Z"
 };
 
-// src/lib/site-config.ts
-import { toast } from "npm:sonner@^1.7.4";
+// src/lib/site-data.ts
 var siteConfig = {
   name: "Manda Sai Srinivas",
   role: "Associate Product Manager",
@@ -37,11 +36,6 @@ var siteConfig = {
     github: "https://github.com/mssrinivas1511"
   }
 };
-var outreachMessage = "Hi Srinivas, I came across your portfolio and would like to connect.";
-var emailHref = `mailto:${siteConfig.email}`;
-var whatsappHref = `${siteConfig.social.whatsapp}?text=${encodeURIComponent(
-  outreachMessage
-)}`;
 
 // src/lib/mcp/portfolio-data.ts
 var profile = {
@@ -176,10 +170,17 @@ var get_profile_default = defineTool({
   description: "Get the portfolio owner's public profile: name, title, location, summary, core expertise and headline achievements.",
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
-  handler: () => ({
-    content: [{ type: "text", text: JSON.stringify(profile, null, 2) }],
-    structuredContent: { profile }
-  })
+  handler: () => {
+    const result = {
+      ...profile,
+      coreExpertise: [...profile.coreExpertise],
+      achievements: profile.achievements.map((achievement) => ({ ...achievement }))
+    };
+    return {
+      content: [{ type: "text", text: JSON.stringify(result, null, 2) }],
+      structuredContent: { profile: result }
+    };
+  }
 });
 
 // src/lib/mcp/tools/list-projects.ts
@@ -202,7 +203,7 @@ var list_projects_default = defineTool2({
       const haystack = [project.title, project.description, project.role, ...project.technologies].join(" ").toLowerCase();
       const matchesQuery = !needle || haystack.includes(needle);
       return matchesCategory && matchesQuery;
-    });
+    }).map((project) => ({ ...project, technologies: [...project.technologies] }));
     return {
       content: [{ type: "text", text: JSON.stringify(results, null, 2) }],
       structuredContent: { count: results.length, projects: results }
@@ -219,7 +220,14 @@ var get_skills_default = defineTool3({
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
-    const payload = { skillCategories, tools, certifications };
+    const payload = {
+      skillCategories: skillCategories.map((category) => ({
+        title: category.title,
+        skills: category.skills.map((skill) => ({ ...skill }))
+      })),
+      tools: [...tools],
+      certifications: [...certifications]
+    };
     return {
       content: [{ type: "text", text: JSON.stringify(payload, null, 2) }],
       structuredContent: payload

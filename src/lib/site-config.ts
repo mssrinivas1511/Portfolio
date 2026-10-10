@@ -1,21 +1,8 @@
-import resumeAsset from '@/assets/final-resume.pdf.asset.json';
+import { siteConfig } from './site-data';
 import { toast } from 'sonner';
 
 // Single source of truth for every outbound link / CTA destination on the site.
-export const siteConfig = {
-  name: 'Manda Sai Srinivas',
-  role: 'Associate Product Manager',
-  email: 'ssai55030@gmail.com',
-  phone: '+91 7287070114',
-  location: 'Pune, Maharashtra, India',
-  resumeUrl: resumeAsset.url,
-  resumeFileName: 'Manda_Sai_Srinivas_APM_Resume.pdf',
-  social: {
-    linkedin: 'https://www.linkedin.com/in/mssrinivas1511',
-    whatsapp: 'https://wa.me/917287070114',
-    github: 'https://github.com/mssrinivas1511',
-  },
-} as const;
+export { siteConfig };
 
 /** Message pre-filled when someone reaches out on WhatsApp. */
 export const outreachMessage =

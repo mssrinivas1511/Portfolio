@@ -1,6 +1,6 @@
 // Public portfolio content exposed through the MCP server.
 // Mirrors what is already published on the site.
-import { siteConfig } from '../site-config';
+import { siteConfig } from '../site-data';
 
 export const profile = {
   name: "Manda Sai Srinivas",

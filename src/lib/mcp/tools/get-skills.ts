@@ -9,7 +9,14 @@ export default defineTool({
   inputSchema: {},
   annotations: { readOnlyHint: true, idempotentHint: true, openWorldHint: false },
   handler: () => {
-    const payload = { skillCategories, tools, certifications };
+    const payload = {
+      skillCategories: skillCategories.map((category) => ({
+        title: category.title,
+        skills: category.skills.map((skill) => ({ ...skill })),
+      })),
+      tools: [...tools],
+      certifications: [...certifications],
+    };
     return {
       content: [{ type: "text", text: JSON.stringify(payload, null, 2) }],
       structuredContent: payload,
