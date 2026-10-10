@@ -3,13 +3,25 @@
 // supabase function: mcp
 // Bundled from src/lib/mcp/index.ts by @lovable.dev/mcp-js.
 // src/lib/mcp/index.ts
-import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { auth, defineMcp } from "npm:@lovable.dev/mcp-js@3.0.5";
 
 // src/lib/mcp/tools/get-profile.ts
-import { defineTool } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool } from "npm:@lovable.dev/mcp-js@3.0.5";
+
+// src/assets/final-resume.pdf.asset.json
+var final_resume_pdf_asset_default = {
+  version: 1,
+  asset_id: "3157cac1-1e8c-467b-a294-c9761400f2e5",
+  project_id: "2f9e33ed-2b3d-49ed-a93d-9fa5511cd947",
+  url: "/__l5e/assets-v1/3157cac1-1e8c-467b-a294-c9761400f2e5/Manda_Sai_Srinivas_APM_Resume.pdf",
+  r2_key: "a/v1/2f9e33ed-2b3d-49ed-a93d-9fa5511cd947/3157cac1-1e8c-467b-a294-c9761400f2e5/Manda_Sai_Srinivas_APM_Resume.pdf",
+  original_filename: "Manda_Sai_Srinivas_APM_Resume.pdf",
+  size: 79722,
+  content_type: "application/pdf",
+  created_at: "2026-10-09T04:34:08Z"
+};
 
 // src/lib/site-config.ts
-import resumeAsset from "npm:@/assets/final-resume.pdf.asset.json";
 import { toast } from "npm:sonner@^1.7.4";
 var siteConfig = {
   name: "Manda Sai Srinivas",
@@ -17,7 +29,7 @@ var siteConfig = {
   email: "ssai55030@gmail.com",
   phone: "+91 7287070114",
   location: "Pune, Maharashtra, India",
-  resumeUrl: resumeAsset.url,
+  resumeUrl: final_resume_pdf_asset_default.url,
   resumeFileName: "Manda_Sai_Srinivas_APM_Resume.pdf",
   social: {
     linkedin: "https://www.linkedin.com/in/mssrinivas1511",
@@ -171,7 +183,7 @@ var get_profile_default = defineTool({
 });
 
 // src/lib/mcp/tools/list-projects.ts
-import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool2 } from "npm:@lovable.dev/mcp-js@3.0.5";
 import { z } from "npm:zod@^3.25.76";
 var list_projects_default = defineTool2({
   name: "list_projects",
@@ -199,7 +211,7 @@ var list_projects_default = defineTool2({
 });
 
 // src/lib/mcp/tools/get-skills.ts
-import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool3 } from "npm:@lovable.dev/mcp-js@3.0.5";
 var get_skills_default = defineTool3({
   name: "get_skills",
   title: "Get skills and expertise",
@@ -216,7 +228,7 @@ var get_skills_default = defineTool3({
 });
 
 // src/lib/mcp/tools/get-contact-info.ts
-import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool4 } from "npm:@lovable.dev/mcp-js@3.0.5";
 var get_contact_info_default = defineTool4({
   name: "get_contact_info",
   title: "Get contact info",
@@ -230,7 +242,7 @@ var get_contact_info_default = defineTool4({
 });
 
 // src/lib/mcp/tools/get-resume.ts
-import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@0.26.1";
+import { defineTool as defineTool5 } from "npm:@lovable.dev/mcp-js@3.0.5";
 var get_resume_default = defineTool5({
   name: "get_resume",
   title: "Get resume link",
@@ -263,5 +275,5 @@ var mcp_default = defineMcp({
 });
 
 // lovable-mcp-supabase-entry.ts
-import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@0.26.1/stacks/supabase";
+import { createSupabaseHandler } from "npm:@lovable.dev/mcp-js@3.0.5/stacks/supabase";
 Deno.serve(createSupabaseHandler(mcp_default, { functionName: "mcp" }));
